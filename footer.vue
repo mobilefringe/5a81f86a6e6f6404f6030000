@@ -53,7 +53,7 @@
                     // search: '',    
                 }
             },
-            props:['social_media'],
+            props:['menu_items', 'social_media'],
             computed: {
                 ...Vuex.mapGetters([
                     'property',
