@@ -101,14 +101,14 @@
                 return {
                     show_mobile_menu: false,
                     
-                    active: false, 
-                    newsletter_email: "",
-                    isOpen: false,
-                    windowWidth: 0,
-                    show_menu: true,
-                    showSubMenu1: false,
-                    showSubMenu2: false,
-                    showSubMenu3: false
+                    // active: false, 
+                    // newsletter_email: "",
+                    // isOpen: false,
+                    // windowWidth: 0,
+                    // show_menu: true,
+                    // showSubMenu1: false,
+                    // showSubMenu2: false,
+                    // showSubMenu3: false
                 }
             },
             props:['menu_items', 'social_media'],
