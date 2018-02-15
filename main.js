@@ -79,7 +79,7 @@ require(["Vue", "vuex", "vue2-filters", "vue_router", "routes", "datastore", "vu
         data: function() {
             return {
                 dataLoaded: false,
-                show_mobile_menu: false,
+                // show_mobile_menu: false,
                 menu_items: [
                     {
                         name: "header.stores",
@@ -175,7 +175,7 @@ require(["Vue", "vuex", "vue2-filters", "vue_router", "routes", "datastore", "vu
                 ],
                 search_result : null,
                 suggestionAttribute: 'name',
-                newsletter_email: "",
+                // newsletter_email: "",
                 stickyMenu: false,
                 isSticky: 350,
             }
