@@ -47,8 +47,10 @@
             template: template, // the variable template will be injected,
             data: function data() {
                 return {
-                    suggestionAttribute: 'name',
-                    search: '',    
+                    newsletter_email: "",
+                    
+                    // suggestionAttribute: 'name',
+                    // search: '',    
                 }
             },
             props:['social_media'],
