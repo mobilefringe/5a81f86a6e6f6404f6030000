@@ -111,7 +111,7 @@
                     showSubMenu3: false
                 }
             },
-            props:['social_media'],
+            props:['menu_items', 'social_media'],
             watch: {
                 $route: function() {
                     if (this.windowWidth <= 768) {
