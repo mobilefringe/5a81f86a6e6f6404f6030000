@@ -99,6 +99,8 @@
             template: template, // the variable template will be injected,
             data: function () {
                 return {
+                    show_mobile_menu: false,
+                    
                     active: false, 
                     newsletter_email: "",
                     isOpen: false,
