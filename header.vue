@@ -1,6 +1,6 @@
 <template>
     <header>
-        <div class="sticky"><!--<div :class="{sticky : stickyMenu}">-->
+        <div class="sticky">
 			<div class="top_bar">
 				<div class="site_container">
 					<div class="row top_bar_wrapper">
@@ -14,13 +14,11 @@
 						</div>
 						<div class="col-sm-6 hidden_phone text-right">
 							<div class="header_social">
-								<a href="https://www.instagram.com/shopbdc_" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                                <a href="https://www.facebook.com/bonniedoonsc" target="_blank"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
-                                <a href="https://www.pinterest.ca/bonniedoonsc" target="_blank"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
-                                <a href="https://www.twitter.com/bonniedoonsc" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-								
-								<!--<a href="#" data-toggle="modal" data-target="#snap_modal"><div class="social_snapchat"></div></a>-->
-								<!--<a href=" https://open.spotify.com/user/playlist/6ozU5Na6bFInmZOVTnSYIm" target="_blank"><div class="social_spotify"></div></a>-->
+								<span v-for="item in social_media">
+                                    <a :href="item.url" target="_blank">
+                                        <i :class="item.iconClass" aria-hidden="true"></i>
+                                    </a>
+                                </span>
 							</div>
 							<router-link id="signup" to="/newsletter">{{$t("header.sign_up")}}</router-link>
 							<span> <span @click="changeLocale('en-ca')"> en</span> | <span @click="changeLocale('fr-ca')">fr</span></span>
