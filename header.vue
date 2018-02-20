@@ -37,7 +37,6 @@
 						    <transition name="custom-classes-transition" enter-active-class="animated slideInDown" leave-active-class="animated slideOutUp">
 								<nav id="mobile_nav" v-show="show_mobile_menu">
 									<ul>
-										
 										<li v-for="item in menu_items" class="menu_item">
     								        <router-link :to="item.href">{{$t(item.name)}}</router-link>
     								        <ul v-if="item.sub_menu">
@@ -47,19 +46,19 @@
     										</ul>
     								    </li>
 									</ul>
-									<div class="small_hr"></div>
-									<div class="tel_num" v-if="property">
-                                        <a :href="'tel:'+property.contact_phone">{{property.contact_phone}}</a>
-                                    </div>
-                                    <div>
-                                       <p style="display:block"> {{property.address1}}</p>
-                                        <p style="display:block">{{property.city}}, {{property.postal_code}} {{property.province_state}}</p>
-                                    </div>
-									<div class="header_social">
-										<a href="https://www.facebook.com/shopthegateway/" target="_blank"><img src="//codecloud.cdn.speedyrails.net/sites/59282acb6e6f647d8d520100/image/png/1495816064000/facebook_icon.png" class="header_social_icon" alt="Facebook Icon"></a>
-										<a href="https://www.instagram.com/shopthegateway/" target="_blank"><img src="//codecloud.cdn.speedyrails.net/sites/59282acb6e6f647d8d520100/image/png/1495817456000/insta_icon.png" class="header_social_icon" alt="Instagram Icon"></a>
-									</div>
-									<div class="small_hr"></div>
+									<!--<div class="small_hr"></div>-->
+									<!--<div class="tel_num" v-if="property">-->
+         <!--                               <a :href="'tel:'+property.contact_phone">{{property.contact_phone}}</a>-->
+         <!--                           </div>-->
+         <!--                           <div>-->
+         <!--                              <p style="display:block"> {{property.address1}}</p>-->
+         <!--                               <p style="display:block">{{property.city}}, {{property.postal_code}} {{property.province_state}}</p>-->
+         <!--                           </div>-->
+									<!--<div class="header_social">-->
+									<!--	<a href="https://www.facebook.com/shopthegateway/" target="_blank"><img src="//codecloud.cdn.speedyrails.net/sites/59282acb6e6f647d8d520100/image/png/1495816064000/facebook_icon.png" class="header_social_icon" alt="Facebook Icon"></a>-->
+									<!--	<a href="https://www.instagram.com/shopthegateway/" target="_blank"><img src="//codecloud.cdn.speedyrails.net/sites/59282acb6e6f647d8d520100/image/png/1495817456000/insta_icon.png" class="header_social_icon" alt="Instagram Icon"></a>-->
+									<!--</div>-->
+									<!--<div class="small_hr"></div>-->
 								</nav>
 							</transition>
 						</div>
