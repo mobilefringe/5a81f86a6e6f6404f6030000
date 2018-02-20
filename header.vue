@@ -7,7 +7,7 @@
 					    <span> <span @click="changeLocale('en-ca')"> en</span> | <span @click="changeLocale('fr-ca')">fr</span></span>	
 					</div>
 					<div class="col-sm-6">
-					    <div class="property_logo">
+					    <div class="property_logo center-block">
 							<router-link to="/">
 							    <img src="//codecloud.cdn.speedyrails.net/sites/5a81f86a6e6f6404f6030000/image/png/1519154972000/mm_logo.png" alt="Property Logo"/>
 						    </router-link>
