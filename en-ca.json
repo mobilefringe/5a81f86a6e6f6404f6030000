@@ -27,13 +27,11 @@
         "guest_services" : "Guest Services",
         "services" : "Services",
         "gift_cards" : "Gift Cards",
-        "green_initiatives" : "Green Initiatives",
-        "gift_card" : "Gift Card",
-        "contact_us" : "Contact Us",
+        "contact" : "Contact",
         "hours": "Hours",
-        "jobs" : "Jobs",
-        "find_us" : "Find Us",
-        "newsletter" : "Newsletter"
+        "directions": "Directions",
+        "leasing": "Leasing",
+        "jobs" : "Jobs"
     },
   "footer": {
     "stay_uptodate" : "Stay up to date on all of our Happenings",
