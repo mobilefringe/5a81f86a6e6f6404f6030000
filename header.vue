@@ -19,20 +19,18 @@
 				</div>
 				<div class="row">
 					<div class="nav_container hidden_phone">
-						<div class="row top_nav hidden_phone">
-							<nav id="primary_nav">
-								<ul>
-								    <li v-for="item in menu_items" class="menu_item">
-								        <router-link :to="item.href">{{$t(item.name)}}</router-link>
-								        <ul v-if="item.sub_menu">
-								            <li v-for="sub_menu in item.sub_menu" class="dropdown_item">
-								                <router-link :to="sub_menu.href">{{$t(sub_menu.name)}}</router-link>
-								            </li>
-										</ul>
-								    </li>
-								</ul>
-							</nav>
-						</div>
+						<nav id="primary_nav">
+							<ul>
+							    <li v-for="item in menu_items" class="menu_item">
+							        <router-link :to="item.href">{{$t(item.name)}}</router-link>
+							        <ul v-if="item.sub_menu">
+							            <li v-for="sub_menu in item.sub_menu" class="dropdown_item">
+							                <router-link :to="sub_menu.href">{{$t(sub_menu.name)}}</router-link>
+							            </li>
+									</ul>
+							    </li>
+							</ul>
+						</nav>
 					</div>
 				</div>
 			</div>
@@ -40,7 +38,7 @@
     </header>
 </template>
 
-</div>
+
 						<!--<div id="menu-icon" @click="show_mobile_menu = !show_mobile_menu" :class="{ open: show_mobile_menu}">-->
 						<!--	<span></span>-->
 						<!--	<span></span>-->
