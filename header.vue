@@ -12,16 +12,6 @@
 							    <img src="//codecloud.cdn.speedyrails.net/sites/5a81f86a6e6f6404f6030000/image/png/1519154972000/mm_logo.png" alt="Property Logo"/>
 						    </router-link>
 						</div>
-									
-						<div class="header_social">
-							<span v-for="item in social_media">
-                                <a :href="item.url" target="_blank">
-                                    <i :class="item.iconClass" aria-hidden="true"></i>
-                                </a>
-                            </span>
-						</div>
-						<!--<router-link id="signup" to="/newsletter">{{$t("header.sign_up")}}</router-link>-->
-						
 					</div>
 					<div class="col-sm-3">
 						
@@ -46,6 +36,15 @@
 									</ul>
 							    </li>
 							</ul>
+							
+							<div class="header_social">
+							<span v-for="item in social_media">
+                                <a :href="item.url" target="_blank">
+                                    <i :class="item.iconClass" aria-hidden="true"></i>
+                                </a>
+                            </span>
+						</div>
+						
 							<!--<div class="small_hr"></div>-->
 							<!--<div class="tel_num" v-if="property">-->
  <!--                               <a :href="'tel:'+property.contact_phone">{{property.contact_phone}}</a>-->
@@ -68,9 +67,6 @@
 			<div class="menu_bar hidden_phone">
 				<div class="site_container">
 					<div class="nav_container hidden_phone">
-						<div class="site_logo">
-							<router-link to="/"><img src="http://via.placeholder.com/500x150/fff" alt="Property Logo"/></router-link>
-						</div>
 						<div class="row top_nav hidden_phone">
 							<nav id="primary_nav">
 								<ul>
