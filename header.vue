@@ -1,69 +1,67 @@
 <template>
     <header>
         <div class="sticky">
-			<div class="top_bar">
-				<div class="site_container">
-					<div class="row top_bar_wrapper">
-						<div class="col-sm-3">
-						    <span> <span @click="changeLocale('en-ca')"> en</span> | <span @click="changeLocale('fr-ca')">fr</span></span>	
-							
+			<div class="site_container">
+				<div class="row">
+					<div class="col-sm-3">
+					    <span> <span @click="changeLocale('en-ca')"> en</span> | <span @click="changeLocale('fr-ca')">fr</span></span>	
+					</div>
+					<div class="col-sm-6 hidden_phone text-right">
+					    <div class="mobile_menu_site_logo">
+							<router-link to="/"><img src="http://via.placeholder.com/500x150/000" alt="Property Logo"/></router-link>
 						</div>
-						<div class="col-sm-6 hidden_phone text-right">
-						    <div class="mobile_menu_site_logo">
-								<router-link to="/"><img src="http://via.placeholder.com/500x150/000" alt="Property Logo"/></router-link>
-							</div>
-										
-							<div class="header_social">
-								<span v-for="item in social_media">
-                                    <a :href="item.url" target="_blank">
-                                        <i :class="item.iconClass" aria-hidden="true"></i>
-                                    </a>
-                                </span>
-							</div>
-							<!--<router-link id="signup" to="/newsletter">{{$t("header.sign_up")}}</router-link>-->
-							
+									
+						<div class="header_social">
+							<span v-for="item in social_media">
+                                <a :href="item.url" target="_blank">
+                                    <i :class="item.iconClass" aria-hidden="true"></i>
+                                </a>
+                            </span>
 						</div>
-						<div class="col-sm-3">
-							
-							
-						</div>
+						<!--<router-link id="signup" to="/newsletter">{{$t("header.sign_up")}}</router-link>-->
+						
+					</div>
+					<div class="col-sm-3">
+						
+					</div>
+				</div>
 						<!--<div id="menu-icon" @click="show_mobile_menu = !show_mobile_menu" :class="{ open: show_mobile_menu}">-->
 						<!--	<span></span>-->
 						<!--	<span></span>-->
 						<!--	<span></span>-->
 						<!--	<span></span>-->
 						<!--</div>-->
-						<div class="mobile_nav_container visible_phone">
-						    <transition name="custom-classes-transition" enter-active-class="animated slideInDown" leave-active-class="animated slideOutUp">
-								<nav id="mobile_nav" v-show="show_mobile_menu">
-									<ul>
-										<li v-for="item in menu_items" class="menu_item">
-    								        <router-link :to="item.href">{{$t(item.name)}}</router-link>
-    								        <ul v-if="item.sub_menu">
-    								            <li v-for="sub_menu in item.sub_menu" class="dropdown_item">
-    								                <router-link :to="sub_menu.href">{{$t(sub_menu.name)}}</router-link>
-    								            </li>
-    										</ul>
-    								    </li>
+				<div class="mobile_nav_container visible_phone">
+				    <transition name="custom-classes-transition" enter-active-class="animated slideInDown" leave-active-class="animated slideOutUp">
+						<nav id="mobile_nav" v-show="show_mobile_menu">
+							<ul>
+								<li v-for="item in menu_items" class="menu_item">
+							        <router-link :to="item.href">{{$t(item.name)}}</router-link>
+							        <ul v-if="item.sub_menu">
+							            <li v-for="sub_menu in item.sub_menu" class="dropdown_item">
+							                <router-link :to="sub_menu.href">{{$t(sub_menu.name)}}</router-link>
+							            </li>
 									</ul>
-									<!--<div class="small_hr"></div>-->
-									<!--<div class="tel_num" v-if="property">-->
-         <!--                               <a :href="'tel:'+property.contact_phone">{{property.contact_phone}}</a>-->
-         <!--                           </div>-->
-         <!--                           <div>-->
-         <!--                              <p style="display:block"> {{property.address1}}</p>-->
-         <!--                               <p style="display:block">{{property.city}}, {{property.postal_code}} {{property.province_state}}</p>-->
-         <!--                           </div>-->
-									<!--<div class="header_social">-->
-									<!--	<a href="https://www.facebook.com/shopthegateway/" target="_blank"><img src="//codecloud.cdn.speedyrails.net/sites/59282acb6e6f647d8d520100/image/png/1495816064000/facebook_icon.png" class="header_social_icon" alt="Facebook Icon"></a>-->
-									<!--	<a href="https://www.instagram.com/shopthegateway/" target="_blank"><img src="//codecloud.cdn.speedyrails.net/sites/59282acb6e6f647d8d520100/image/png/1495817456000/insta_icon.png" class="header_social_icon" alt="Instagram Icon"></a>-->
-									<!--</div>-->
-									<!--<div class="small_hr"></div>-->
-								</nav>
-							</transition>
-						</div>
-					</div>
+							    </li>
+							</ul>
+							<!--<div class="small_hr"></div>-->
+							<!--<div class="tel_num" v-if="property">-->
+ <!--                               <a :href="'tel:'+property.contact_phone">{{property.contact_phone}}</a>-->
+ <!--                           </div>-->
+ <!--                           <div>-->
+ <!--                              <p style="display:block"> {{property.address1}}</p>-->
+ <!--                               <p style="display:block">{{property.city}}, {{property.postal_code}} {{property.province_state}}</p>-->
+ <!--                           </div>-->
+							<!--<div class="header_social">-->
+							<!--	<a href="https://www.facebook.com/shopthegateway/" target="_blank"><img src="//codecloud.cdn.speedyrails.net/sites/59282acb6e6f647d8d520100/image/png/1495816064000/facebook_icon.png" class="header_social_icon" alt="Facebook Icon"></a>-->
+							<!--	<a href="https://www.instagram.com/shopthegateway/" target="_blank"><img src="//codecloud.cdn.speedyrails.net/sites/59282acb6e6f647d8d520100/image/png/1495817456000/insta_icon.png" class="header_social_icon" alt="Instagram Icon"></a>-->
+							<!--</div>-->
+							<!--<div class="small_hr"></div>-->
+						</nav>
+					</transition>
 				</div>
+				<!--	</div>-->
+				<!--</div>-->
 			</div>
 			<div class="menu_bar hidden_phone">
 				<div class="site_container">
