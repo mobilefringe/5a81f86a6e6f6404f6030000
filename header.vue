@@ -4,15 +4,15 @@
 			<div class="top_bar">
 				<div class="site_container">
 					<div class="row top_bar_wrapper">
-						<div class="col-sm-6">
-							<div class="mobile_site_logo visible_phone">
-							    <router-link to="/"><img src="http://via.placeholder.com/500x150/fff" alt="Property Logo"/></router-link>
-						    </div>
-							<div id="home_hours_container" class="hidden_phone">
-								<p class="open_now"><span v-if="!todays_hours.is_closed || todays_hours.is_closed == null">{{$t("header.open_today")}}</span><span v-else>{{$t("header.closed_today")}}</span> <span style="margin:0 20px">|</span> {{todays_hours.open_time | moment("h:mma", timezone)}} - {{todays_hours.close_time | moment("h:mma", timezone)}}</p>
-							</div>
+						<div class="col-sm-3">
+						    <span> <span @click="changeLocale('en-ca')"> en</span> | <span @click="changeLocale('fr-ca')">fr</span></span>	
+							
 						</div>
 						<div class="col-sm-6 hidden_phone text-right">
+						    <div class="mobile_menu_site_logo">
+								<router-link to="/"><img src="http://via.placeholder.com/500x150/000" alt="Property Logo"/></router-link>
+							</div>
+										
 							<div class="header_social">
 								<span v-for="item in social_media">
                                     <a :href="item.url" target="_blank">
@@ -20,22 +20,24 @@
                                     </a>
                                 </span>
 							</div>
-							<router-link id="signup" to="/newsletter">{{$t("header.sign_up")}}</router-link>
-							<span> <span @click="changeLocale('en-ca')"> en</span> | <span @click="changeLocale('fr-ca')">fr</span></span>
+							<!--<router-link id="signup" to="/newsletter">{{$t("header.sign_up")}}</router-link>-->
+							
 						</div>
-						<div id="menu-icon" @click="show_mobile_menu = !show_mobile_menu" :class="{ open: show_mobile_menu}">
-							<span></span>
-							<span></span>
-							<span></span>
-							<span></span>
+						<div class="col-sm-3">
+							
+							
 						</div>
+						<!--<div id="menu-icon" @click="show_mobile_menu = !show_mobile_menu" :class="{ open: show_mobile_menu}">-->
+						<!--	<span></span>-->
+						<!--	<span></span>-->
+						<!--	<span></span>-->
+						<!--	<span></span>-->
+						<!--</div>-->
 						<div class="mobile_nav_container visible_phone">
 						    <transition name="custom-classes-transition" enter-active-class="animated slideInDown" leave-active-class="animated slideOutUp">
 								<nav id="mobile_nav" v-show="show_mobile_menu">
 									<ul>
-										<div class="mobile_menu_site_logo">
-											<router-link to="/"><img src="http://via.placeholder.com/500x150/000" alt="Property Logo"/></router-link>
-										</div>
+										
 										<li v-for="item in menu_items" class="menu_item">
     								        <router-link :to="item.href">{{$t(item.name)}}</router-link>
     								        <ul v-if="item.sub_menu">
