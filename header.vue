@@ -8,7 +8,9 @@
 					</div>
 					<div class="col-sm-6 hidden_phone text-right">
 					    <div class="mobile_menu_site_logo">
-							<router-link to="/"><img src="http://via.placeholder.com/500x150/000" alt="Property Logo"/></router-link>
+							<router-link to="/">
+							    <img src="//codecloud.cdn.speedyrails.net/sites/5a81f86a6e6f6404f6030000/image/png/1519154972000/mm_logo.png" alt="Property Logo"/>
+						    </router-link>
 						</div>
 									
 						<div class="header_social">
