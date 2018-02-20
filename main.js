@@ -82,67 +82,61 @@ require(["Vue", "vuex", "vue2-filters", "vue_router", "routes", "datastore", "vu
                 // show_mobile_menu: false,
                 menu_items: [
                     {
-                        name: "header.stores",
-                        href: "/stores",
+                        name: "nav.directory",
+                        // href: "/stores",
                         sub_menu: [{
-                                name: "header.stores",
+                                name: "nav.stores",
                                 href: "/stores"
                             },
                             {
-                                name: "header.centre_map",
+                                name: "nav.centre_map",
                                 href: "/map"
                             }
                         ]
                     },
                     {
-                        name: "header.promos",
+                        name: "nav.promos",
                         href: "/promotions",
                     },
                     {
-                        name: "header.events",
+                        name: "nav.events",
                         href: "/events",
                     },
                     {
-                        name: "header.guest_services",
-                        href: "/pages/bonniedoon-services",
+                        name: "nav.guest_services",
+                        // href: "/pages/bonniedoon-services",
                         sub_menu: [{
-                                name: "header.services ",
+                                name: "nav.services",
                                 href: "/pages/bonniedoon-services"
                             },
                             {
-                                name: "header.community",
-                                href: "/pages/bonniedoon-community-support"
-                            },
-                            {
-                                name: "header.green_initiatives",
-                                href: "/pages/bonniedoon-green-initiatives"
-                            },
-                            {
-                                name: "header.gift_card",
+                                name: "nav.gift_card",
                                 href: "/pages/bonniedoon-gift-cards"
                             }
                         ]
                     },
                     {
-                        name: "header.contact_us",
-                        href: "/contact_us",
+                        name: "nav.contact",
+                        // href: "/contact_us",
                         sub_menu: [
                             {
-                                name: "header.hours",
+                                name: "nav.hours",
                                 href: "/hours"
                             },
                             {
-                                name: "header.jobs",
-                                href: "/jobs"
-                            },
-                            {
-                                name: "header.find_us",
+                                name: "nav.directions",
                                 href: "/find_us"
                             },
                             {
-                                name: "header.newsletter",
+                                name: "nav.leasing",
                                 href: "/newsletter"
                             }
+                            {
+                                name: "nav.jobs",
+                                href: "/jobs"
+                            },
+                            
+                            
                         ],
                     }
                 ],
