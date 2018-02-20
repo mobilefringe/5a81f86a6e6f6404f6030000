@@ -9,7 +9,6 @@
 #primary_nav {
     margin: 0 auto;
 }
-
 #primary_nav ul {
     margin: 0 auto;
 	padding: 0;
@@ -17,7 +16,6 @@
 	position: relative;
 	text-align: center;
 }
-
 #primary_nav ul .menu_item a {
     padding: 0 15px;
 	display: block;
@@ -29,7 +27,6 @@
 	    text-decoration: underline;
 	}
 }
-
 #primary_nav ul .menu_item {
 	margin: 0;
 	padding: 5px 0 43px;
