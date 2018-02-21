@@ -114,6 +114,7 @@ footer {
     height: 464px;
     border: 4px solid #000;
     border-bottom: none;
+    border-left: none;
     &::after {
         content: "";
         position: absolute;
