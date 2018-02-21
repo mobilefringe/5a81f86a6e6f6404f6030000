@@ -109,6 +109,16 @@ $link: #000;
     background: rgba(255, 255, 255, 0.9);
     text-align: center;
     color: $font;
+    .footer_logo {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
     p {
         margin: 0;
         font-size: 1rem;
