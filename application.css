@@ -123,6 +123,7 @@ footer {
         input {
             max-width: 498px;
             height: 66px;
+            display: inline-block;
             border-radius: 0;
             border: none;
             background: rgba(0,0,0,0.5);
