@@ -134,6 +134,7 @@ footer {
             padding: 16px 44px;
             width: 175px;
             height: 66px;
+            display: inline-block;
             background: rgba(0,0,0,0.5);
             color: #FFF;    
         }
