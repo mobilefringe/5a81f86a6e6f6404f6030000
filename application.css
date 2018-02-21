@@ -11,6 +11,9 @@ $link: #000;
     line-height: 19px;
     letter-spacing: 3.3;
     text-transform: uppercase;
+    span:hover {
+        cursor: pointer;
+    }
 }
 .property_logo {
     margin: 32px auto;
