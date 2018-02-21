@@ -10,7 +10,7 @@ $link: #000;
     font-size: 14px;
     line-height: 19px;
     letter-spacing: 3.3;
-    
+    text-transform: uppercase;
 }
 .property_logo {
     margin: 32px auto;
