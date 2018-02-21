@@ -3,7 +3,7 @@
         <div class="newsletter_subscription">
             <div class="newsletter_content_container">
                  <h4 class="caps">{{$t("footer.stay_uptodate")}}</h4> 
-                 <div id="newsletterBlogForm">
+                 <div id="newsletter_form">
                     <label for="fieldEmail" style="display:none"></label>
                     <input id="fieldEmail" name="cm-tkyhii-tkyhii" class="form-control" type="email" v-model="newsletter_email" :placeholder="$t('footer.enter_email')" required/> 
                     <router-link class="contact_btn" data-i18n="general.submit" :to="'/newsletter?email='+ newsletter_email"><i class="fa fa-arrow-right"></i></router-link>
