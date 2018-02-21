@@ -6,7 +6,13 @@
     font-weight: normal;
     font-style: normal;
 }
-
+@font-face {
+    font-family: 'Didot-Bold';
+    src: url('//codecloud.cdn.speedyrails.net/sites/5a81f86a6e6f6404f6030000//1519280304000/DidotLTStd-Bold.woff2') format('woff2'),
+        url('//codecloud.cdn.speedyrails.net/sites/5a81f86a6e6f6404f6030000//1519280304000/DidotLTStd-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
 @import url('https://fonts.googleapis.com/css?family=PT+Serif');
 
 /* COLOUR VARIABLES */
@@ -17,6 +23,23 @@ $font: #000;
 $social: #000;
 $link: #000;
 
+h1 {
+    font-family: 'Didot-Bold';
+    font-size: 78px;
+    line-height: 99px;
+    color: #FFF;
+}
+h2 {
+    font-size: 56px;
+    line-height: 74px;
+}
+h3 {
+    font-size: 36px;
+    line-height: 46px;
+}
+h4 {
+    
+}
 .header_logo {
     display: -webkit-box;
     display: -webkit-flex;
