@@ -62,6 +62,7 @@ $link: #000;
 	min-width: 150px;
 	font-size: 0.8rem;
 	line-height: 26px;
+	color: $font;
 }
 #primary_nav ul ul .dropdown_item:hover {
     background: transparent;
