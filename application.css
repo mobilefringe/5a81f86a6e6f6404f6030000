@@ -123,6 +123,9 @@ $link: #000;
     .footer_phone {
         padding: 10px 0;
     }
+    .property_logo {
+        max-width: 282px;    
+    }
 }
 .footer_social {
     padding: 15px 0;
