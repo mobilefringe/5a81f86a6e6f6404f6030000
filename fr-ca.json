@@ -20,27 +20,27 @@
     },
     "nav": {
         "directory" : "Directory",
-        "stores" : "Stores",
-        "centre_map" : "Centre Map",
+        "stores" : "Magasins",
+        "centre_map" : "Carte du centre",
         "promos" : "Promotions",
-        "events" : "Events",
+        "events" : "Evènements",
         "guest_services" : "Guest Services",
         "services" : "Services",
-        "gift_cards" : "Gift Cards",
+        "gift_card" : "Cartes cadeaux",
         "contact" : "Contact",
-        "hours": "Hours",
+        "hours": "Horaires",
         "directions": "Directions",
         "leasing": "Leasing",
-        "jobs" : "Jobs"
+        "jobs" : "Carrières"
     },
-  "footer": {
-    "stay_uptodate" : "Restez au courant de notre actualité",
-    "enter_email" : "Inscrire votre courriel",
-    "subscribe_thankyou" : "Nous vous remercions de vous être inscrits à notre Newsletter.",
-    "all_rights" : "Tous droits réservés.",
-    "privacy_policy" : "Règles de confidentialité",
-    "powered_by" : "Géré par"
-  },
+    "footer": {
+        "stay_uptodate" : "Restez au courant de notre actualité",
+        "enter_email" : "Inscrire votre courriel",
+        "subscribe_thankyou" : "Nous vous remercions de vous être inscrits à notre Newsletter.",
+        "all_rights" : "Tous droits réservés.",
+        "privacy_policy" : "Règles de confidentialité",
+        "powered_by" : "Géré par"
+    },
   "home_page": {
     "explore" : "Explorer",
     "our_feed" : "Notre actualité"
