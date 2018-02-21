@@ -13,7 +13,6 @@
     font-weight: bold;
     font-style: normal;
 }
-@import url('https://fonts.googleapis.com/css?family=PT+Serif');
 
 /* COLOUR VARIABLES */
 $primary: #004d71;
@@ -23,7 +22,7 @@ $font: #000;
 $social: #000;
 $link: #000;
 
-$font_family:'Raleway', 'Helvetica', 'Arial', sans-serif;
+$font_family: 'Raleway', 'Helvetica', 'Arial', sans-serif;
 
 [v-cloak] {
   display:none!important;
