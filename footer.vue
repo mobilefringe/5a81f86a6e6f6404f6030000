@@ -27,7 +27,7 @@
 				        </div>    
 			        </div>
 			        <div class="col-md-6">
-			            <nav id="primary_nav">
+			            <nav id="footer_nav">
     						<ul>
     						    <li v-for="item in footer_menu_items" class="menu_item">
     						        <router-link :to="item.href">{{$t(item.name)}}</router-link>
