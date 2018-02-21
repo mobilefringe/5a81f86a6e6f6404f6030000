@@ -6,22 +6,33 @@ $font: #000;
 $social: #000;
 $link: #000;
 
-.language_select {
-    font-size: 14px;
-    line-height: 19px;
-    letter-spacing: 3.3;
-    text-transform: uppercase;
-    span:hover {
-        cursor: pointer;
+.header_logo {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    .language_select {
+        font-size: 14px;
+        line-height: 19px;
+        letter-spacing: 3.3;
+        text-transform: uppercase;
+        span:hover {
+            cursor: pointer;
+        }
+    }
+    .property_logo {
+        margin: 32px auto;
+        max-width: 282px;
+        img {
+            max-width: 100%;
+        }
     }
 }
-.property_logo {
-    margin: 32px auto;
-    max-width: 282px;
-    img {
-        max-width: 100%;
-    }
-}
+
 
 #primary_nav {
     margin: 0 auto;
