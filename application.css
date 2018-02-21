@@ -72,3 +72,12 @@ $link: #000;
 #primary_nav ul .menu_item:hover > ul {
 	display: block;
 }
+.social_icons {
+    .fa {
+        color: $accent;
+        transition: all 0.3s ease;
+        &:hover {
+            color: $primary;
+        }
+    }
+}
