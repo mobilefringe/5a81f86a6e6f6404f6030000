@@ -18,7 +18,7 @@
 					</div>
 				</div>
 				<div class="row">
-					<div class="nav_container hidden_phone">
+					<div class="col-md-6 nav_container">
 						<nav id="primary_nav">
 							<ul>
 							    <li v-for="item in menu_items" class="menu_item">
@@ -31,6 +31,15 @@
 							    </li>
 							</ul>
 						</nav>
+					</div>
+					<div class="col-sm-3">
+					    <div class="social_icons">
+                            <span v-for="item in social_media">
+                                <a :href="item.url" target="_blank">
+                                    <i :class="item.iconClass" aria-hidden="true"></i>
+                                </a>
+                            </span>
+                        </div>	
 					</div>
 				</div>
 			</div>
