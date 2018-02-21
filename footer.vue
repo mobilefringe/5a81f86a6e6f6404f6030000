@@ -16,7 +16,7 @@
 			<div class="site_container">
 			    <div class="row">
 			        <div class="col-md-4">
-			            <div class="site_logo">
+			            <div class="property_logo">
 					        <router-link to="/">
 					            <img src="//codecloud.cdn.speedyrails.net/sites/5a81f86a6e6f6404f6030000/image/png/1519154972000/mm_logo.png" alt="Property Logo"/>
 				            </router-link>
