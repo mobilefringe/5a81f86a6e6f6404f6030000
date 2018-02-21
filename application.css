@@ -107,10 +107,15 @@ footer {
     background-image: url(http://placehold.it/1920x650);
     background-position: center center;
 }
+.newsletter_subscription {
+    .newsletter_content_container {
+        max-width: 1150px;
+    }
+}
 .footer {
     position: relative;
     padding: 20px 0;
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.5);
     text-align: center;
     color: $font;
     .footer_logo {
