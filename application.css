@@ -1,3 +1,12 @@
+/* COLOUR VARIABLES */
+$primary: #004d71;
+$secondary: #fff;
+$accent : #848484;
+$font: #000;
+$social: #000;
+$link: #000;
+
+
 .property_logo {
     margin: 32px auto;
     max-width: 282px;
