@@ -2,21 +2,7 @@
     "header": {
         "open_today": "Ouvert aujourd'hui",
         "closed": "Fermé aujourd'hui",
-        "sign_up": "Inscription",
-        "stores" : "Magasins",
-        "centre_map" : "Carte du centre",
-        "promos" : "Promotions",
-        "events" : "Evènements",
-        "guest_services" : "Service Clientèle",
-        "services" : "Services",
-        "community" : "Services communautaires",
-        "green_initiatives" : "Initiatives écologiques",
-        "gift_card" : "Cartes cadeaux",
-        "contact_us" : "Nous contacter",
-        "hours": "Horaires",
-        "jobs" : "Carrières",
-        "find_us" : "Nous Trouver",
-        "newsletter" : "Newsletter"
+        "sign_up": "Inscription"
     },
     "nav": {
         "directory" : "Directory",
