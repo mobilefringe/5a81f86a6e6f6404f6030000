@@ -112,6 +112,7 @@ footer {
     margin-top: 84px;
     max-width: 1150px;
     height: 464px;
+    position: relative;
     border: 4px solid #000;
     border-bottom: none;
     border-left: none;
