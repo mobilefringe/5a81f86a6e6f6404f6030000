@@ -119,12 +119,12 @@ footer {
     &::after {
         content: "";
         position: absolute;
+        top: 0;
         left: 0;
         z-index: 100;
-        top  : 0;
-        width  : 3px;
-        height   : 50%;  /* or 100px */
-        background: #555;
+        width: 4px;
+        height: 50%;
+        background: #000;
     }
     .newsletter_content_container {
         margin: 0 auto;
