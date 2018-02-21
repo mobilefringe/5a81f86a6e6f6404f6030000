@@ -4,9 +4,9 @@
 			<div class="site_container">
 				<div class="row">
 					<div class="col-sm-3">
-					    <span class="language_select">
+					    <div class="language_select">
 					        <span @click="changeLocale('en-ca')">en</span> | <span @click="changeLocale('fr-ca')">fr</span>
-				        </span>	
+				        </div>	
 					</div>
 					<div class="col-sm-6">
 					    <div class="property_logo center-block">
