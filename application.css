@@ -168,7 +168,7 @@ footer {
             margin: 0;
             padding: 0;
             list-style-type: none;
-            li {
+            .menu_item {
                 display: inline-block;
             }
         }
