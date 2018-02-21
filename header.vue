@@ -18,7 +18,8 @@
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-md-6 nav_container">
+				    <div class="col-sm-2"></div>
+					<div class="col-md-8 nav_container">
 						<nav id="primary_nav">
 							<ul>
 							    <li v-for="item in menu_items" class="menu_item">
@@ -32,7 +33,7 @@
 							</ul>
 						</nav>
 					</div>
-					<div class="col-sm-3">
+					<div class="col-sm-2">
 					    <div class="social_icons">
                             <span v-for="item in social_media">
                                 <a :href="item.url" target="_blank">
