@@ -8,7 +8,9 @@
                  <div id="newsletter_form">
                     <label for="fieldEmail" style="display:none"></label>
                     <input id="fieldEmail" name="cm-tkyhii-tkyhii" class="form-control" type="email" v-model="newsletter_email" :placeholder="$t('footer.enter_email')" required/> 
-                    <router-link class="newsletter_btn" data-i18n="general.submit" :to="'/newsletter?email='+ newsletter_email">{{$t("footer.subscribe")}}</router-link>
+                    <router-link class="newsletter_btn" data-i18n="general.submit" :to="'/newsletter?email='+ newsletter_email">
+                        {{$t("footer.subscribe")}}
+                    </router-link>
                     
                     <span id="success_subscribe" class="hidden_now">{{$t("footer.subscribe_thankyou")}}</span>
                  </div>
