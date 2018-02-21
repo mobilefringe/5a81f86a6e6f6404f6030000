@@ -157,26 +157,23 @@ footer {
         -ms-flex-align: center;
         align-items: center;
     }
-    p {
-        margin: 0;
-        font-size: 1rem;
-        line-height: 26px;
-    }
-    a {
-        color: inherit;
-        &:hover {
-            color: inherit;
-        }
-    }
-    .footer_phone {
-        padding: 10px 0;
-    }
     .property_logo {
         max-width: 282px; 
         img {
             max-width: 100%;
         }
     }
+    #footer_menu {
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+            li {
+                display: inline-block;
+            }
+        }
+    }
+    
 }
 .footer_social {
     padding: 15px 0;
