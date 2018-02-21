@@ -121,6 +121,7 @@ footer {
     }
     #newsletter_form {
         input {
+            margin: 0;
             max-width: 498px;
             height: 66px;
             display: inline-block;
