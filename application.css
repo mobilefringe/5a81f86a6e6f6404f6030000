@@ -6,7 +6,12 @@ $font: #000;
 $social: #000;
 $link: #000;
 
-
+.language_select {
+    font-size: 14px;
+    line-height: 19px;
+    letter-spacing: 3.3;
+    
+}
 .property_logo {
     margin: 32px auto;
     max-width: 282px;
