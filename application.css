@@ -110,7 +110,11 @@ footer {
 .newsletter_subscription {
     .newsletter_content_container {
         margin: 0 auto;
+        margin-top: 84px;
         max-width: 1150px;
+        height: 464px;
+        border: 4px solid #000;
+        border-bottom: none;
     }
 }
 .footer {
