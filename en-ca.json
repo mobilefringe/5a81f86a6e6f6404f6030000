@@ -20,18 +20,15 @@
         "jobs" : "Jobs"
     },
     "footer": {
-
-        "subscribe_thankyou" : "Thank you for subscribing to our newsletter.",
-        
-        
         "newsletter" : "Newsletter",
         "subscription": "Subscription",
         "newsletter_desc" : "For updates, promotions, events & more",
         "enter_email" : "Enter Your Email",
         "subscribe" : "Subscribe",
+        "subscribe_thankyou" : "Thank you for subscribing to our newsletter.",
         "all_rights" : "All Rights Reserved.",
         "privacy_policy" : "Privacy Policy",
-        "powered_by" : "Powered by",
+        "powered_by" : "Powered by"
     },
   "home_page": {
     "explore" : "Explore",
