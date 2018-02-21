@@ -23,6 +23,23 @@ $font: #000;
 $social: #000;
 $link: #000;
 
+$font_family:'Raleway', 'Helvetica', 'Arial', sans-serif;
+
+[v-cloak] {
+  display:none!important;
+}
+html { 
+    font-size: 16px;
+    overflow-x: hidden !important;
+}
+body {
+    color: #4D4D4D;
+    font-family: $font_family;
+    font-size: 18px;
+    line-height: 28px;
+    overflow-x: hidden;
+    transition: all 0.3s ease;
+}
 h1 {
     font-family: 'Didot-Bold';
     font-size: 78px;
@@ -40,6 +57,11 @@ h3 {
 h4 {
     
 }
+hr{
+  max-width: 100%;
+}
+
+/* *** HEADER *** */
 .header_logo {
     display: -webkit-box;
     display: -webkit-flex;
