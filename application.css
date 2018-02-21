@@ -103,6 +103,10 @@ $link: #000;
 }
 
 /* FOOTER */
+footer {
+    background-image: url(http://placehold.it/1920x650);
+    background-position: center center;
+}
 .footer {
     position: relative;
     padding: 20px 0;
