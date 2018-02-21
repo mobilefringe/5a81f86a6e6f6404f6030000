@@ -1,7 +1,7 @@
 <template>
     <footer>
         <div class="newsletter_subscription">
-            <div class="subscribeBlog content_container">
+            <div class="newsletter_content_container">
                  <h4 class="caps">{{$t("footer.stay_uptodate")}}</h4> 
                  <div id="newsletterBlogForm">
                     <label for="fieldEmail" style="display:none"></label>
