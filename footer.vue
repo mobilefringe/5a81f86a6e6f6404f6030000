@@ -61,7 +61,7 @@
                     // search: '',    
                 }
             },
-            props:['menu_items', 'social_media'],
+            props:['footer_menu_items', 'social_media'],
             computed: {
                 ...Vuex.mapGetters([
                     'property',
