@@ -1,6 +1,6 @@
 <template>
     <footer>
-        <div class="home_subscription hidden_phone">
+        <div class="newsletter_subscription">
             <div class="subscribeBlog content_container">
                  <h4 class="caps">{{$t("footer.stay_uptodate")}}</h4> 
                  <div id="newsletterBlogForm">
