@@ -2,7 +2,7 @@
     <header>
         <div class="sticky">
 			<div class="site_container">
-				<div class="row">
+				<div class="row header_logo">
 					<div class="col-sm-3">
 					    <div class="language_select">
 					        <span @click="changeLocale('en-ca')">en</span> | <span @click="changeLocale('fr-ca')">fr</span>
