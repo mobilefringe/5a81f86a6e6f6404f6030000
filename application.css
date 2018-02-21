@@ -170,6 +170,7 @@ footer {
             list-style-type: none;
             .menu_item {
                 display: inline-block;
+                font-size: 16px;
             }
         }
     }
