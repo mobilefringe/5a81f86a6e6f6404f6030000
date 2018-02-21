@@ -14,7 +14,7 @@
         </div>
 		<div class="footer">
 			<div class="site_container">
-			    <div class="row">
+			    <div class="row footer_logo">
 			        <div class="col-md-4">
 			            <div class="property_logo">
 					        <router-link to="/">
