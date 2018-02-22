@@ -57,12 +57,12 @@
         "no_promo_message" : "There are no Promotions at this time. Please check back soon.",
         "back_to_promos" : "Back to Promotions"
     },
-  "events_page": {
-    "events" : "Events",
-    "read_more" : "Read More",
-    "no_event_message" : "There are no Events at this time. Please check back soon.",
-    "back_to_events" : "Back to Events"
-  },
+    "events_page": {
+        "events" : "Upcoming Events",
+        "read_more" : "Check It Out",
+        "no_event_message" : "There are no Events at this time. Please check back soon.",
+        "back_to_events" : "Back to Events"
+    },
   "jobs_page": {
     "jobs" : "Jobs",
     "read_more" : "Read More",
