@@ -280,6 +280,7 @@ footer {
     padding: 18px 0 0 44px;
     width: calc(50%);
     height: 264px;
+    position: relative;
     display: inline-block;
     outline: solid 16px #FFF;
     border: solid 3px #D6D6D6;
@@ -287,6 +288,12 @@ footer {
     background: #FFF;
     h2 {
         color: #000;
+    }
+    p {
+        position: absolute;
+        bottom: 0;
+        font-size: 18px;
+        line-height: 28px;
     }
 }
 .details_store_image {
