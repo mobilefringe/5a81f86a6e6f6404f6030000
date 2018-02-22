@@ -46,6 +46,7 @@ h1 {
     color: #FFF;
 }
 h2 {
+    margin: 0;
     font-family: 'Didot-Bold';
     font-size: 56px;
     line-height: 74px;
@@ -275,8 +276,8 @@ footer {
 
 /* *** STORE DETAILS *** */
 .details_store_name {
-    margin-top: 86px;
-    margin-left: 16px;
+    margin: 86px 0 0 16px;
+    padding: 18px 0 0 44px;
     width: calc(50%);
     height: 264px;
     display: inline-block;
