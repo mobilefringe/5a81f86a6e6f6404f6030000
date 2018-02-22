@@ -19,14 +19,15 @@
 					<div class="promo_container" v-for="(promo, index) in paginated('promos')">
 					    <div class="promo_img" v-lazy:background-image="promo.image_url"></div>
 					    <div class="promo_content">
-					        <h4 class="event_name caps" v-if="locale=='en-ca'">{{promo.name}}</h4>-->
-							<h4 class="event_name caps" v-else>{{promo.name_2}}</h4>
+					        <h3 class="event_name caps" v-if="locale=='en-ca'">{{promo.name}}</h3>
+							<h3 class="event_name caps" v-else>{{promo.name_2}}</h3>
 					        <p class="event_desc"  v-if="locale=='en-ca'" >{{promo.description_short}}</p>
 							<p class="event_desc" v-else>{{promo.description_short_2}}</p>
 							<router-link :to="'/promotions/'+ promo.slug" class="event_learn_more pull-left">
 								   {{$t("promos_page.read_more")}} <i class="fa fa-angle-right" aria-hidden="true"></i>
 						    </router-link>
 					    </div>
+					</div>
 						<!--<div class="col-sm-6 col-md-4 event_image_container">-->
 						<!--	<router-link :to="'/promotions/'+ promo.slug" class="event_learn_more">-->
 						<!--		<img v-lazy="promo.store.image_url"  class="event_image image" alt=""/>-->
