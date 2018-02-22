@@ -2304,11 +2304,11 @@ strong, .bold {
 .promo_margin {
     margin-top: 226px;
 }
-.promo_container {
-    margin-bottom: 40px;
-    position: relative;
-    border: 1px solid #000;
-}
+// .promo_container {
+//     margin-bottom: 40px;
+//     position: relative;
+//     border: 1px solid #000;
+// }
 .promo_img_container {
     height: 225px;
     text-align: center;
