@@ -277,11 +277,11 @@ footer {
     margin-left: 16px;
     width: calc(50%);
     height: 264px;
+    display: inline-block;
     outline: solid 16px #FFF;
     border: solid 3px #D6D6D6;
     border-right: none;
     background: #FFF;
-    display: inline-block;
 }
 .details_store_image {
     margin-top: 30px;
@@ -289,4 +289,13 @@ footer {
     height: 566px;
     display: inline-block;
     float: right;
+}
+.details_store_desc {
+    margin: 41px 16px 70px 16px;
+    width: calc(50% - 32px);
+    height: 364px;
+    display: inline-block;
+    outline: solid 16px #FFF;
+    border: solid 3px #D6D6D6;
+    background: #FFF;
 }
