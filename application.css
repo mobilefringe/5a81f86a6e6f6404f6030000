@@ -311,6 +311,7 @@ footer {
         font-family: 'didot-bold';
         font-size: 12px;
         line-height: 20px;
+        text-transform: uppercase;
         text-align: center;
     }
 }
