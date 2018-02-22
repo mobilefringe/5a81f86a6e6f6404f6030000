@@ -3,18 +3,21 @@
         <loader v-if="!dataLoaded"></loader>
         <transition name="fade">
             <div v-if="dataLoaded" v-cloak class="site_container">
-                <div>
-                    <h3>{{ currentStore.name}}</h3>
-                    <p>{{ storeCategory }}</p>
-                </div>
-    			<div class="row">
-    				<div class="col-sm-4 promo_logo_container hidden_phone">
-    					<div class="image_container">
-    						<img v-lazy="currentStore.image_url" class="image"/>
-    					</div>
+                <div class="">
+                    <div class="details_store_name">
+                        <h3>{{ currentStore.name}}</h3>
+                        <p>{{ storeCategory }}</p>
+                    </div>
+    
+					<div class="details_store_image">
+						<img v-lazy="currentStore.image_url" class="image"/>
+					</div>
+    				<div class="details_store_desc">
+    				    <div v-hml="currentStore.description"></div>
+    				    <a :href="'//'+currentStore.website" target="_blank"><div>{{$t("stores_page.store_website")}}</div></a>
     				</div>
     				
-    			</div>
+
 			
     			<div class="row margin_30">
     				<div class="col-sm-4">
