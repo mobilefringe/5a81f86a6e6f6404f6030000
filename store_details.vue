@@ -11,6 +11,7 @@
     
 					<div class="details_store_image">
 						<img v-lazy="currentStore.store_front_url_abs" class="image"/>
+						<p v-if="currentStore.phone" class="details_store_phone">{{ currentStore.phone }}</p>
 					</div>
     				<div class="details_store_desc">
     				    <div v-html="currentStore.description"></div>
