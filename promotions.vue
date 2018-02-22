@@ -21,9 +21,9 @@
 					    <div class="promo_content">
 					        <h4 class="event_name caps" v-if="locale=='en-ca'">{{promo.name}}</h4>-->
 							<h4 class="event_name caps" v-else>{{promo.name_2}}</h4>
-					        <p class="event_desc"  v-if="locale=='en-ca'" >{{promo.description_short}}</p>-->
+					        <p class="event_desc"  v-if="locale=='en-ca'" >{{promo.description_short}}</p>
 							<p class="event_desc" v-else>{{promo.description_short_2}}</p>
-							<router-link :to="'/promotions/'+ promo.slug" class="event_learn_more pull-left">-->
+							<router-link :to="'/promotions/'+ promo.slug" class="event_learn_more pull-left">
 								   {{$t("promos_page.read_more")}} <i class="fa fa-angle-right" aria-hidden="true"></i>
 						    </router-link>
 					    </div>
