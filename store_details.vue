@@ -143,9 +143,7 @@
                     'processedStores',
                     'findStoreBySlug',
                     'findPromoById',
-                    'findJobById',
-                    'findRepoByName',
-                    'findHourById'
+                    'findCategoryById'
                 ]),
                 storeCategory() {
                     var currentStoreCategory = this.currentStore.categories[0];
