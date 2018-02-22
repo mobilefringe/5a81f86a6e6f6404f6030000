@@ -14,7 +14,9 @@
 					</div>
     				<div class="details_store_desc">
     				    <div v-html="currentStore.description"></div>
-    				    <a :href="'//'+currentStore.website" target="_blank"><div>{{$t("stores_page.store_website")}}</div></a>
+    				    <a v-if="currentStore.website" :href="'//' + currentStore.website" target="_blank">
+    				        <div class="details_store_website">{{$t("stores_page.store_website")}}</div>
+    				    </a>
     				</div>
     			</div>
 		    </div>
@@ -153,21 +155,13 @@
                     var currentStoreCategory = this.currentStore.categories[0];
                     category = this.findCategoryById(currentStoreCategory)
                     return category.name
-                },
-                getPNGurl () {
-                    return "https://www.mallmaverick.com" + this.property.map_url;
-                },
-                // svgMapRef() {
-                //     return _.filter(this.$children, function(o) {
-                //         return (o.$el.className == "svg-map")
-                //     })[0];
-                // },
+                }
             },
             methods: {
                 loadData: async function() {
                     try {
                         // avoid making LOAD_META_DATA call for now as it will cause the entire Promise.all to fail since no meta data is set up.
-                        let results = await Promise.all([this.$store.dispatch("getData","categories")]);
+                        let results = await Promise.all([this.$store.dispatch("getData", "categories")]);
                     } catch (e) {
                         console.log("Error loading data: " + e.message);
                     }
