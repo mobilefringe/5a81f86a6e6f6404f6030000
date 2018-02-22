@@ -13,7 +13,7 @@
 						<img v-lazy="currentStore.image_url" class="image"/>
 					</div>
     				<div class="details_store_desc">
-    				    <div v-hml="currentStore.description"></div>
+    				    <div v-html="currentStore.description"></div>
     				    <a :href="'//'+currentStore.website" target="_blank"><div>{{$t("stores_page.store_website")}}</div></a>
     				</div>
     			</div>
