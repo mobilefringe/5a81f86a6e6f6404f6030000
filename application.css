@@ -27,12 +27,6 @@ $font_family: 'Raleway', 'Helvetica', 'Arial', sans-serif;
 [v-cloak] {
     display: none!important;
 }
-.content {
-    margin-top: 148px;
-    v-webkit-box-flex: 1;
-    -ms-flex: 1 0 auto;
-    flex: 1 0 auto;
-}
 html { 
     font-size: 16px;
     overflow-x: hidden !important;
@@ -65,6 +59,12 @@ h4 {
 }
 hr{
   max-width: 100%;
+}
+.content {
+    margin-top: 148px;
+    v-webkit-box-flex: 1;
+    -ms-flex: 1 0 auto;
+    flex: 1 0 auto;
 }
 .grey_background {
     background-color: #D6D6D6;
