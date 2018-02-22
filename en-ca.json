@@ -52,7 +52,8 @@
         "find_store" : "Find Store"
     },
     "promos_page": {
-        "promotions" : "Upcoming Promotions",
+        "promotions_title" : "Upcoming Promotions",
+        "promotions" : "Promotions",
         "read_more" : "Check It Out",
         "no_promo_message" : "There are no Promotions at this time. Please check back soon.",
         "back_to_promos" : "Back to Promotions"
