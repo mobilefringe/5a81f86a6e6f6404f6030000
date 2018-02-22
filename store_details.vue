@@ -54,16 +54,17 @@
     				<!--</div>-->
 
 <script>
-    define(['Vue', 'vuex', 'moment', "jquery", "smooth-zoom", "vue!png-map", 'vue-lazy-load'], function(Vue, Vuex, moment, $, smoothZoom, PNGMapComponent, VueLazyload) {
+    define(['Vue', 'vuex', 'moment', 'vue-lazy-load'], function(Vue, Vuex, moment, VueLazyload) {
         Vue.use(VueLazyload);
         return Vue.component("store-details-component", {
             template: template, // the variable template will be injected,
             data: function() {
                 return {
+                    dataLoaded: false,
                     currentStore: null,
                     promotions : [],
                     jobs:[],
-                    dataLoaded: false,
+                    
                     pageBanner : null ,
                     storeHours :[]
                 }
@@ -80,11 +81,11 @@
                 this.loadData().then(response => {
                     this.dataLoaded = true;
                     this.updateCurrentStore(this.id);
-                    var temp_repo = this.findRepoByName('Stores Banner');
-                    if(temp_repo) {
-                        this.pageBanner = temp_repo.images[0];
-                    }
-                    this.pageBanner = this.pageBanner;
+                    // var temp_repo = this.findRepoByName('Stores Banner');
+                    // if(temp_repo) {
+                    //     this.pageBanner = temp_repo.images[0];
+                    // }
+                    // this.pageBanner = this.pageBanner;
                 });
                  console.log("locale created", this.locale);
             },
