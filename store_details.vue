@@ -5,6 +5,7 @@
             <div v-if="dataLoaded" v-cloak class="site_container">
                 <div>
                     <h3>{{ currentStore.name}}</h3>
+                    <p>{{ storeCategory }}</p>
                 </div>
     			<div class="row">
     				<div class="col-sm-4 promo_logo_container hidden_phone">
@@ -160,6 +161,11 @@
                     'findRepoByName',
                     'findHourById'
                 ]),
+                storeCategory() {
+                    var currentStoreCategory = this.currentStore.categories[0];
+                    category = this.findCategoryById(currentStoreCategory)
+                    return category.name
+                },
                 getPNGurl () {
                     return "https://www.mallmaverick.com" + this.property.map_url;
                 },
