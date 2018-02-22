@@ -2374,13 +2374,13 @@ strong, .bold {
     line-height: 45px;
     color: #000;
 }
-.details_store_name {
-    margin-top: 0;
-    margin-bottom: 10px;
-    font-size: 1.25rem;
-    color: #4A4A4A;
-    text-transform: uppercase;
-}
+// .details_store_name {
+//     margin-top: 0;
+//     margin-bottom: 10px;
+//     font-size: 1.25rem;
+//     color: #4A4A4A;
+//     text-transform: uppercase;
+// }
 .read_more_btn {
     padding: 6px 20px;
     width: 160px;
