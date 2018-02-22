@@ -3,7 +3,9 @@
         <loader v-if="!dataLoaded"></loader>
         <transition name="fade">
             <div v-if="dataLoaded" v-cloak class="site_container">
-
+                <div>
+                    <h3>{{ currentStore.name}}</h3>
+                </div>
     			<div class="row">
     				<div class="col-sm-4 promo_logo_container hidden_phone">
     					<div class="image_container">
