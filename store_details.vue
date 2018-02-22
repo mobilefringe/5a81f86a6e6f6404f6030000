@@ -92,8 +92,9 @@
             watch: {
                 currentStore: function() {
                     console.log(this.currentStore)
+                    console.log(this.currentStore.store_front_url_abs)
                     if ( _.includes(this.currentStore.store_front_url_abs, 'missing')) {
-                        console.log(this.currentStore.store_front_url_abs)
+                        
                         this.currentStore.store_front_url_abs = "//codecloud.cdn.speedyrails.net/sites/5a81f86a6e6f6404f6030000/image/png/1516652189884/ES_logo_red2.png";
                     }
                     // var vm = this;
