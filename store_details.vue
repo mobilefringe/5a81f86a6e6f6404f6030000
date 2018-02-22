@@ -148,8 +148,9 @@
                     'findCategoryById'
                 ]),
                 storeCategory() {
-                    // var currentStoreCategory = this.currentStore.categories[0];
-                    // category = this.findCategoryById(currentStoreCategory)
+                    var currentStoreCategory = this.currentStore.categories[0];
+                    category = this.findCategoryById(currentStoreCategory)
+                    console.log(category)
                     // return category.name
                 },
                 getPNGurl () {
