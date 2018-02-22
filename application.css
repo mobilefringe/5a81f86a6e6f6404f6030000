@@ -262,3 +262,23 @@ footer {
 .footer_conduct p, .footer_terms p {
     font-size: 0.75rem;
 }
+
+/* *** STORE DETAILS *** */
+.details_store_name {
+    margin-top: 70px;
+    margin-left: 16px;
+    width: calc(50%);
+    height: 264px;
+    outline: solid 16px #FFF;
+    border: solid 3px #D6D6D6;
+    border-right: none;
+    background: #FFF;
+    display: inline-block;
+}
+.store_details_image {
+    margin-top: 30px;
+    width: calc(50% - 20px);
+    height: 566px;
+    display: inline-block;
+    float: right;
+}
