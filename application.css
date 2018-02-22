@@ -292,8 +292,9 @@ footer {
 }
 .details_store_desc {
     margin: 41px 16px 70px 16px;
+    padding: 48px 34px;
     width: calc(50% - 32px);
-    height: 364px;
+    min-height: 364px;
     display: inline-block;
     outline: solid 16px #FFF;
     border: solid 3px #D6D6D6;
