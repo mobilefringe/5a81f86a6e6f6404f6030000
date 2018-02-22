@@ -150,8 +150,8 @@
                 storeCategory() {
                     var currentStoreCategory = this.currentStore.categories[0];
                     console.log(currentStoreCategory)
-                    // category = this.findCategoryById(currentStoreCategory)
-                    // console.log(category)
+                    category = this.findCategoryById(currentStoreCategory)
+                    console.log(category)
                     // return category.name
                 },
                 getPNGurl () {
