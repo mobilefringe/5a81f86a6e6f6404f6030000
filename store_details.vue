@@ -5,7 +5,7 @@
             <div v-if="dataLoaded" v-cloak class="site_container">
                 <div class="">
                     <div class="details_store_name">
-                        <h3>{{ currentStore.name}}</h3>
+                        <h2>{{ currentStore.name}}</h2>
                         <p>{{ storeCategory }}</p>
                     </div>
     
