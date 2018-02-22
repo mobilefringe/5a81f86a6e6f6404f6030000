@@ -11,7 +11,7 @@
 		<div class="site_container page_content">
 		    <div class="row">
 		        <div class="col-md-12">
-		            <h3>{{$t("promos.page_title")}}</h3>
+		            <h3>{{$t("promos_page.promotions")}}</h3>
 		        </div>
 		    </div>
 			<div id="events_container" v-if="promotions.length > 0">
