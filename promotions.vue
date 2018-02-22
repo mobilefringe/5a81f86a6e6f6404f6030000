@@ -63,9 +63,6 @@
 						<!--		</social-sharing>-->
 						<!--	</div>-->
 						<!--</div>-->
-						<div class="col-sm-12">
-							<hr>
-						</div>
 					</div>
 				</paginate>
 			</div>
