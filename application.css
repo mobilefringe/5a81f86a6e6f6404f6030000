@@ -285,6 +285,9 @@ footer {
     border: solid 3px #D6D6D6;
     border-right: none;
     background: #FFF;
+    h2 {
+        color: #000;
+    }
 }
 .details_store_image {
     margin-top: 30px;
