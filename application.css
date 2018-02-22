@@ -298,7 +298,7 @@ footer {
 }
 .details_store_image {
     margin-top: 30px;
-    width: calc(50% - 20px);
+    width: calc(50% - 16px);
     height: 566px;
     display: inline-block;
     float: right;
