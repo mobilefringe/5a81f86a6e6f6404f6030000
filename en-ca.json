@@ -51,12 +51,12 @@
         "about_us" : "About Us",
         "find_store" : "Find Store"
     },
-  "promos_page": {
-    "promotions" : "Promotions",
-    "read_more" : "Read More",
-    "no_promo_message" : "There are no Promotions at this time. Please check back soon.",
-    "back_to_promos" : "Back to Promotions"
-  },
+    "promos_page": {
+        "promotions" : "Promotions",
+        "read_more" : "Read More",
+        "no_promo_message" : "There are no Promotions at this time. Please check back soon.",
+        "back_to_promos" : "Back to Promotions"
+    },
   "events_page": {
     "events" : "Events",
     "read_more" : "Read More",
