@@ -332,3 +332,13 @@ footer {
         text-align: center;
     }
 }
+
+@media(max-width: 1024px){
+    .site_container {
+        padding: 0 15px;
+        max-width: 100%;
+        
+    }
+}    
+    
+}
