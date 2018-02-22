@@ -292,6 +292,10 @@ footer {
     display: inline-block;
     float: right;
 }
+.details_store_phone {
+    margin-top: 70px;
+    text-align: center;
+}
 .details_store_desc {
     margin: 41px 16px 70px 16px;
     padding: 48px 34px;
