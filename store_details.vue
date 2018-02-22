@@ -152,7 +152,7 @@
                     console.log(currentStoreCategory)
                     category = this.findCategoryById(currentStoreCategory)
                     console.log(category)
-                    // return category.name
+                    return category.name
                 },
                 getPNGurl () {
                     return "https://www.mallmaverick.com" + this.property.map_url;
