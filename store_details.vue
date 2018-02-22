@@ -16,24 +16,13 @@
     				    <div v-hml="currentStore.description"></div>
     				    <a :href="'//'+currentStore.website" target="_blank"><div>{{$t("stores_page.store_website")}}</div></a>
     				</div>
-    				
+    			</div>
+		    </div>
+		</transition>
+	</div>
+</template>
 
-			
-    			<div class="row margin_30">
-    				<div class="col-sm-4">
-    					<div class="text-center">
-    						<h4 v-if="currentStore.phone" class="store_dets_title"> {{currentStore.phone}}</h4>
-    						<h4 v-if="currentStore.website" class="store_dets_title"> <a :href="'//'+currentStore.website" target="_blank">{{$t("stores_page.store_website")}}</a></h4>
-    						<h4 v-if="storeHours.length > 0 " class="store_dets_title">{{$t("stores_page.store_hours")}}</h4>
-    						<ul class="store_hours_list">
-    							<li v-if="storeHours" v-for="hour in storeHours" class="col-xs-12">
-    								<span class="col-xs-6 text-left">{{hour.day_of_week | moment("dddd", timezone)}}</span>
-    								<span class="col-xs-6 text-left">{{hour.open_time | moment("h A", timezone)}} - {{hour.close_time | moment("h A", timezone)}}</span>
-    							</li>
-    						</ul>
-    					</div>
-    				</div>
-    				<!--<hr class="green_hr visible_phone">-->
+<!--<hr class="green_hr visible_phone">-->
     				<!--<div class="col-sm-8 text-left">-->
     				<!--	<h4 v-if="currentStore.rich_description" class="store_dets_title caps"> {{$t("stores_page.about_us")}}</h4>-->
     				<!--	<div class="text-left promo_description">-->
@@ -63,12 +52,6 @@
     				<!--		</div>-->
     				<!--	</div>-->
     				<!--</div>-->
-    			</div>
-		    </div>
-		</transition>
-	</div>
-</template>
-
 
 <script>
     define(['Vue', 'vuex', 'moment', "jquery", "smooth-zoom", "vue!png-map", 'vue-lazy-load'], function(Vue, Vuex, moment, $, smoothZoom, PNGMapComponent, VueLazyload) {
