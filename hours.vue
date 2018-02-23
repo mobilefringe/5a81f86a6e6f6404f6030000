@@ -76,17 +76,17 @@
             props:['locale'],
             data: function() {
                 return {
+                    dataLoaded: false,
                     pageBanner : null
                 }
             },
             created() {
                 this.loadData().then(response => {
-                    
+                    this.dataLoaded = true;
                     this.pageBanner = this.findRepoByName('Hours Banner').images[0];
-                   console.log(this.pageBanner); 
-                   console.log("locale created", this.locale);
+                    console.log(this.pageBanner); 
+                    console.log("locale created", this.locale);
                 });
-                
             },
             watch : {
                 locale: function(val, oldVal) {
