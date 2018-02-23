@@ -644,17 +644,17 @@ strong, .bold {
 	text-align: center;
 }
 
-#primary_nav ul .menu_item a {
-    padding: 0 15px;
-	display: block;
-	color: #FFF;
-	text-transform: uppercase;
-	text-decoration: none;
-	text-shadow: 0 1px 3px rgba(0,0,0,0.4);
-	&:hover {
-	    text-decoration: underline;
-	}
-}
+// #primary_nav ul .menu_item a {
+//     padding: 0 15px;
+// 	display: block;
+// 	color: #FFF;
+// 	text-transform: uppercase;
+// 	text-decoration: none;
+// 	text-shadow: 0 1px 3px rgba(0,0,0,0.4);
+// 	&:hover {
+// 	    text-decoration: underline;
+// 	}
+// }
 
 #primary_nav ul .menu_item {
 	margin: 0;
