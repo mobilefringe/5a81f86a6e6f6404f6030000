@@ -64,18 +64,18 @@
         "no_event_message" : "There are no Events at this time. Please check back soon.",
         "back_to_events" : "Back to Events"
     },
-  "jobs_page": {
-    "jobs" : "Jobs",
-    "read_more" : "Read More",
-    "no_job_message" : "There are no Jobs at this time. Please check back soon.",
-    "back_to_jobs" : "Back to Jobs"
-  },
-  "hours_page" : {
-    "hours" : "Hours",
-    "reg_hours" : "Regular Shopping Hours",
-    "extended_holiday_hours" : "Extended Holiday Hours",
-    "holiday_closures" : "Holiday Closures"
-  },
+    "jobs_page": {
+        "jobs" : "Jobs",
+        "read_more" : "Read More",
+        "no_job_message" : "There are no Jobs at this time. Please check back soon.",
+        "back_to_jobs" : "Back to Jobs"
+    },
+    "hours_page" : {
+        "hours" : "Hours",
+        "reg_hours" : "Regular Hours",
+        "extended_holiday_hours" : "Extended Holiday Hours",
+        "holiday_closures" : "Holiday Closures"
+    },
   "newsletter_page" : {
     "newsletter" : "Newsletter",
     "name" : "Name",
