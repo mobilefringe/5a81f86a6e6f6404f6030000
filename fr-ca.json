@@ -45,12 +45,13 @@
     "about_us" : "A propos de nous",
     "find_store" : "Trouver un magasin"
   },
-  "promos_page": {
-    "promotions" : "Promotions",
-    "read_more" : "Voir plus",
-    "no_promo_message" : "Il n'y a pas de promotions pour le moment. Revenez prochainement.",
-    "back_to_promos" : "Retour aux promotions"
-  },
+    "promos_page": {
+        "promotions_title" : "Promotions à venir",
+        "promotions" : "Promotion",
+        "read_more" : "Vérifiez-le",
+        "no_promo_message" : "Il n'y a pas de promotions pour le moment. Revenez prochainement.",
+        "back_to_promos" : "Retour aux promotions"
+    },
   "events_page": {
     "events" : "Evènements",
     "read_more" : "En savoir plus",
