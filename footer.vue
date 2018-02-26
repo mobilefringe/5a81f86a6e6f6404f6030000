@@ -4,7 +4,7 @@
             <div class="newsletter_content_container">
                  <h2 class="caps">{{$t("footer.newsletter")}}</h2>
                  <h1 class="caps">{{$t("footer.subscription")}}</h1>
-                 <h2 class="caps">{{$t("footer.newsletter_desc")}}</h2>
+                 <h3 class="caps">{{$t("footer.newsletter_desc")}}</h3>
                  <div id="newsletter_form">
                     <label for="fieldEmail" style="display:none"></label>
                     <input id="fieldEmail" name="cm-tkyhii-tkyhii" class="form-control" type="email" v-model="newsletter_email" :placeholder="$t('footer.enter_email')" required/> 
