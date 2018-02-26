@@ -10,7 +10,7 @@
         "centre_map" : "Carte du centre",
         "promos" : "Promotions",
         "events" : "Evènements",
-        "guest_services" : "Service Clientèle",
+        "guest_services" : "Guest Services",
         "services" : "Services",
         "gift_card" : "Cartes cadeaux",
         "contact" : "Contact",
@@ -52,24 +52,24 @@
         "no_promo_message" : "Il n'y a pas de promotions pour le moment. Revenez prochainement.",
         "back_to_promos" : "Retour aux promotions"
     },
-  "events_page": {
-    "events" : "Evènements",
-    "read_more" : "En savoir plus",
-    "no_event_message" : "Il n'y a pas d'évènements pour le moment. Nous vous tiendrons au courant ici.",
-    "back_to_events" : "Retour aux évènements"
-  },
-  "jobs_page": {
-    "jobs" : "Carrières",
-    "read_more" : "Voir plus",
-    "no_job_message" : "Il n'y a pas de jobs disponibles pour le moment. Revenez ultérieurement.",
-    "back_to_jobs" : "Retour à Carrières"
-  },
-  "hours_page" : {
-    "hours" : "Horaires",
-    "reg_hours" : "Horaires habituels du centre",
-    "extended_holiday_hours" : "Horaires de vacances du centre",
-    "holiday_closures" : "Fermé pour vacances"
-  },
+    "events_page": {
+        "events" : "Evènements",
+        "read_more" : "En savoir plus",
+        "no_event_message" : "Il n'y a pas d'évènements pour le moment. Nous vous tiendrons au courant ici.",
+        "back_to_events" : "Retour aux évènements"
+    },
+    "jobs_page": {
+        "jobs" : "Carrières",
+        "read_more" : "Voir plus",
+        "no_job_message" : "Il n'y a pas de jobs disponibles pour le moment. Revenez ultérieurement.",
+        "back_to_jobs" : "Retour à Carrières"
+    },
+    "hours_page" : {
+        "hours" : "Horaires",
+        "reg_hours" : "Horaires habituels du centre",
+        "extended_holiday_hours" : "Horaires de vacances du centre",
+        "holiday_closures" : "Fermé pour vacances"
+    },
   "newsletter_page" : {
     "newsletter" : "Newsletter",
     "name" : "Nom et Prénom",
