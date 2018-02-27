@@ -7,14 +7,14 @@
         		<div class="page_header"  v-bind:style="{ backgroundImage: 'url(http://via.placeholder.com/1920x600)' }">
         			<div class="site_container">
         				<div class="header_content caps">
-        					<h1>{{ $t("promos_page.promotions") }}</h1>
+        					<h1>{{ $t("events_page.events") }}</h1>
         				</div>
         			</div>
         		</div>
         		<div class="site_container page_content">
         		    <div class="row">
         		        <div class="col-md-12">
-        		            <h3 class="promo_page_title center">{{ $t("promos_page.promotions_title") }}</h3>
+        		            <h3 class="promo_page_title center">{{ $t("events_page.events_title") }}</h3>
         		        </div>
         		    </div>
         			<div id="promos_container" v-if="promotions.length > 0">
@@ -22,13 +22,13 @@
         					<div class="promo_container" v-for="(promo, index) in paginated('promos')">
         					    <div class="promo_img" v-lazy:background-image="promo.image_url"></div>
         					    <div class="promo_content">
-        					        <p class="promo_title">{{ $t("promos_page.promotions") }}</p>
+        					        <p class="promo_title">{{ $t("events_page.events") }}</p>
         					        <h3 class="" v-if="locale=='en-ca'">{{ promo.name_short }}</h3>
         							<h3 class="" v-else>{{ promo.name_short_2 }}</h3>
         					        <p class="promo_desc"  v-if="locale=='en-ca'" >{{ promo.description_short }}</p>
         							<p class="promo_desc" v-else>{{ promo.description_short_2 }}</p>
         							<router-link :to="'/promotions/'+ promo.slug" >
-        								   <div class="promo_learn_more animated_btn">{{ $t("promos_page.read_more") }}</div>
+        								   <div class="promo_learn_more animated_btn">{{ $t("events_page.read_more") }}</div>
         						    </router-link>
         					    </div>
         					</div>
@@ -36,7 +36,7 @@
         			</div>
         			<div class="row" v-else>
         				<div class="col-md-12">
-        					<p>{{$t("promos_page.no_promo_message")}}</p>
+        					<p>{{$t("events_page.no_events_message")}}</p>
         				</div>
         			</div>
         			<div class="row">
