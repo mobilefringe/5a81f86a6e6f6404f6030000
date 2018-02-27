@@ -59,10 +59,9 @@
             template: template, // the variable template will be injected,
             data: function data() {
                 return {
+                    footerBanner: "",
                     newsletter_email: "",
-                    
-                    // suggestionAttribute: 'name',
-                    // search: '',    
+    
                 }
             },
             props:['footer_menu_items', 'social_media'],
@@ -72,16 +71,14 @@
                     
                     var temp_repo = this.findRepoByName('Jobs Banner');
                     if(temp_repo) {
-                        this.pageBanner = temp_repo.images[0];
+                        this.footerBanner = temp_repo.images[0];
                     }
-                    
-                    this.promos = this.promotions;
                 });
             },
             computed: {
                 ...Vuex.mapGetters([
                     'property',
-                    'processedStores'
+                    'findRepoByName',
                 ]),
                 copyright_year() {
                     return moment().year();
@@ -90,7 +87,6 @@
             methods: {
                 loadData: async function() {
                     try {
-                        // avoid making LOAD_META_DATA call for now as it will cause the entire Promise.all to fail since no meta data is set up.
                         let results = await Promise.all([this.$store.dispatch("getData", "repos")]);
                     } catch (e) {
                         console.log("Error loading data: " + e.message);
