@@ -66,6 +66,18 @@
                 }
             },
             props:['footer_menu_items', 'social_media'],
+            created() {
+                this.loadData().then(response => {
+                    this.dataLoaded = true;
+                    
+                    var temp_repo = this.findRepoByName('Jobs Banner');
+                    if(temp_repo) {
+                        this.pageBanner = temp_repo.images[0];
+                    }
+                    
+                    this.promos = this.promotions;
+                });
+            },
             computed: {
                 ...Vuex.mapGetters([
                     'property',
@@ -76,6 +88,14 @@
                 }
             },
             methods: {
+                loadData: async function() {
+                    try {
+                        // avoid making LOAD_META_DATA call for now as it will cause the entire Promise.all to fail since no meta data is set up.
+                        let results = await Promise.all([this.$store.dispatch("getData", "repos")]);
+                    } catch (e) {
+                        console.log("Error loading data: " + e.message);
+                    }
+                },
                 onOptionSelect(option) {
                     console.log('Selected option:', option);
                     this.$nextTick(function() {
