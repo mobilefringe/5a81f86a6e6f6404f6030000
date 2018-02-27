@@ -69,7 +69,7 @@
         "hours" : "Horaires",
         "reg_hours" : "Horaires habituels du centre",
         "holiday_hours" : "Heures de vacances",
-        "closed" : "Closed"
+        "closed" : "Fermé"
     },
     "newsletter_page" : {
         "newsletter" : "Newsletter",
