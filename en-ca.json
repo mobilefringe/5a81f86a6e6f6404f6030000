@@ -78,7 +78,8 @@
         "header_desc" : "Regular & Holiday Hours",
         "hours" : "Hours",
         "reg_hours" : "Regular Hours",
-        "holiday_hours" : "Holiday Hours"
+        "holiday_hours" : "Holiday Hours",
+        "closed" : "Closed"
     },
   "newsletter_page" : {
     "newsletter" : "Newsletter",
