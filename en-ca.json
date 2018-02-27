@@ -75,6 +75,7 @@
         "back_to_jobs" : "Back to Jobs"
     },
     "hours_page" : {
+        "header_desc" : "Regular & Holiday Hours",
         "hours" : "Hours",
         "reg_hours" : "Regular Hours",
         "extended_holiday_hours" : "Extended Holiday Hours",
