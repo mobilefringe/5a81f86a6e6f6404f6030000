@@ -65,20 +65,21 @@
         "back_to_jobs" : "Retour à Carrières"
     },
     "hours_page" : {
+        "header_desc" : "Regular & Holiday Hours",
         "hours" : "Horaires",
         "reg_hours" : "Horaires habituels du centre",
-        "extended_holiday_hours" : "Horaires de vacances du centre",
-        "holiday_closures" : "Fermé pour vacances"
+        "holiday_hours" : "Heures de vacances",
+        "closed" : "Closed"
     },
-  "newsletter_page" : {
-    "newsletter" : "Newsletter",
-    "name" : "Nom et Prénom",
-    "email" : "E-mail",
-    "agree" : "Oui, j'aimerais recevoir des nouvelles concernant les évènements, promotions et annonces diverses de votre part",
-    "subscribe" : "Inscription",
-    "success" : "Réussie", 
-    "error": "Erreur",
-    "thank_you_message" : "Nous vous remercions de votre inscription à notre newsletter. Vous aurez de nos nouvelles prochainement!",
-    "error_message" : "Il semblerait qu'une erreur se soit produite lors de la transmission de votre demande. Merci de réessayer dans quelques instants."
-  }
+    "newsletter_page" : {
+        "newsletter" : "Newsletter",
+        "name" : "Nom et Prénom",
+        "email" : "E-mail",
+        "agree" : "Oui, j'aimerais recevoir des nouvelles concernant les évènements, promotions et annonces diverses de votre part",
+        "subscribe" : "Inscription",
+        "success" : "Réussie", 
+        "error": "Erreur",
+        "thank_you_message" : "Nous vous remercions de votre inscription à notre newsletter. Vous aurez de nos nouvelles prochainement!",
+        "error_message" : "Il semblerait qu'une erreur se soit produite lors de la transmission de votre demande. Merci de réessayer dans quelques instants."
+    }
 }
