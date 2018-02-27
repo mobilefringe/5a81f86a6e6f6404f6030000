@@ -8,7 +8,7 @@
         			<div class="site_container">
         				<div class="header_content caps">
         				    <p>{{ $t("jobs_page.jobs_header_desc") }}</p>
-        					<h1>{{ $t("jobs_page.promotions") }}</h1>
+        					<h1>{{ $t("jobs_page.jobs") }}</h1>
         				</div>
         			</div>
         		</div>
