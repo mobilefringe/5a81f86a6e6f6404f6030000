@@ -81,6 +81,7 @@
             props:['locale'],
             data: function() {
                 return {
+                    dataLoaded: false,
                     selectedDate: null,
                     filteredPromos:[],
                     dataloaded: false,
@@ -91,7 +92,7 @@
             },
             created() {
                 this.loadData().then(response => {
-                    this.dataloaded = true;
+                    this.dataLoaded = true;
                     
                     // var temp_repo = this.findRepoByName('Jobs Banner');
                     // if(temp_repo) {
