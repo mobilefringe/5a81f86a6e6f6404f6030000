@@ -79,10 +79,10 @@
             template: template, // the variable template will be injected,
             data: function() {
                 return {
+                    dataLoaded: false,
                     currentJob: null,
                     storeJobs : null,
                     storeHours : null,
-                    jobBanner : null
                 }
             },
             props:['id', 'locale'],
@@ -95,6 +95,7 @@
             },
             created(){
                 this.loadData().then(response => {
+                    this.dataLoaded = true;
                     this.updateCurrentJob(this.id);
                     var temp_repo = this.findRepoByName('Jobs Banner');
                     if(temp_repo) {
