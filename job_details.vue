@@ -3,68 +3,69 @@
         <loader v-if="!dataLoaded"></loader>
         <transition name="fade">
             <div v-if="dataLoaded" v-cloak>
-        		<div class="site_container page_content">
-        			<div v-if="promotions.length > 0">
+        		<div class="site_container">
+				    <div class="job_details_container clearfix">
+					    <div class="promo_img" v-lazy:background-image="promo.image_url"></div>
+					    <div class="promo_content">
+					        <h3 class="">{{ promo.store_name }}</h3>
+					        <p v-if="promo.store_category">{{ promo.store_category }}</p>
+							<p></p>
+							<hr>
+					        <p class="job_position">{{ $t("jobs_page.position") }}: {{ promo.job_type }}</p>
+							<p class="job_date">{{ $t("jobs_page.end_date") }}: {{promo.end_date | moment("MMMM DD, YYYY", timezone)}}</p>
+					    </div>
+					    <div class="job_details_desc">
+        				    <div v-html="currentStore.description"></div>
+        				    <a v-if="currentStore.website" :href="'//' + currentStore.website" target="_blank">
+        				        <div class="details_store_website">{{$t("stores_page.store_website")}}</div>
+        				    </a>
+        				</div>
+					</div>
         				
-        				    <div class="promo_container jobs clearfix" v-for="(promo, index) in paginated('promos')">
-        					    <div class="promo_img" v-lazy:background-image="promo.image_url"></div>
-        					    <div class="promo_content">
-        					        <h3 class="">{{ promo.store_name }}</h3>
-        					        <p v-if="promo.store_category">{{ promo.store_category }}</p>
-        							<p></p>
-        							<hr>
-        					        <p class="job_position">{{ $t("jobs_page.position") }}: {{ promo.job_type }}</p>
-        							<p class="job_date">{{ $t("jobs_page.end_date") }}: {{promo.end_date | moment("MMMM DD, YYYY", timezone)}}</p>
-        							<router-link :to="'/jobs/'+ promo.slug" >
-    								   <div class="promo_learn_more animated_btn">{{ $t("jobs_page.read_more") }}</div>
-        						    </router-link>
-        					    </div>
-        					</div>
-        				
-        			</div>
+        	
         			
 
-            		<div class="site_container">
-            			<div class="row">
-            				<div class="col-sm-4 promo_logo_container hidden_phone">
-            					<div class="image_container">
-            						<img v-lazy="currentJob.store.image_url" class="image"/>
-            					</div>
-            					<div class="text-center" v-if="currentJob.store.name">
-            					    <div v-if="currentJob.jobable_type == 'Store'">
-            						    <h4 class="event_store_name caps" v-if="locale=='en-ca'">{{currentJob.store.name}}</h4>
-            						    <h4 class="event_store_name caps" v-else>{{currentJob.store.name_2}}</h4>
-            						</div>
-            						<h4 v-if="currentJob.store.phone" class="store_dets_title"> {{currentJob.store.phone}}</h4>
-            						<h4 v-if="currentJob.store.website" class="store_dets_title"> <a :href="'//'+currentJob.store.website" target="_blank">{{$t("stores_page.store_website")}}</a></h4>
-            						<h4 v-if="storeHours.length >0 " class="store_dets_title">{{$t("stores_page.store_hours")}}</h4>
-            						<ul class="store_hours_list">
-            							<li v-if="storeHours" v-for="hour in storeHours">
-            								{{hour.day_of_week | moment("dddd", timezone)}} - {{hour.open_time | moment("h A", timezone)}} - {{hour.close_time | moment("h A", timezone)}}
-            							</li>
-            						</ul>
-            						<div class="store_dets_btn caps" v-if="currentJob.jobable_type == 'Store'">
-            							<router-link :to="'/stores/'+currentJob.store.slug"> {{$t("stores_page.store_dets_loc")}}</router-link>
-            						</div>
-            					</div>
-            				</div>
-            				<div class="col-sm-8 promo_image_container text-left">
-            					<router-link to="/jobs"><i class="fa fa-angle-left"></i> &nbsp; {{$t("jobs_page.back_to_jobs")}}</router-link>
-            					<h3 class="promo_name" style="margin: 20px auto 0px;" v-if="locale=='en-ca'">{{currentJob.name}}</h3>
-            					<h3 class="promo_name" style="margin: 20px auto 0px;" v-else>{{currentJob.name_2}}</h3>
-            					<div class="row">
-            						<p class="promo_div_date pull-left">{{currentJob.start_date | moment("MMM D", timezone)}} - {{currentJob.end_date | moment("MMM D", timezone)}}</p>
+            		<!--<div class="site_container">-->
+            		<!--	<div class="row">-->
+            		<!--		<div class="col-sm-4 promo_logo_container hidden_phone">-->
+            		<!--			<div class="image_container">-->
+            		<!--				<img v-lazy="currentJob.store.image_url" class="image"/>-->
+            		<!--			</div>-->
+            		<!--			<div class="text-center" v-if="currentJob.store.name">-->
+            		<!--			    <div v-if="currentJob.jobable_type == 'Store'">-->
+            		<!--				    <h4 class="event_store_name caps" v-if="locale=='en-ca'">{{currentJob.store.name}}</h4>-->
+            		<!--				    <h4 class="event_store_name caps" v-else>{{currentJob.store.name_2}}</h4>-->
+            		<!--				</div>-->
+            		<!--				<h4 v-if="currentJob.store.phone" class="store_dets_title"> {{currentJob.store.phone}}</h4>-->
+            		<!--				<h4 v-if="currentJob.store.website" class="store_dets_title"> <a :href="'//'+currentJob.store.website" target="_blank">{{$t("stores_page.store_website")}}</a></h4>-->
+            		<!--				<h4 v-if="storeHours.length >0 " class="store_dets_title">{{$t("stores_page.store_hours")}}</h4>-->
+            		<!--				<ul class="store_hours_list">-->
+            		<!--					<li v-if="storeHours" v-for="hour in storeHours">-->
+            		<!--						{{hour.day_of_week | moment("dddd", timezone)}} - {{hour.open_time | moment("h A", timezone)}} - {{hour.close_time | moment("h A", timezone)}}-->
+            		<!--					</li>-->
+            		<!--				</ul>-->
+            		<!--				<div class="store_dets_btn caps" v-if="currentJob.jobable_type == 'Store'">-->
+            		<!--					<router-link :to="'/stores/'+currentJob.store.slug"> {{$t("stores_page.store_dets_loc")}}</router-link>-->
+            		<!--				</div>-->
+            		<!--			</div>-->
+            		<!--		</div>-->
+            		<!--		<div class="col-sm-8 promo_image_container text-left">-->
+            		<!--			<router-link to="/jobs"><i class="fa fa-angle-left"></i> &nbsp; {{$t("jobs_page.back_to_jobs")}}</router-link>-->
+            		<!--			<h3 class="promo_name" style="margin: 20px auto 0px;" v-if="locale=='en-ca'">{{currentJob.name}}</h3>-->
+            		<!--			<h3 class="promo_name" style="margin: 20px auto 0px;" v-else>{{currentJob.name_2}}</h3>-->
+            		<!--			<div class="row">-->
+            		<!--				<p class="promo_div_date pull-left">{{currentJob.start_date | moment("MMM D", timezone)}} - {{currentJob.end_date | moment("MMM D", timezone)}}</p>-->
             						
-            					</div>
-            					<div class="col-sm-12 no_padding">
-            						<div class="text-left promo_description">
-            							<p v-if="locale=='en-ca'" v-html="currentJob.rich_description"></p>
-            							<p v-else v-html="currentJob.rich_description_2"></p>
-            						</div>
-            					</div>
-            				</div>
-            			</div>
-            		</div>
+            		<!--			</div>-->
+            		<!--			<div class="col-sm-12 no_padding">-->
+            		<!--				<div class="text-left promo_description">-->
+            		<!--					<p v-if="locale=='en-ca'" v-html="currentJob.rich_description"></p>-->
+            		<!--					<p v-else v-html="currentJob.rich_description_2"></p>-->
+            		<!--				</div>-->
+            		<!--			</div>-->
+            		<!--		</div>-->
+            		<!--	</div>-->
+            		<!--</div>-->
             </div>
         </transition>
 	</div>
