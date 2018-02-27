@@ -70,11 +70,11 @@
                 this.loadData().then(response => {
                     this.dataLoaded = true;
                     
-                    var temp_repo = this.findRepoByName('Promos Banner');
-                    if(temp_repo) {
-                        this.pageBanner = temp_repo.images[0];
-                    }
-                    console.log(this.pageBanner);
+                    // var temp_repo = this.findRepoByName('Promos Banner');
+                    // if(temp_repo) {
+                    //     this.pageBanner = temp_repo.images[0];
+                    // }
+                    // console.log(this.pageBanner);
                     this.promos = this.events;
                 });
             },
