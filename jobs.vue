@@ -102,6 +102,7 @@
                     // }
                     // console.log(this.promoBanner);
                     this.promos = this.promotions;
+                    console.log(this.promos)
                 });
             },
             computed: {
