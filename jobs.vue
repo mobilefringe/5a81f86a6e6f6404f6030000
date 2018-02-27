@@ -7,7 +7,8 @@
         		<div class="page_header"  v-bind:style="{ backgroundImage: 'url(http://via.placeholder.com/1920x600)' }">
         			<div class="site_container">
         				<div class="header_content caps">
-        					<h1>{{ $t("promos_page.promotions") }}</h1>
+        				    <p>{{ $t("jobs_page.jobs_header_desc") }}</p>
+        					<h1>{{ $t("jobs_page.promotions") }}</h1>
         				</div>
         			</div>
         		</div>
