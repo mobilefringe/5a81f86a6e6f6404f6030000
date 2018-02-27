@@ -30,34 +30,34 @@
         					    </div>
         					</div>
         					
-        					<div class="row event_container" v-for="(promo,index) in paginated('promos')" :class="{ 'last': index === (paginated('promos').length - 1) }">
-        						<div class="col-sm-6 col-md-4 event_image_container">
-        							<router-link :to="'/jobs/'+ promo.slug" class="event_learn_more">
-        								<img v-lazy="promo.store.image_url"  class="event_image image" alt=""/>
-        							</router-link>
-        						</div>
-        						<div class="col-sm-6 col-md-8 event_dets_container">
-        							<h4 class="event_name caps"  v-if="locale=='en-ca'">{{promo.name}}</h4>
-        							<h4 class="event_name caps"  v-else>{{promo.name_2}}</h4>
-        							<div v-if="promo.jobable_type == 'Store'">
-            						    <h4 class="event_store_name caps" v-if="locale=='en-ca'">{{promo.store.name}}</h4>
-            						    <h4 class="event_store_name caps" v-else>{{promo.store.name_2}}</h4>
-            						</div>
-        							<div class="event_thick_line"></div>
-        							<p class="event_dates">{{promo.start_date | moment("MMM D", timezone)}} - {{promo.end_date | moment("MMM D", timezone)}}</p>
-        							<p class="event_desc"  v-if="locale=='en-ca'">{{promo.description_short}}</p>
-        							<p class="event_desc"  v-else>{{promo.description_short_2}}</p>
-        							<div class="text-right  col-sm-6" v-if="promo" style="padding:0">
-        								<router-link :to="'/jobs/'+ promo.slug" class="event_learn_more pull-left">
-        									{{$t("jobs_page.read_more")}} <i class="fa fa-angle-right" aria-hidden="true"></i>
-        								</router-link>
+        					<!--<div class="row event_container" v-for="(promo,index) in paginated('promos')" :class="{ 'last': index === (paginated('promos').length - 1) }">-->
+        					<!--	<div class="col-sm-6 col-md-4 event_image_container">-->
+        					<!--		<router-link :to="'/jobs/'+ promo.slug" class="event_learn_more">-->
+        					<!--			<img v-lazy="promo.store.image_url"  class="event_image image" alt=""/>-->
+        					<!--		</router-link>-->
+        					<!--	</div>-->
+        					<!--	<div class="col-sm-6 col-md-8 event_dets_container">-->
+        					<!--		<h4 class="event_name caps"  v-if="locale=='en-ca'">{{promo.name}}</h4>-->
+        					<!--		<h4 class="event_name caps"  v-else>{{promo.name_2}}</h4>-->
+        					<!--		<div v-if="promo.jobable_type == 'Store'">-->
+            	<!--					    <h4 class="event_store_name caps" v-if="locale=='en-ca'">{{promo.store.name}}</h4>-->
+            	<!--					    <h4 class="event_store_name caps" v-else>{{promo.store.name_2}}</h4>-->
+            	<!--					</div>-->
+        					<!--		<div class="event_thick_line"></div>-->
+        					<!--		<p class="event_dates">{{promo.start_date | moment("MMM D", timezone)}} - {{promo.end_date | moment("MMM D", timezone)}}</p>-->
+        					<!--		<p class="event_desc"  v-if="locale=='en-ca'">{{promo.description_short}}</p>-->
+        					<!--		<p class="event_desc"  v-else>{{promo.description_short_2}}</p>-->
+        					<!--		<div class="text-right  col-sm-6" v-if="promo" style="padding:0">-->
+        					<!--			<router-link :to="'/jobs/'+ promo.slug" class="event_learn_more pull-left">-->
+        					<!--				{{$t("jobs_page.read_more")}} <i class="fa fa-angle-right" aria-hidden="true"></i>-->
+        					<!--			</router-link>-->
         								
-        							</div>
-        						</div>
-        						<div class="col-sm-12">
-        							<hr>
-        						</div>
-        					</div>
+        					<!--		</div>-->
+        					<!--	</div>-->
+        					<!--	<div class="col-sm-12">-->
+        					<!--		<hr>-->
+        					<!--	</div>-->
+        					<!--</div>-->
         				</paginate>
         			</div>
         			<div id="no_events" class="row" v-else>
