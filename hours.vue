@@ -84,6 +84,7 @@
                     return this.getPropertyHours;
                 },
                 holidayHours () {
+                    console.log(this.getPropertyHolidayHours;)
                     return this.getPropertyHolidayHours;
                 }
             },
