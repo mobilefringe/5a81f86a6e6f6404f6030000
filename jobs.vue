@@ -15,6 +15,21 @@
         		<div class="site_container page_content">
         			<div id="events_container" v-if="promotions.length > 0">
         				<paginate name="promos" v-if="promos" :list="promos" class="paginate-list margin-60" :per="4">
+        				    <div class="promo_container" v-for="(promo, index) in paginated('promos')">
+        					    <div class="job_img" v-lazy:background-image="promo.image_url"></div>
+        					    <div class="job_content">
+        					        
+        					        <h3 class="">{{ promo.name_short }}</h3>
+        							<p></p>
+        							<hr>
+        					        <p class="promo_desc"  v-if="locale=='en-ca'" >{{ promo.description_short }}</p>
+        							<p class="promo_desc" v-else>{{ promo.description_short_2 }}</p>
+        							<router-link :to="'/promotions/'+ promo.slug" >
+        								   <div class="promo_learn_more animated_btn">{{ $t("promos_page.read_more") }}</div>
+        						    </router-link>
+        					    </div>
+        					</div>
+        					
         					<div class="row event_container" v-for="(promo,index) in paginated('promos')" :class="{ 'last': index === (paginated('promos').length - 1) }">
         						<div class="col-sm-6 col-md-4 event_image_container">
         							<router-link :to="'/jobs/'+ promo.slug" class="event_learn_more">
@@ -72,9 +87,6 @@
             data: function() {
                 return {
                     dataLoaded: false,
-                    selectedDate: null,
-                    filteredPromos:[],
-                    dataloaded: false,
                     promoBanner: null,
                     paginate: ['promos'],
                     promos : null
@@ -96,8 +108,8 @@
                 ...Vuex.mapGetters([
                     'property',
                     'timezone',
-                    'processedJobs',
                     'findRepoByName',
+                    'processedJobs'
                 ]),
                 promotions() {
                     var vm = this;
