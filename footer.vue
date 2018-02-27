@@ -2,18 +2,17 @@
     <footer v-if="footerBanner" v-bind:style="{ backgroundImage: 'url(' + footerBanner.image_url + ')' }">
         <div class="newsletter_subscription">
             <div class="newsletter_content_container">
-                 <h3 class="caps">{{$t("footer.newsletter")}}</h3>
-                 <h1 class="caps">{{$t("footer.subscription")}}</h1>
-                 <h3 class="newsletter_desc caps">{{$t("footer.newsletter_desc")}}</h3>
-                 <div id="newsletter_form">
+                <h3 class="caps">{{$t("footer.newsletter")}}</h3>
+                <h1 class="caps">{{$t("footer.subscription")}}</h1>
+                <h3 class="newsletter_desc caps">{{$t("footer.newsletter_desc")}}</h3>
+                <div id="newsletter_form">
                     <label for="fieldEmail" style="display:none"></label>
                     <input id="fieldEmail" name="cm-tkyhii-tkyhii" class="form-control" type="email" v-model="newsletter_email" :placeholder="$t('footer.enter_email')" required/> 
                     <router-link data-i18n="general.submit" :to="'/newsletter?email='+ newsletter_email">
                         <div class="newsletter_btn animated_btn">{{$t("footer.subscribe")}}</div>
                     </router-link>
-                    
                     <span id="success_subscribe" class="hidden_now">{{$t("footer.subscribe_thankyou")}}</span>
-                 </div>
+                </div>
             </div>
         </div>
 		<div class="footer">
