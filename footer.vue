@@ -59,9 +59,8 @@
             template: template, // the variable template will be injected,
             data: function data() {
                 return {
-                    footerBanner: "",
+                    footerBanner: null,
                     newsletter_email: "",
-    
                 }
             },
             props:['footer_menu_items', 'social_media'],
