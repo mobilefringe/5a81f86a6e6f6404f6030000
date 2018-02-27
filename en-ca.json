@@ -32,10 +32,10 @@
         "privacy_policy" : "Privacy Policy",
         "powered_by" : "Powered by"
     },
-  "home_page": {
-    "explore" : "Explore",
-    "our_feed" : "In Our Feed"
-  },
+    "home_page": {
+        "explore" : "Explore",
+        "our_feed" : "In Our Feed"
+    },
     "stores_page" : {
         "shopping" : "shopping",
         "map" : "Map",
@@ -59,7 +59,8 @@
         "back_to_promos" : "Back to Promotions"
     },
     "events_page": {
-        "events" : "Upcoming Events",
+        "events_title" : "Upcoming Events",
+        "events" : "Event",
         "read_more" : "Check It Out",
         "no_event_message" : "There are no Events at this time. Please check back soon.",
         "back_to_events" : "Back to Events"
