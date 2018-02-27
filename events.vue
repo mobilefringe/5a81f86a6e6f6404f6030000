@@ -27,7 +27,7 @@
         							<h3 class="" v-else>{{ promo.name_short_2 }}</h3>
         					        <p class="promo_desc"  v-if="locale=='en-ca'" >{{ promo.description_short }}</p>
         							<p class="promo_desc" v-else>{{ promo.description_short_2 }}</p>
-        							<router-link :to="'/promotions/'+ promo.slug" >
+        							<router-link :to="'/events/'+ promo.slug" >
         								   <div class="promo_learn_more animated_btn">{{ $t("events_page.read_more") }}</div>
         						    </router-link>
         					    </div>
