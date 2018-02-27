@@ -19,7 +19,7 @@
         					    <div class="job_img" v-lazy:background-image="promo.image_url"></div>
         					    <div class="job_content">
         					        
-        					        <h3 class="">{{ promo.name_short }}</h3>
+        					        <h3 class="">{{ promo.store_name }}</h3>
         							<p></p>
         							<hr>
         					        <p class="promo_desc"  v-if="locale=='en-ca'" >{{ promo.description_short }}</p>
@@ -113,6 +113,7 @@
                     'processedJobs'
                 ]),
                 promotions() {
+                    var property_name = this.propery.name
                     var vm = this;
                     var temp_promo = [];
                     var temp_job = [];
@@ -125,6 +126,7 @@
                         });
                         if (value.store != null && value.store != undefined && _.includes(value.store.image_url, 'missing')) {
                             value.store.image_url = "http://via.placeholder.com/400x400/757575";
+                            value.store_name = 
                         }
                         else if (value.store == null || value.store == undefined) {
                             value.store = {};
@@ -133,6 +135,8 @@
                         if (_.includes(value.image_url, 'missing')) {
                             value.image_url = "http://via.placeholder.com/400x400/757575";
                         }
+                        
+                        
                         // value.image_url = "//codecloud.cdn.speedyrails.net/sites/5a6a54eb6e6f647da51e0100/image/png/1516652189884/ES_logo_red2.png";
                         
                         temp_promo.push(value);
