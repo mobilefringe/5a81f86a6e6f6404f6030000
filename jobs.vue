@@ -1,67 +1,73 @@
 <template>
-	<div v-if="dataloaded">
-		<div class="page_header" v-if="promoBanner" v-bind:style="{ backgroundImage: 'url(' + promoBanner.image_url + ')' }">
-			<div class="site_container">
-				<div class="header_content cap">
-					<h1>{{$t("jobs_page.jobs")}}</h1>
-				</div>
-			</div>
-		</div>
-		<div class="site_container page_content">
-			<div id="events_container" v-if="promotions.length > 0">
-				<paginate name="promos" v-if="promos" :list="promos" class="paginate-list margin-60" :per="4">
-					<div class="row event_container" v-for="(promo,index) in paginated('promos')" :class="{ 'last': index === (paginated('promos').length - 1) }">
-						<div class="col-sm-6 col-md-4 event_image_container">
-							<router-link :to="'/jobs/'+ promo.slug" class="event_learn_more">
-								<img v-lazy="promo.store.image_url"  class="event_image image" alt=""/>
-							</router-link>
-						</div>
-						<div class="col-sm-6 col-md-8 event_dets_container">
-							<h4 class="event_name caps"  v-if="locale=='en-ca'">{{promo.name}}</h4>
-							<h4 class="event_name caps"  v-else>{{promo.name_2}}</h4>
-							<div v-if="promo.jobable_type == 'Store'">
-    						    <h4 class="event_store_name caps" v-if="locale=='en-ca'">{{promo.store.name}}</h4>
-    						    <h4 class="event_store_name caps" v-else>{{promo.store.name_2}}</h4>
-    						</div>
-							<div class="event_thick_line"></div>
-							<p class="event_dates">{{promo.start_date | moment("MMM D", timezone)}} - {{promo.end_date | moment("MMM D", timezone)}}</p>
-							<p class="event_desc"  v-if="locale=='en-ca'">{{promo.description_short}}</p>
-							<p class="event_desc"  v-else>{{promo.description_short_2}}</p>
-							<div class="text-right  col-sm-6" v-if="promo" style="padding:0">
-								<router-link :to="'/jobs/'+ promo.slug" class="event_learn_more pull-left">
-									{{$t("jobs_page.read_more")}} <i class="fa fa-angle-right" aria-hidden="true"></i>
-								</router-link>
-								<social-sharing :url="shareURL(promo.slug)" :title="promo.title" :description="promo.body" :quote="_.truncate(promo.description, {'length': 99})" twitter-user="EastgateSquare" :media="promo.image_url" inline-template >
-									<div class="blog-social-share pull_right">
-										<div class="social_share">
-											<network network="facebook">
-												<i class="fa fa-facebook social_icons" aria-hidden="true"></i>
-											</network>
-											<network network="twitter">
-												<i class="fa fa-twitter social_icons" aria-hidden="true"></i>
-											</network>
-										</div>
-									</div>
-								</social-sharing>
-							</div>
-						</div>
-						<div class="col-sm-12">
-							<hr>
-						</div>
-					</div>
-				</paginate>
-			</div>
-			<div id="no_events" class="row" v-else>
-				<div class="col-md-12">
-					<p>{{$t("jobs_page.no_job_message")}}</p>
-				</div>
-			</div>
-			<div class="row margin-60">
-				<div class="col-md-12">
-					<paginate-links for="promos" :async="true" :limit="5" :show-step-links="true"></paginate-links>
-				</div>
-			</div>
-		</div>
+    <div> <!-- without an outer container div this component template will not render -->
+        <loader v-if="!dataLoaded"></loader>
+        <transition name="fade">
+            <div v-if="dataLoaded" v-cloak>
+        		<!--<div class="page_header" v-if="pageBanner" v-bind:style="{ backgroundImage: 'url(' + pageBanner.image_url + ')' }">-->
+        		<div class="page_header"  v-bind:style="{ backgroundImage: 'url(http://via.placeholder.com/1920x600)' }">
+        			<div class="site_container">
+        				<div class="header_content caps">
+        					<h1>{{ $t("promos_page.promotions") }}</h1>
+        				</div>
+        			</div>
+        		</div>
+        		<div class="site_container page_content">
+        			<div id="events_container" v-if="promotions.length > 0">
+        				<paginate name="promos" v-if="promos" :list="promos" class="paginate-list margin-60" :per="4">
+        					<div class="row event_container" v-for="(promo,index) in paginated('promos')" :class="{ 'last': index === (paginated('promos').length - 1) }">
+        						<div class="col-sm-6 col-md-4 event_image_container">
+        							<router-link :to="'/jobs/'+ promo.slug" class="event_learn_more">
+        								<img v-lazy="promo.store.image_url"  class="event_image image" alt=""/>
+        							</router-link>
+        						</div>
+        						<div class="col-sm-6 col-md-8 event_dets_container">
+        							<h4 class="event_name caps"  v-if="locale=='en-ca'">{{promo.name}}</h4>
+        							<h4 class="event_name caps"  v-else>{{promo.name_2}}</h4>
+        							<div v-if="promo.jobable_type == 'Store'">
+            						    <h4 class="event_store_name caps" v-if="locale=='en-ca'">{{promo.store.name}}</h4>
+            						    <h4 class="event_store_name caps" v-else>{{promo.store.name_2}}</h4>
+            						</div>
+        							<div class="event_thick_line"></div>
+        							<p class="event_dates">{{promo.start_date | moment("MMM D", timezone)}} - {{promo.end_date | moment("MMM D", timezone)}}</p>
+        							<p class="event_desc"  v-if="locale=='en-ca'">{{promo.description_short}}</p>
+        							<p class="event_desc"  v-else>{{promo.description_short_2}}</p>
+        							<div class="text-right  col-sm-6" v-if="promo" style="padding:0">
+        								<router-link :to="'/jobs/'+ promo.slug" class="event_learn_more pull-left">
+        									{{$t("jobs_page.read_more")}} <i class="fa fa-angle-right" aria-hidden="true"></i>
+        								</router-link>
+        								<social-sharing :url="shareURL(promo.slug)" :title="promo.title" :description="promo.body" :quote="_.truncate(promo.description, {'length': 99})" twitter-user="EastgateSquare" :media="promo.image_url" inline-template >
+        									<div class="blog-social-share pull_right">
+        										<div class="social_share">
+        											<network network="facebook">
+        												<i class="fa fa-facebook social_icons" aria-hidden="true"></i>
+        											</network>
+        											<network network="twitter">
+        												<i class="fa fa-twitter social_icons" aria-hidden="true"></i>
+        											</network>
+        										</div>
+        									</div>
+        								</social-sharing>
+        							</div>
+        						</div>
+        						<div class="col-sm-12">
+        							<hr>
+        						</div>
+        					</div>
+        				</paginate>
+        			</div>
+        			<div id="no_events" class="row" v-else>
+        				<div class="col-md-12">
+        					<p>{{$t("jobs_page.no_job_message")}}</p>
+        				</div>
+        			</div>
+        			<div class="row margin-60">
+        				<div class="col-md-12">
+        					<paginate-links for="promos" :async="true" :limit="5" :show-step-links="true"></paginate-links>
+        				</div>
+        			</div>
+        		</div>
+		    </div>
+		</transition>
 	</div>
 </template>
 
