@@ -44,11 +44,7 @@
         </transition>        
     </div>
 </template>
-<style>
-    .hours_page_container .row{
-        margin-left:inherit;
-    }
-</style>
+
 <script>
     define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "vue-meta"], function(Vue, Vuex, moment, tz, VueMoment, Meta) {
         Vue.use(Meta);
