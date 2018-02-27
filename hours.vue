@@ -26,7 +26,7 @@
                             <div class="col-sm-6">
                                 <h5 class="caps">{{$t("hours_page.holiday_hours")}}</h5>
                                 <div id="holidays_hours_container" class="hours_container">
-                                    <div class="hours_div text-left"  v-for="hour in reducedHolidays">
+                                    <div class="hours_div text-left"  v-for="hour in holidayHours">
                                         <span>
                                             <span v-if="locale=='en-ca'">{{hour.holiday_name}}</span>
                                             <span v-else>{{hour.holiday_name_2}}</span>
@@ -60,9 +60,11 @@
             created() {
                 this.loadData().then(response => {
                     this.dataLoaded = true;
-                    this.pageBanner = this.findRepoByName('Hours Banner').images[0];
-                    console.log(this.pageBanner); 
-                    console.log("locale created", this.locale);
+                    
+                    var temp_repo = this.findRepoByName('Hours Banner');
+                    if(temp_repo) {
+                        this.pageBanner = temp_repo.images[0];
+                    }
                 });
             },
             watch : {
