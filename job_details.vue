@@ -5,18 +5,18 @@
             <div v-if="dataLoaded" v-cloak>
         		<div class="site_container">
 				    <div class="job_details_container clearfix">
-					    <div class="promo_img" v-lazy:background-image="promo.image_url"></div>
+					    <div class="promo_img" v-lazy:background-image="currentJob.image_url"></div>
 					    <div class="promo_content">
-					        <h3 class="">{{ promo.store_name }}</h3>
-					        <p v-if="promo.store_category">{{ promo.store_category }}</p>
+					        <h3 class="">{{ currentJob.store_name }}</h3>
+					        <p v-if="currentJob.store_category">{{ currentJob.store_category }}</p>
 							<p></p>
 							<hr>
-					        <p class="job_position">{{ $t("jobs_page.position") }}: {{ promo.job_type }}</p>
-							<p class="job_date">{{ $t("jobs_page.end_date") }}: {{promo.end_date | moment("MMMM DD, YYYY", timezone)}}</p>
+					        <p class="job_position">{{ $t("jobs_page.position") }}: {{ currentJob.job_type }}</p>
+							<p class="job_date">{{ $t("jobs_page.end_date") }}: {{ currentJob.end_date | moment("MMMM DD, YYYY", timezone)}}</p>
 					    </div>
 					    <div class="job_details_desc">
-        				    <div v-html="currentStore.description"></div>
-        				    <a v-if="currentStore.website" :href="'//' + currentStore.website" target="_blank">
+        				    <div v-html="currentJob.description"></div>
+        				    <a v-if="currentJob.website" :href="'//' + currentJob.website" target="_blank">
         				        <div class="details_store_website">{{$t("stores_page.store_website")}}</div>
         				    </a>
         				</div>
@@ -97,6 +97,7 @@
                 this.loadData().then(response => {
                     this.dataLoaded = true;
                     this.updateCurrentJob(this.id);
+                    
                     var temp_repo = this.findRepoByName('Jobs Banner');
                     if(temp_repo) {
                         this.jobBanner = temp_repo.images[0];
