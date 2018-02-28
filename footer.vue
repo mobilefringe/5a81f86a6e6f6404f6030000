@@ -25,6 +25,11 @@
 				            </router-link>
 				        </div>    
 			        </div>
+			        <div class="col-sm-12 visible_phone">
+			            <div class="language_select">
+					        <span @click="changeLocale('en-ca')">en</span> | <span @click="changeLocale('fr-ca')">fr</span>
+				        </div>
+			        </div>
 			        <div class="col-md-6">
 			            <nav id="footer_nav">
     						<ul>
