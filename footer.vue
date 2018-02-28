@@ -2,9 +2,9 @@
     <footer v-if="footerBanner" v-bind:style="{ backgroundImage: 'url(' + footerBanner.image_url + ')' }">
         <div class="newsletter_subscription">
             <div class="newsletter_content_container">
-                <h3 class="caps">{{$t("footer.newsletter")}}</h3>
-                <h1 class="caps">{{$t("footer.subscription")}}</h1>
-                <h3 class="newsletter_desc caps">{{$t("footer.newsletter_desc")}}</h3>
+                <h3 class="caps hidden_phone">{{$t("footer.newsletter")}}</h3>
+                <h1 class="caps hidden_phone">{{$t("footer.subscription")}}</h1>
+                <h3 class="newsletter_desc caps hidden_phone">{{$t("footer.newsletter_desc")}}</h3>
                 <div id="newsletter_form">
                     <label for="fieldEmail" style="display:none"></label>
                     <input id="fieldEmail" name="cm-tkyhii-tkyhii" class="form-control" type="email" v-model="newsletter_email" :placeholder="$t('footer.enter_email')" required/> 
