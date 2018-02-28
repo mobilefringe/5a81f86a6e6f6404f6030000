@@ -18,14 +18,14 @@
 		<div class="footer">
 			<div class="site_container">
 			    <div class="row footer_logo">
-			        <div class="col-md-3">
+			        <div class="col-sm-12 col-md-3">
 			            <div class="property_logo">
 					        <router-link to="/">
 					            <img src="//codecloud.cdn.speedyrails.net/sites/5a81f86a6e6f6404f6030000/image/png/1519154972000/mm_logo.png" alt="Property Logo"/>
 				            </router-link>
 				        </div>    
 			        </div>
-			        <div class="col-md-6">
+			        <div class="col-sm-12 col-md-6">
 			            <nav id="footer_nav">
     						<ul>
     						    <li v-for="item in footer_menu_items" class="menu_item">
@@ -34,7 +34,7 @@
     						</ul>
     					</nav>    
 			        </div>
-			        <div class="col-md-3">
+			        <div class="col-sm-12 col-md-3">
 			            <div class="social_icons">
                             <span v-for="item in social_media">
                                 <a :href="item.url" target="_blank">
