@@ -20,7 +20,7 @@
 					        <p class="job_desc_title">{{ $t("jobs_page.desc_title") }}:</p>
         				    <div v-html="currentJob.description"></div>
         				    <a v-if="currentJob.website" :href="'//' + currentJob.website" target="_blank">
-        				        <div class="details_store_website">{{$t("stores_page.store_website")}}</div>
+        				        <div class="details_store_website">{{ $t("stores_page.store_website") }}</div>
         				    </a>
         				</div>
         				
