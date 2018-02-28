@@ -3,19 +3,19 @@
         <div class="sticky">
 			<div class="site_container">
 				<div class="row header_logo">
-					<div class="col-sm-3">
+					<div class="col-md-3 hidden_phone">
 					    <div class="language_select">
 					        <span @click="changeLocale('en-ca')">en</span> | <span @click="changeLocale('fr-ca')">fr</span>
 				        </div>	
 					</div>
-					<div class="col-sm-6">
+					<div class="col-md-6">
 					    <div class="property_logo center-block">
 							<router-link to="/">
 							    <img src="//codecloud.cdn.speedyrails.net/sites/5a81f86a6e6f6404f6030000/image/png/1519154972000/mm_logo.png" alt="Property Logo"/>
 						    </router-link>
 						</div>
 					</div>
-					<div class="col-sm-3">
+					<div class="col-md-3 hidden_phone">
 						
 					</div>
 				</div>
