@@ -3,8 +3,9 @@
 		<div class="page_header" v-if="storeBanner" v-bind:style="{ backgroundImage: 'url(' + storeBanner.image_url + ')' }">
 			<!--http://via.placeholder.com/1920x300-->
 			<div class="site_container">
-				<div class="header_content">
-					<h1>{{$t("stores_page.shopping")}}</h1>
+				<div class="header_content caps">
+				    <p>{{ $t("jobs_page.jobs_header_desc") }} {{ property.name }}</p>
+					<h1>{{ $t("jobs_page.jobs") }}</h1>
 				</div>
 			</div>
 		</div>
