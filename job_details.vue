@@ -5,7 +5,6 @@
             <div v-if="dataLoaded" v-cloak>
         		<div class="site_container">
 				    <div class="job_details_container clearfix">
-					    <div class="promo_img" v-lazy:background-image="currentJob.image_url"></div>
 					    <div class="promo_content">
 					        <h3 class="">{{ currentJob.store_name }}</h3>
 					        <p v-if="currentJob.store_category">{{ currentJob.store_category }}</p>
@@ -14,12 +13,14 @@
 					        <p class="job_position">{{ $t("jobs_page.position") }}: {{ currentJob.job_type }}</p>
 							<p class="job_date">{{ $t("jobs_page.end_date") }}: {{ currentJob.end_date | moment("MMMM DD, YYYY", timezone)}}</p>
 					    </div>
+					    <div class="promo_img" v-lazy:background-image="currentJob.image_url"></div>
 					    <div class="job_details_desc">
         				    <div v-html="currentJob.description"></div>
         				    <a v-if="currentJob.website" :href="'//' + currentJob.website" target="_blank">
         				        <div class="details_store_website">{{$t("stores_page.store_website")}}</div>
         				    </a>
         				</div>
+        				
 					</div>
                 </div>
             </div>
