@@ -15,7 +15,7 @@
 						    </router-link>
 						</div>
 					</div>
-					<div class="col-md-3 hidden_phone">
+					<div class="col-sm-12 col-md-3 hidden_phone">
 						
 					</div>
 				</div>
