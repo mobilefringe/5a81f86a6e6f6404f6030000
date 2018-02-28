@@ -5,7 +5,7 @@
 			<div class="site_container">
 				<div class="header_content caps">
 				    <p>{{ $t("stores_page.header_desc") }} {{ property.name }}</p>
-					<h1>{{ $t("jobs_page.jobs") }}</h1>
+					<h1>{{ $t("stores_page.directory") }}</h1>
 				</div>
 			</div>
 		</div>
