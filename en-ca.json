@@ -37,6 +37,8 @@
         "our_feed" : "In Our Feed"
     },
     "stores_page" : {
+        "header_desc" : "Discover ",
+        "directory" : "Store Directory", 
         "shopping" : "shopping",
         "map" : "Map",
         "find_your_store": "Find Your Store",
