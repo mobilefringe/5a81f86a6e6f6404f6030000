@@ -52,6 +52,7 @@
         "find_store" : "Find Store"
     },
     "promos_page": {
+        "promos_header_desc" : "Find The Best Deals at ",
         "promotions_title" : "Upcoming Promotions",
         "promotions" : "Promotion",
         "read_more" : "Check It Out",
