@@ -111,32 +111,6 @@
                     this.getWindowWidth();
                 });
             },
-            methods: {
-                loadData: async function() {
-                    try {
-                        // avoid making LOAD_META_DATA call for now as it will cause the entire Promise.all to fail since no meta data is set up.
-                        let results = await Promise.all([this.$store.dispatch("getData", "categories"), this.$store.dispatch("getData", "repos")]);
-                    } catch (e) {
-                        console.log("Error loading data: " + e.message);
-                    }
-                },
-                changeMode(mode) {
-                    this.listMode = mode;
-                },
-                updateSVGMap(map) {
-                    this.map = map;
-                },
-                addLandmark(store) {
-                    this.svgMapRef.addMarker(store);
-                },
-                getWindowWidth(event) {
-                    this.windowWidth = window.innerWidth;
-                },
-                onOptionSelect(option) {
-                    this.search_result = "";
-                    this.$router.push("/stores/"+option.slug);
-                },
-            },
             computed: {
                 ...Vuex.mapGetters([
                     'property',
@@ -208,6 +182,32 @@
                     
                 },
                 
+            },
+            methods: {
+                loadData: async function() {
+                    try {
+                        // avoid making LOAD_META_DATA call for now as it will cause the entire Promise.all to fail since no meta data is set up.
+                        let results = await Promise.all([this.$store.dispatch("getData", "categories"), this.$store.dispatch("getData", "repos")]);
+                    } catch (e) {
+                        console.log("Error loading data: " + e.message);
+                    }
+                },
+                changeMode(mode) {
+                    this.listMode = mode;
+                },
+                updateSVGMap(map) {
+                    this.map = map;
+                },
+                addLandmark(store) {
+                    this.svgMapRef.addMarker(store);
+                },
+                getWindowWidth(event) {
+                    this.windowWidth = window.innerWidth;
+                },
+                onOptionSelect(option) {
+                    this.search_result = "";
+                    this.$router.push("/stores/"+option.slug);
+                },
             },
             beforeDestroy: function() {
                 window.removeEventListener('resize', this.getWindowWidth);
