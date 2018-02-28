@@ -53,6 +53,7 @@
     },
     "promos_page": {
         "promos_header_desc" : "Find The Best Deals at ",
+        "promos_header" : "Promotions",
         "promotions_title" : "Upcoming Promotions",
         "promotions" : "Promotion",
         "read_more" : "Check It Out",
