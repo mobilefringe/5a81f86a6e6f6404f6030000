@@ -40,8 +40,7 @@
                 return {
                     dataLoaded: false,
                     currentJob: null,
-                    storeJobs : null,
-                    storeHours : null,
+                    storeJobs : null
                 }
             },
             props:['id', 'locale'],
@@ -57,11 +56,7 @@
                     this.dataLoaded = true;
                     this.updateCurrentJob(this.id);
                     
-                    var temp_repo = this.findRepoByName('Jobs Banner');
-                    if(temp_repo) {
-                        this.jobBanner = temp_repo.images[0];
-                    }
-                    console.log(this.jobBanner);
+                
                     this.jobs = this.job;
                 });
             },
@@ -94,36 +89,14 @@
                         });
                         this.storeJobs = temp_job;
                     }
-                    // if(this.currentJob.store) {
-                    //     var storeHours = [];
-                    //     var vm = this;
-                    //     _.forEach(this.currentJob.store.store_hours, function (value, key) {
-                    //         var hour = vm.findHourById(value);
-                    //         if(hour.day_of_week === 0){
-                    //             hour.order = 7;
-                    //         }
-                    //         else {
-                    //             hour.order = hour.day_of_week;
-                    //         }
-                    //         storeHours.push();
-                    //     });
-                    //     this.storeHours = _.sortBy(storeHours, [function(o) { return o.order; }]);;
-                    // }
                 }
             },
             computed: {
                 ...Vuex.mapGetters([
                     'property',
-                    'processedJobs',
-                    'findJobBySlug',
-                    'findJobById',
-                    'timezone',
-                    'findRepoByName',
-                    'findHourById'
-                ]),
-                allJobs() {
-                    return this.processedJobs;
-                },
+                    'timezone'
+                    'findJobBySlug'
+                ])
             },
             methods: {
                 updateCurrentJob (id) {
@@ -135,15 +108,11 @@
                 loadData: async function() {
                     try {
                         // avoid making LOAD_META_DATA call for now as it will cause the entire Promise.all to fail since no meta data is set up.
-                        let results = await Promise.all([this.$store.dispatch("getData", "jobs"), this.$store.dispatch("getData", "repos")]);
+                        let results = await Promise.all([this.$store.dispatch("getData", "jobs")]);
                     } catch (e) {
                         console.log("Error loading data: " + e.message);
                     }
-                },
-                shareURL(slug){
-                    var share_url = "http://mallmaverick.ca/jobs/" + slug;
-                    return share_url;
-                },
+                }
             }
         });
     });
