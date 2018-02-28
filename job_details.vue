@@ -63,14 +63,18 @@
             },
             watch: {
                 currentJob : function (){
+                    var property_name = this.property.name
                     if(this.currentJob != null) {
                         console.log(this.currentJob.store);
-                        if (this.currentJob.store != null && this.currentJob.store != undefined && _.includes(this.currentJob.store.image_url, 'missing')) {
-                            this.currentJob.store.image_url = "http://via.placeholder.com/400x400/757575";
-                        }
-                        else if (this.currentJob.store == null || this.currentJob.store == undefined) {
+                        if (this.currentJob.store != null && this.currentJob.store != undefined){
+                            if(_.includes(this.currentJob.store.image_url, 'missing')) {
+                                this.currentJob.store.image_url = "http://via.placeholder.com/400x400/757575";
+                            }
+                            this.currentJob.store_name = this.currentJob.store.name;
+                        } else if (this.currentJob.store == null || this.currentJob.store == undefined) {
                             this.currentJob.store = {};
                             this.currentJob.store.image_url =  "http://via.placeholder.com/400x400/757575";
+                            this.currentJob.store_name = property_name;
                         }
                         var vm = this;
                         var temp_job = [];
@@ -84,21 +88,21 @@
                         });
                         this.storeJobs = temp_job;
                     }
-                    if(this.currentJob.store) {
-                        var storeHours = [];
-                        var vm = this;
-                        _.forEach(this.currentJob.store.store_hours, function (value, key) {
-                            var hour = vm.findHourById(value);
-                            if(hour.day_of_week === 0){
-                                hour.order = 7;
-                            }
-                            else {
-                                hour.order = hour.day_of_week;
-                            }
-                            storeHours.push();
-                        });
-                        this.storeHours = _.sortBy(storeHours, [function(o) { return o.order; }]);;
-                    }
+                    // if(this.currentJob.store) {
+                    //     var storeHours = [];
+                    //     var vm = this;
+                    //     _.forEach(this.currentJob.store.store_hours, function (value, key) {
+                    //         var hour = vm.findHourById(value);
+                    //         if(hour.day_of_week === 0){
+                    //             hour.order = 7;
+                    //         }
+                    //         else {
+                    //             hour.order = hour.day_of_week;
+                    //         }
+                    //         storeHours.push();
+                    //     });
+                    //     this.storeHours = _.sortBy(storeHours, [function(o) { return o.order; }]);;
+                    // }
                 }
             },
             computed: {
