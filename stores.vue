@@ -11,7 +11,7 @@
 		</div>
 		<div class="site_container page_content">
 			<div class="row bold">
-			    <div class="line"></div>
+			    <div class="stores_header_line"></div>
 				<div class="col-sm-6 col-md-4 container">
 					<div class="store_search" >
 						<search-component :list="allStores" :placeholder="$t('stores_page.find_your_store')" suggestion-attribute="name" v-model="search_result" @select="onOptionSelect" class="text-left">
@@ -26,7 +26,7 @@
 						<img src="//codecloud.cdn.speedyrails.net/sites/5a81f86a6e6f6404f6030000/image/png/1517497861636/search_icon_2x.png" class="pull-right" id="store_search_img" alt="">
 					</div>
 				</div>
-				<div class="line"></div>
+				<div class="stores_header_line"></div>
 				<div class="col-sm-6 col-md-4 container">
 					<div class="store_search" >
 						<div class="category-select-container">
@@ -34,7 +34,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="line"></div>
+				<div class="stores_header_line"></div>
 				<div class="col-md-4 col-sm-12 hidden_phone container">
 					<div class="store_search" >
 						<a class="directory_link" href="/map">
@@ -42,7 +42,7 @@
 						</a>
 					</div>
 				</div>
-				<div></div>
+				<div class="stores_header_line"></div>
 			</div>
 			<div class="row">
 				<div id="store_list_container">
