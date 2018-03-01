@@ -27,9 +27,16 @@
 				</div>
 				<div class="stores_header_line"></div>
 				<div class="stores_button_container category">
-					<!--<div class="category-select-container">-->
-						<v-select v-model="selectedCat" :options="dropDownCats" :searchable="false" :on-change="filterByCategory" class="category-select" :placeholder="$t('stores_page.sort_by_cats')" id="selectByCat"></v-select>
-					<!--</div>-->
+
+					<v-select 
+					    v-model="selectedCat" 
+					    :options="dropDownCats" 
+					    :searchable="false" 
+					    :on-change="filterByCategory" 
+					    class="category-select" 
+					    :placeholder="$t('stores_page.sort_by_cats')" 
+					    id="selectByCat"
+				    ></v-select>
 				</div>
 				<div class="stores_header_line"></div>
 				<div class="stores_button_container map_link">
