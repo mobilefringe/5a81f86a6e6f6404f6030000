@@ -33,9 +33,7 @@
 				</div>
 				<div class="stores_header_line"></div>
 				<div class="stores_button_container map_link">
-					<a class="directory_link" href="/map">
-						<div class="promotions_header_container directory_btn">{{$t("stores_page.view_map")}}</div>
-					</a>
+				    <router-link :to="/map">{{$t("stores_page.view_map")}}</router-link>
 				</div>
 				<div class="stores_header_line"></div>
 			</div>
