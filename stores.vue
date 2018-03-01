@@ -12,14 +12,11 @@
 		<div class="site_container page_content">
 			<div class="stores_header_container">
 			    <div class="stores_header_line"></div>
-
 				<div class="stores_button_container search position_relative">
 					<search-component :list="allStores" :placeholder="$t('stores_page.find_your_store')" suggestion-attribute="name" v-model="search_result" @select="onOptionSelect" class="text-left">
 						<template slot="item" scope="option" class="manual">
 							<article class="media">
-								<p>
-									<strong>{{ option.data.name }}</strong>
-								</p>
+								<p>{{ option.data.name }}</p>
 							</article>
 						</template>
 					</search-component>
@@ -27,7 +24,6 @@
 				</div>
 				<div class="stores_header_line"></div>
 				<div class="stores_button_container category">
-
 					<v-select 
 					    v-model="selectedCat" 
 					    :options="dropDownCats" 
