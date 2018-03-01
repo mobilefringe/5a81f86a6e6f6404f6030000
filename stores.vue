@@ -10,37 +10,32 @@
 			</div>
 		</div>
 		<div class="site_container page_content">
-			<div class="row bold">
+			<div class="stores_header_container">
 			    <div class="stores_header_line"></div>
-				<div class="col-sm-6 col-md-4 container">
-					<div class="store_search" >
-						<search-component :list="allStores" :placeholder="$t('stores_page.find_your_store')" suggestion-attribute="name" v-model="search_result" @select="onOptionSelect" class="text-left">
-							<template slot="item" scope="option" class="manual">
-								<article class="media">
-									<p>
-										<strong>{{ option.data.name }}</strong>
-									</p>
-								</article>
-							</template>
-						</search-component>
-						<img src="//codecloud.cdn.speedyrails.net/sites/5a81f86a6e6f6404f6030000/image/png/1517497861636/search_icon_2x.png" class="pull-right" id="store_search_img" alt="">
+
+				<div class="stores_button_container search">
+					<search-component :list="allStores" :placeholder="$t('stores_page.find_your_store')" suggestion-attribute="name" v-model="search_result" @select="onOptionSelect" class="text-left">
+						<template slot="item" scope="option" class="manual">
+							<article class="media">
+								<p>
+									<strong>{{ option.data.name }}</strong>
+								</p>
+							</article>
+						</template>
+					</search-component>
+					<img src="//codecloud.cdn.speedyrails.net/sites/5a81f86a6e6f6404f6030000/image/png/1517497861636/search_icon_2x.png" class="pull-right" id="store_search_img" alt="">
+				</div>
+				<div class="stores_header_line"></div>
+				<div class="stores_button_container category">
+					<div class="category-select-container">
+						<v-select v-model="selectedCat" :options="dropDownCats" :searchable="false" :on-change="filterByCategory" class="category-select" :placeholder="$t('stores_page.sort_by_cats')" id="selectByCat"></v-select>
 					</div>
 				</div>
 				<div class="stores_header_line"></div>
-				<div class="col-sm-6 col-md-4 container">
-					<div class="store_search" >
-						<div class="category-select-container">
-							<v-select v-model="selectedCat" :options="dropDownCats" :searchable="false" :on-change="filterByCategory" class="category-select" :placeholder="$t('stores_page.sort_by_cats')" id="selectByCat"></v-select>
-						</div>
-					</div>
-				</div>
-				<div class="stores_header_line"></div>
-				<div class="col-md-4 col-sm-12 hidden_phone container">
-					<div class="store_search" >
-						<a class="directory_link" href="/map">
-							<div class="promotions_header_container directory_btn">{{$t("stores_page.view_map")}}</div>
-						</a>
-					</div>
+				<div class="stores_button_container map_link">
+					<a class="directory_link" href="/map">
+						<div class="promotions_header_container directory_btn">{{$t("stores_page.view_map")}}</div>
+					</a>
 				</div>
 				<div class="stores_header_line"></div>
 			</div>
