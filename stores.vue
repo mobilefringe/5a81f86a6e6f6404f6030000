@@ -23,7 +23,7 @@
 							</article>
 						</template>
 					</search-component>
-					<img src="//codecloud.cdn.speedyrails.net/sites/5a81f86a6e6f6404f6030000/image/png/1517497861636/search_icon_2x.png" class="pull-right" id="store_search_img" alt="">
+					<img src="//codecloud.cdn.speedyrails.net/sites/5a81f86a6e6f6404f6030000/image/png/1517497861636/search_icon_2x.png" id="search_img" alt="">
 				</div>
 				<div class="stores_header_line"></div>
 				<div class="stores_button_container category">
