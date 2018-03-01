@@ -35,9 +35,11 @@
 				    ></v-select>
 				</div>
 				<div class="stores_header_line"></div>
-				<div class="stores_button_container map_link">
-				    <router-link to="/map">{{$t("stores_page.view_map")}}</router-link>
-				</div>
+				<router-link to="/map">
+				    <div class="stores_button_container map_link">
+				        {{$t("stores_page.view_map")}}
+				    </div>
+				</router-link>
 				<div class="stores_header_line"></div>
 			</div>
 			<div class="row">
