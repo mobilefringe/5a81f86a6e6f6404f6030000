@@ -57,7 +57,6 @@
             watch: {
                 currentEvent : function (){
                     if(this.currentEvent != null) {
-                        console.log(this.currentEvent);
                         if (this.currentEvent != null && this.currentEvent != undefined) {
                             if(_.includes(this.currentEvent.image_url, 'missing')) {
                                 this.currentEvent.image_url = "http://via.placeholder.com/1560x800/757575";
@@ -71,8 +70,7 @@
                     'property',
                     'timezone',
                     'processedEents',
-                    'findEventBySlug',
-                    'findEventById'
+                    'findEventBySlug'
                 ])
             },
             methods: {
