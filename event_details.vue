@@ -62,9 +62,6 @@
                             if(_.includes(this.currentEvent.image_url, 'missing')) {
                                 this.currentEvent.image_url = "http://via.placeholder.com/1560x800/757575";
                             }
-                        // } else if (this.currentEvent.store == null || this.currentEvent.store == undefined) {
-                        //     this.currentEvent.store = {};
-                        //     this.currentEvent.store.image_url =  "http://via.placeholder.com/400x400/757575";
                         }
                     }
                 }
