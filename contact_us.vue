@@ -97,6 +97,7 @@
             template: template, // the variable template will be injected
             data: function() {
                 return {
+                    dataLoaded: false,
                     form_data : {},
                     formSuccess : false,
                     formError: false,
@@ -116,6 +117,7 @@
                     }
                     // this.pageBanner = this.findRepoByName('Contact Us Banner').images[0];
                    console.log(this.pageBanner); 
+                   this.dataLoaded = true;
                 });
             },
             mounted () {
