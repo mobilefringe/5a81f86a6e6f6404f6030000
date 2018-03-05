@@ -109,7 +109,6 @@
                 this.loadData().then(response => {
                     this.updateCurrentPromo(this.id);
 
-                    this.promos = this.promotions;
                     this.dataLoaded = true;
                 });
             },
