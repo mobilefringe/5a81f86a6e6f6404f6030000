@@ -16,7 +16,7 @@
     							</p>
     					    </div>
     					    <div class="promo_img" v-if="locale=='en-ca'" v-lazy:background-image="currentEvent.image_url"></div>
-    					    <div class="promo_img" v-else v-lazy:background-image="currentEvent.promo_image2_url_abs"></div>
+    					    <div class="promo_img" v-else v-lazy:background-image="currentEvent.event_image2_url_abs"></div>
     					    <div class="promo_details_desc">
             				    <div v-if="locale=='en-ca'" v-html="currentEvent.rich_description"></div>
             				    <div v-else v-html="currentEvent.rich_description_2"></div>
