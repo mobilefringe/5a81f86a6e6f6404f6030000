@@ -170,6 +170,7 @@
                     if (this.currentPromo === null || this.currentPromo === undefined){
                         this.$router.replace({ name: '404'});
                     }
+                    console.log(this.currentPromo)
                 },
                 loadData: async function() {
                     try {
