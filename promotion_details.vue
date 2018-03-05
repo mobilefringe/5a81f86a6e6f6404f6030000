@@ -4,6 +4,7 @@
         <transition name="fade">
             <div v-if="dataLoaded" v-cloak>
         		<div class="site_container page_content">
+        		    <div class="margin_60"></div>
         			<div id="promos_container">
     					<div class="promo_container">
     					    <div class="promo_img" v-if="locale=='en-ca'" v-lazy:background-image="currentPromo.image_url"></div>
