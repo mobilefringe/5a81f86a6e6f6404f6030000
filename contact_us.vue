@@ -4,7 +4,22 @@
         <transition name="fade">
             <div v-if="dataLoaded" v-cloak>
         		<div class="site_container">
-                    <div class="row"> 
+                    <div class="promo_container jobs clearfix">
+					    <div class="promo_img">
+					        <!-- Map -->
+					    </div>
+					    <div class="promo_content">
+					        <h3 class="">Location</h3>
+					        <p v-if="promo.store_category">{{ promo.store_category }}</p>
+					        <h3 class="">Phone</h3>
+					        <p v-if="promo.store_category">{{ promo.store_category }}</p>
+					        <h3 class="">Email</h3>
+					        <p v-if="promo.store_category">{{ promo.store_category }}</p>
+							
+					    </div>
+					</div>
+					
+                    <div class="row">
                         <div class="col-sm-6 text-left" v-if="currentPage">
                     		<!--<div class="property_address">-->
                     		<!--     {{property.address1}} <br/> {{property.city}} <br/> {{property.province}} {{property.postal_code}} -->
