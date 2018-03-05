@@ -8,7 +8,7 @@
         			<div id="promos_container">
     					<div class="promo_container">
     					    <div class="promo_content center">
-    					        <p class="promo_title">{{ $t("events_page.promotions") }}</p>
+    					        <p class="promo_title">{{ $t("events_page.events") }}</p>
     					        <h3 class="margin_60" v-if="locale=='en-ca'">{{ currentEvent.name }}</h3>
     							<h3 class="margin_60" v-else>{{ currentEvent.name_2 }}</h3>
     							<p class="promo_desc">
