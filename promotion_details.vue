@@ -14,7 +14,7 @@
     					        <h3 class="" v-if="locale=='en-ca'">{{ currentPromo.name }}</h3>
     							<h3 class="" v-else>{{ currentPromo.name }}</h3>
     					    </div>
-    					    <div class="promo_desc">
+    					    <div class="promo_details_desc">
             				    <div v-if="locale=='en-ca'" v-html="currentPromo.rich_description"></div>
             				    <div v-else v-html="currentPromo.rich_description_2"></div>
             				</div>
