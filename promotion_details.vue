@@ -13,7 +13,9 @@
     					        <p class="promo_title">{{ $t("promos_page.promotions") }}</p>
     					        <h3 class="" v-if="locale=='en-ca'">{{ currentPromo.name }}</h3>
     							<h3 class="" v-else>{{ currentPromo.name_2 }}</h3>
-    							<p class="promo_desc">{{ promo.description_short }}</p>
+    							<p class="promo_desc">
+    							    {{currentEvent.start_date | moment("MMM D", timezone)}} - {{currentEvent.end_date | moment("MMM D", timezone)}}
+    							</p>
     					    </div>
     					    <div class="promo_details_desc">
             				    <div v-if="locale=='en-ca'" v-html="currentPromo.rich_description"></div>
