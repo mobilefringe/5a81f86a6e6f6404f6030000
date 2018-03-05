@@ -10,11 +10,8 @@
     					    <div class="promo_img" v-else v-lazy:background-image="currentPromo.promo_image2_url_abs"></div>
     					    <div class="promo_content">
     					        <p class="promo_title">{{ $t("promos_page.promotions") }}</p>
-    					        <h3 class="" v-if="locale=='en-ca'">{{ currentPromo.name_short }}</h3>
-    							<h3 class="" v-else>{{ currentPromo.name_short_2 }}</h3>
-    					        <p class="promo_desc"  v-if="locale=='en-ca'">{{ currentPromo.description_short }}</p>
-    							<p class="promo_desc" v-else>{{ currentPromo.description_short_2 }}</p>
-    							
+    					        <h3 class="" v-if="locale=='en-ca'">{{ currentPromo.name }}</h3>
+    							<h3 class="" v-else>{{ currentPromo.name }}</h3>
     					    </div>
     					    <div class="promo_desc">
             				    <div v-if="locale=='en-ca'" v-html="currentPromo.rich_description"></div>
