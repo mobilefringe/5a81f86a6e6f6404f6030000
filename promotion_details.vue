@@ -19,62 +19,6 @@
             				</div>
     					</div>
         			</div>
-        			
-        			
-		<!--	<div class="row">-->
-		<!--		<div class="col-sm-4 promo_logo_container hidden_phone">-->
-		<!--			<div class="image_container">-->
-		<!--				<img v-lazy="currentPromo.store.image_url" class="image"/>-->
-		<!--			</div>-->
-		<!--			<div class="text-center">-->
-		<!--			    <div v-if="currentPromo.promotionable_type == 'Store'">-->
-		<!--				    <h4 class="event_store_name caps" v-if="locale=='en-ca'">{{currentPromo.store.name}}</h4>-->
-		<!--				    <h4 class="event_store_name caps" v-else>{{currentPromo.store.name_2}}</h4>-->
-		<!--				</div>-->
-		<!--				<h4 v-if="currentPromo.store.phone" class="store_dets_title"> <a :href="'tel:'+currentPromo.store.phone">{{currentPromo.store.phone}}</a></h4>-->
-		<!--				<h4 v-if="currentPromo.store.website" class="store_dets_title"> <a :href="'//'+currentPromo.store.website" target="_blank"> {{$t("stores_page.store_website")}}</a></h4>-->
-		<!--				<h4 v-if="storeHours.length > 0" class="store_dets_title"> {{$t("stores_page.store_hours")}}</h4>-->
-		<!--				<ul class="store_hours_list">-->
-		<!--					<li v-if="storeHours" v-for="hour in storeHours" class="col-xs-12">-->
-		<!--						<span class="col-xs-6 text-left">{{hour.day_of_week | moment("dddd", timezone)}}</span>-->
-		<!--						<span class="col-xs-6 text-left">{{hour.open_time | moment("h A", timezone)}} - {{hour.close_time | moment("h A", timezone)}}</span>-->
-		<!--					</li>-->
-		<!--				</ul>-->
-		<!--				<div class="store_dets_btn caps" v-if="currentPromo.promotionable_type == 'Store'">-->
-		<!--					<router-link :to="'/stores/'+currentPromo.store.slug">{{$t("stores_page.store_dets_loc")}}</router-link>-->
-		<!--				</div>-->
-		<!--			</div>-->
-		<!--		</div>-->
-		<!--		<div class="col-sm-8 promo_image_container text-left">-->
-		<!--			<router-link to="/promotions"><i class="fa fa-angle-left"></i> &nbsp;{{$t("promos_page.back_to_promos")}}</router-link>-->
-		<!--			<h3 class="promo_name" style="margin: 20px auto 0px;"  v-if="locale=='en-ca'">{{currentPromo.name}}</h3>-->
-		<!--			<h3 class="promo_name" style="margin: 20px auto 0px;"  v-else>{{currentPromo.name_2}}</h3>-->
-		<!--			<div class="row">-->
-		<!--				<p class="promo_div_date pull-left">{{currentPromo.start_date | moment("MMM D", timezone)}} - {{currentPromo.end_date | moment("MMM D", timezone)}}</p>-->
-		<!--				<social-sharing :url="shareURL(currentPromo.slug)" :title="currentPromo.title" :description="currentPromo.body" :quote="_.truncate(currentPromo.description, {'length': 99})" twitter-user="EastgateSquare" :media="currentPromo.image_url" inline-template >-->
-		<!--					<div class="blog-social-share pull-right" style="margin: 15px auto;">-->
-		<!--						<div class="social_share">-->
-		<!--							<network network="facebook">-->
-		<!--								<i class="fa fa-facebook social_icons" aria-hidden="true"></i>-->
-		<!--							</network>-->
-		<!--							<network network="twitter">-->
-		<!--								<i class="fa fa-twitter social_icons" aria-hidden="true"></i>-->
-		<!--							</network>-->
-		<!--						</div>-->
-		<!--					</div>-->
-		<!--				</social-sharing>-->
-		<!--			</div>-->
-		<!--			<div class="col-sm-12 no_padding">-->
-		<!--				<img v-lazy="currentPromo.image_url" class="image"/>-->
-		<!--				<div class="text-left promo_description">-->
-		<!--					<p v-if="locale=='en-ca'" v-html="currentPromo.rich_description"></p>-->
-		<!--					<p v-else v-html="currentPromo.rich_description_2"></p>-->
-		<!--				</div>-->
-		<!--			</div>-->
-		<!--		</div>-->
-		<!--	</div>-->
-		<!--</div>-->
-		    
 		        </div>
 		    </div>
 		</transition>
