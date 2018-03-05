@@ -108,11 +108,11 @@
             created(){
                 this.loadData().then(response => {
                     this.updateCurrentPromo(this.id);
-                    var temp_repo = this.findRepoByName('Promos Banner');
-                    if(temp_repo) {
-                        this.promoBanner = temp_repo.images[0];
-                    }
-                    console.log(this.promoBanner);
+                    // var temp_repo = this.findRepoByName('Promos Banner');
+                    // if(temp_repo) {
+                    //     this.promoBanner = temp_repo.images[0];
+                    // }
+                    // console.log(this.promoBanner);
                     this.promos = this.promotions;
                 });
             },
