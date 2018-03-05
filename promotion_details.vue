@@ -117,44 +117,44 @@
                 });
             },
             watch: {
-                currentPromo : function (){
-                    if(this.currentPromo != null) {
-                        console.log(this.currentPromo.store);
-                        if (this.currentPromo.store != null && this.currentPromo.store != undefined && _.includes(this.currentPromo.store.image_url, 'missing')) {
-                            this.currentPromo.store.image_url = "http://via.placeholder.com/400x400/757575";
-                        }
-                        else if (this.currentPromo.store == null || this.currentPromo.store == undefined) {
-                            this.currentPromo.store = {};
-                            this.currentPromo.store.image_url =  "http://via.placeholder.com/400x400/757575";
-                        }
-                        var vm = this;
-                        var temp_promo = [];
-                        var current_id =_.toNumber(this.currentPromo.id);
-                        _.forEach(this.currentPromo.store.promotions, function(value, key) {
-                            if(_.toNumber(value) != current_id){
-                                var current_promo = vm.findPromoById(value);
-                                current_promo.description_short = _.truncate(current_promo.description, {'length': 70});
-                                temp_promo.push(current_promo);
-                            }
-                        });
-                        this.storePromos = temp_promo;
-                    }
-                    if(this.currentPromo.store) {
-                        var storeHours = [];
-                        var vm = this;
-                        _.forEach(this.currentPromo.store.store_hours, function (value, key) {
-                            var hour = vm.findHourById(value);
-                            if(hour.day_of_week === 0){
-                                hour.order = 7;
-                            }
-                            else {
-                                hour.order = hour.day_of_week;
-                            }
-                            storeHours.push();
-                        });
-                        this.storeHours = _.sortBy(storeHours, [function(o) { return o.order; }]);
-                    }
-                }
+                // currentPromo : function (){
+                //     if(this.currentPromo != null) {
+                //         console.log(this.currentPromo.store);
+                //         if (this.currentPromo.store != null && this.currentPromo.store != undefined && _.includes(this.currentPromo.store.image_url, 'missing')) {
+                //             this.currentPromo.store.image_url = "http://via.placeholder.com/400x400/757575";
+                //         }
+                //         else if (this.currentPromo.store == null || this.currentPromo.store == undefined) {
+                //             this.currentPromo.store = {};
+                //             this.currentPromo.store.image_url =  "http://via.placeholder.com/400x400/757575";
+                //         }
+                //         var vm = this;
+                //         var temp_promo = [];
+                //         var current_id =_.toNumber(this.currentPromo.id);
+                //         _.forEach(this.currentPromo.store.promotions, function(value, key) {
+                //             if(_.toNumber(value) != current_id){
+                //                 var current_promo = vm.findPromoById(value);
+                //                 current_promo.description_short = _.truncate(current_promo.description, {'length': 70});
+                //                 temp_promo.push(current_promo);
+                //             }
+                //         });
+                //         this.storePromos = temp_promo;
+                //     }
+                //     if(this.currentPromo.store) {
+                //         var storeHours = [];
+                //         var vm = this;
+                //         _.forEach(this.currentPromo.store.store_hours, function (value, key) {
+                //             var hour = vm.findHourById(value);
+                //             if(hour.day_of_week === 0){
+                //                 hour.order = 7;
+                //             }
+                //             else {
+                //                 hour.order = hour.day_of_week;
+                //             }
+                //             storeHours.push();
+                //         });
+                //         this.storeHours = _.sortBy(storeHours, [function(o) { return o.order; }]);
+                //     }
+                // }
             },
             computed: {
                 ...Vuex.mapGetters([
