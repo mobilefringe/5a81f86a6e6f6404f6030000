@@ -3,37 +3,23 @@
         <loader v-if="!dataLoaded"></loader>
         <transition name="fade">
             <div v-if="dataLoaded" v-cloak>
-        		<div class="page_header" v-if="pageBanner" v-bind:style="{ backgroundImage: 'url(' + pageBanner.image_url + ')' }">
-        			<div class="site_container">
-        				<div class="header_content caps">
-        					<p>{{ $t("promos_page.promos_header_desc") }} {{ property.name }}</p>
-        					<h1>{{ $t("promos_page.promos_header") }}</h1>
-        				</div>
-        			</div>
-        		</div>
         		<div class="site_container page_content">
-        		    <div class="row">
-        		        <div class="col-md-12">
-        		            <h3 class="promo_page_title center">{{ $t("promos_page.promotions_title") }}</h3>
-        		        </div>
-        		    </div>
-        			<div id="promos_container" v-if="promotions.length > 0">
+        			<div id="promos_container">
         				
-        					<div class="promo_container" v-for="(promo, index) in paginated('promos')">
-        					    <div class="promo_img" v-if="locale=='en-ca'" v-lazy:background-image="promo.image_url"></div>
-        					    <div class="promo_img" v-else v-lazy:background-image="promo.promo_image2_url_abs"></div>
-        					    <div class="promo_content">
-        					        <p class="promo_title">{{ $t("promos_page.promotions") }}</p>
-        					        <h3 class="" v-if="locale=='en-ca'">{{ promo.name_short }}</h3>
-        							<h3 class="" v-else>{{ promo.name_short_2 }}</h3>
-        					        <p class="promo_desc"  v-if="locale=='en-ca'" >{{ promo.description_short }}</p>
-        							<p class="promo_desc" v-else>{{ promo.description_short_2 }}</p>
-        							<router-link :to="'/promotions/'+ promo.slug" >
-        								   <div class="promo_learn_more animated_btn">{{ $t("promos_page.read_more") }}</div>
-        						    </router-link>
-        					    </div>
-        					</div>
-        				
+    					<div class="promo_container">
+    					    <div class="promo_img" v-if="locale=='en-ca'" v-lazy:background-image="currentPromo.image_url"></div>
+    					    <div class="promo_img" v-else v-lazy:background-image="currentPromo.promo_image2_url_abs"></div>
+    					    <div class="promo_content">
+    					        <p class="promo_title">{{ $t("promos_page.promotions") }}</p>
+    					        <h3 class="" v-if="locale=='en-ca'">{{ currentPromo.name_short }}</h3>
+    							<h3 class="" v-else>{{ currentPromo.name_short_2 }}</h3>
+    					        <p class="promo_desc"  v-if="locale=='en-ca'" >{{ currentPromo.description_short }}</p>
+    							<p class="promo_desc" v-else>{{ currentPromo.description_short_2 }}</p>
+    							<router-link :to="'/promotions/'+ currentPromo.slug" >
+    								   <div class="promo_learn_more animated_btn">{{ $t("promos_page.read_more") }}</div>
+    						    </router-link>
+    					    </div>
+    					</div>
         			</div>
         			
         			
