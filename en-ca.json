@@ -63,6 +63,8 @@
         "back_to_promos" : "Back to Promotions"
     },
     "events_page": {
+        "events_header_desc" : " is the Place to Be ",
+        "events_header" : "Events",
         "events_title" : "Upcoming Events",
         "events" : "Event",
         "read_more" : "Check It Out",
