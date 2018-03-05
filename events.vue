@@ -3,8 +3,7 @@
         <loader v-if="!dataLoaded"></loader>
         <transition name="fade">
             <div v-if="dataLoaded" v-cloak>
-        		<!--<div class="page_header" v-if="pageBanner" v-bind:style="{ backgroundImage: 'url(' + pageBanner.image_url + ')' }">-->
-        		<div class="page_header"  v-bind:style="{ backgroundImage: 'url(http://via.placeholder.com/1920x600)' }">
+        		<div class="page_header" v-if="pageBanner" v-bind:style="{ backgroundImage: 'url(' + pageBanner.image_url + ')' }">
         			<div class="site_container">
         				<div class="header_content caps">
         					<h1>{{ $t("events_page.events") }}</h1>
@@ -71,11 +70,11 @@
                 this.loadData().then(response => {
                     this.dataLoaded = true;
                     
-                    // var temp_repo = this.findRepoByName('Promos Banner');
-                    // if(temp_repo) {
-                    //     this.pageBanner = temp_repo.images[0];
-                    // }
-                    // console.log(this.pageBanner);
+                    var temp_repo = this.findRepoByName('Events Banner');
+                    if(temp_repo) {
+                        this.pageBanner = temp_repo.images[0];
+                    }
+                    console.log(this.pageBanner);
                     this.promos = this.events;
                 });
             },
