@@ -90,7 +90,7 @@
 		<!--		</div>-->
 		<!--	</div>-->
 		<!--</div>-->
-		</transition
+		</transition>
 	</div>
 </template>
 
