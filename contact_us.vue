@@ -10,11 +10,11 @@
 					    </div>
 					    <div class="promo_content">
 					        <h3 class="">Location</h3>
-					        <p v-if="promo.store_category">{{ promo.store_category }}</p>
+					        <p ></p>
 					        <h3 class="">Phone</h3>
-					        <p v-if="promo.store_category">{{ promo.store_category }}</p>
+					        <p ></p>
 					        <h3 class="">Email</h3>
-					        <p v-if="promo.store_category">{{ promo.store_category }}</p>
+					        <p ></p>
 							
 					    </div>
 					</div>
