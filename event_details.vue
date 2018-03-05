@@ -57,7 +57,7 @@
             watch: {
                 currentEvent : function (){
                     if(this.currentEvent != null) {
-                        console.log(this.currentEvent.store);
+                        console.log(this.currentEvent);
                         if (this.currentEvent.store != null && this.currentEvent.store != undefined) {
                             if(_.includes(this.currentEvent.store.image_url, 'missing')) {
                                 this.currentEvent.store.image_url = "http://via.placeholder.com/400x400/757575";
