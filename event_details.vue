@@ -36,10 +36,8 @@
             template: template, // the variable template will be injected,
             data: function() {
                 return {
+                    dataLoaded: false,
                     currentEvent: null,
-                    storeEvents : null,
-                    storeHours : null,
-                    eventBanner : null
                 }
             },
             props:['id', 'locale'],
@@ -53,12 +51,13 @@
             created(){
                 this.loadData().then(response => {
                     this.updatecurrentEvent(this.id);
-                    var temp_repo = this.findRepoByName('Events Banner');
-                    if(temp_repo) {
-                        this.eventBanner = temp_repo.images[0];
-                    }
-                    console.log(this.eventBanner);
-                    this.events = this.event;
+                    // var temp_repo = this.findRepoByName('Events Banner');
+                    // if(temp_repo) {
+                    //     this.eventBanner = temp_repo.images[0];
+                    // }
+                    // console.log(this.eventBanner);
+                    // this.events = this.event;
+                    this.dataLoaded = true;
                 });
             },
             watch: {
