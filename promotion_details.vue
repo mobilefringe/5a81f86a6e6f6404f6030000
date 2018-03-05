@@ -9,10 +9,10 @@
     					<div class="promo_container">
     					    <div class="promo_img" v-if="locale=='en-ca'" v-lazy:background-image="currentPromo.image_url"></div>
     					    <div class="promo_img" v-else v-lazy:background-image="currentPromo.promo_image2_url_abs"></div>
-    					    <div class="promo_content">
+    					    <div class="promo_content center">
     					        <p class="promo_title">{{ $t("promos_page.promotions") }}</p>
-    					        <h3 class="" v-if="locale=='en-ca'">{{ currentPromo.name }}</h3>
-    							<h3 class="" v-else>{{ currentPromo.name_2 }}</h3>
+    					        <h3 class="margin_60" v-if="locale=='en-ca'">{{ currentPromo.name }}</h3>
+    							<h3 class="margin_60" v-else>{{ currentPromo.name_2 }}</h3>
     							<p class="promo_desc">
     							    {{ currentPromo.start_date | moment("MMM D", timezone) }} - {{ currentPromo.end_date | moment("MMM D", timezone) }}
     							</p>
