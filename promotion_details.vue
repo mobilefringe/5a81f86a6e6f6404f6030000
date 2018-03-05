@@ -114,6 +114,7 @@
                     // }
                     // console.log(this.promoBanner);
                     this.promos = this.promotions;
+                    this.dataLoaded = true;
                 });
             },
             watch: {
