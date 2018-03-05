@@ -89,6 +89,10 @@
         "holiday_hours" : "Holiday Hours",
         "closed" : "Closed"
     },
+    "contact_page" : {
+        "phone1" : "Customer Service",
+        "phone2" : "Security",
+    },
   "newsletter_page" : {
     "newsletter" : "Newsletter",
     "name" : "Name",
