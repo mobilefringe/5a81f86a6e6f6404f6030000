@@ -14,7 +14,7 @@
     					        <h3 class="" v-if="locale=='en-ca'">{{ currentPromo.name }}</h3>
     							<h3 class="" v-else>{{ currentPromo.name_2 }}</h3>
     							<p class="promo_desc">
-    							    {{currentEvent.start_date | moment("MMM D", timezone)}} - {{currentEvent.end_date | moment("MMM D", timezone)}}
+    							    {{ currentPromo.start_date | moment("MMM D", timezone) }} - {{ currentPromo.end_date | moment("MMM D", timezone) }}
     							</p>
     					    </div>
     					    <div class="promo_details_desc">
