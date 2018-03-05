@@ -82,30 +82,8 @@
     </div>
 </template>
 
-<!--<style>-->
-<!--    #contact_us_container .row{-->
-<!--        margin-left:inherit;-->
-<!--    }-->
-<!--    #contact_us_container {-->
-<!--        margin: 20px auto 0;-->
-<!--    }-->
-<!--    #contact_us_container .page_header {-->
-<!--        margin-bottom:20px;-->
-<!--    }-->
-<!--    #contact_us_container .property_address {-->
-<!--        margin-bottom:20px;-->
-<!--    }-->
-<!--    .form-group .form-control-feedback{-->
-<!--        font-size: 12px;-->
-        /*top:60px;*/
-<!--        color: #F44336;-->
-<!--        top: initial;-->
-<!--        bottom: -27px;-->
-<!--    }-->
-<!--</style>-->
-
 <script>
-    define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "vue-meta", 'vee-validate', 'utility'], function(Vue, Vuex, moment, tz, VueMoment, Meta, VeeValidate,Utility) {
+    define(["Vue", "vuex", "vue-meta", "vee-validate", "utility"], function(Vue, Vuex, Meta, VeeValidate, Utility) {
         Vue.use(Meta);
         Vue.use(VeeValidate);
         return Vue.component("contact-us-component", {
@@ -115,17 +93,11 @@
                     dataLoaded: false,
                     form_data : {},
                     formSuccess : false,
-                    formError: false,
-                    validaNum: '',
-                    correctValNum: null,
-                    validNumError: false,
-                    currentPage : null,
-                    pageBanner: null
+                    formError: false
                 }
             },
             created(){
                 this.loadData().then(response => {
-                    // this.currentPage = response[0].data;
                    this.dataLoaded = true;
                 });
             },
@@ -142,8 +114,7 @@
             computed: {
                 ...Vuex.mapGetters([
                     'property',
-                    'timezone',
-                    'findRepoByName'
+                    'timezone'
                 ]),
             },
             methods: {
@@ -179,7 +150,7 @@
                 loadData: async function() {
                     try {
                         // avoid making LOAD_META_DATA call for now as it will cause the entire Promise.all to fail since no meta data is set up.
-                        let results = await Promise.all([this.$store.dispatch('LOAD_PAGE_DATA', {url: this.property.mm_host + "	/pages/bonniedoon-contact-us.json"}),this.$store.dispatch("getData", "repos")]);
+                        let results = await Promise.all(this.$store.dispatch("getData", "repos")]);
                         return results;
                     } catch (e) {
                         console.log("Error loading data: " + e.message);
