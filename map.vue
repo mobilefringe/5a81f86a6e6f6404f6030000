@@ -165,7 +165,8 @@
                         console.log(this.storesByAlphaIndex)
                         var filtered = _.filter(this.storesByAlphaIndex, function(o,i) { return _.lowerCase(i) == _.lowerCase(letter); })[0];
                         console.log(filtered)
-                        this.filteredStores = _.groupBy(filtered, store => (isNaN(store.name.charAt(0)) ? store.name.charAt(0) : "#"));
+                        this.filteredStores = filtered
+                        // this.filteredStores = _.groupBy(filtered, store => (isNaN(store.name.charAt(0)) ? store.name.charAt(0) : "#"));
                     }
                 },
                 onOptionSelect(option) {
