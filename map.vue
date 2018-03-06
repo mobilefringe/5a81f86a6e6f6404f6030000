@@ -1,0 +1,182 @@
+<template>
+    <div> <!-- without an outer container div this component template will not render -->
+        <loader v-if="!dataLoaded"></loader>
+        <transition name="fade">
+            <div v-if="dataLoaded" v-cloak>
+                <div class="page_header" v-if="pageBanner" v-bind:style="{ backgroundImage: 'url(' + pageBanner.image_url + ')' }">
+        			<div class="site_container">
+        				<div class="header_content caps">
+        				    <p>{{ $t("hours_page.header_desc") }}</p>
+        					<h1>{{$t("hours_page.hours")}}</h1>
+        				</div>
+        			</div>
+        		</div>  
+                <div class="site_container">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <h5>Store Directory</h5>
+                            <h2 class="hidden-mobile">Select A Category</h2>
+                            <div class="category-select-container map">
+                                <v-select 
+                                    v-if="allCategories"
+                                    v-model="selected" 
+                                    :options="allCategories" 
+                                    :searchable="false" 
+                                    class="category-select"
+                                ></v-select>
+                            </div>
+                            <div class="store-search-container">
+                                <search-component v-model="storeSearch" :list="processedStores" :suggestion-attribute="suggestionAttribute" @select="onOptionSelect">
+                                    <template slot="item" scope="option">
+                                        <article class="media">
+                                            <p>{{ option.data.name }}</p>
+                                        </article>
+                                    </template>
+                                </search-component>
+                                <i id="store-search-icon" class="fa fa-search" aria-hidden="true"></i>
+                            </div>
+                            <div class="storelist-container hidden-mobile" v-if="currentSelection">
+                                <div class="storename" v-for="store in currentSelection">
+                                    <p @click="dropPin(store)">{{store.name}}</p>
+                                </div>
+                            </div>
+                            <div class="store-map-download hidden-mobile" v-if="mapDownload">
+                                <a :href="mapDownload()" target="_blank">
+                                    <h5>Download Directory Map</h5>
+                                </a>
+                            </div>
+                            <div class="hidden-mobile">
+                                <a class="details-link" href="https://www.google.com/maps/place/NorthPark+Center/@32.868225,-96.773204,15z/data=!4m5!3m4!1s0x0:0x95fc10ba98f7aad4!8m2!3d32.8680671!4d-96.7735128?hl=en-US" target="_blank">
+                                    Get Directions <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="margin-30 visible-mobile"></div>
+                        <div class="col-md-9">
+                            <mapplic-map ref="mapplic_ref" :height="700" :minimap= "true" :deeplinking="false" :sidebar="false" :hovertip="true" :maxscale= "5" :storelist="allStores" :floorlist="floorList" tooltiplabel="Info"></mapplic-map>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </transition>
+    </div>
+</template>
+<script>
+    define(["Vue", "vuex", "vue!mapplic-map"], function(Vue, Vuex, MapplicComponent) {
+        return Vue.component("stores-component", {
+            template: template, // the variable template will be injected
+            data: function () {
+                return {
+                    dataLoaded: false,
+                    selected: "Select a Category",
+                    suggestionAttribute: "name",
+                    storeSearch: null,
+                    currentSelection: null,
+                }
+            },
+            created() {
+                this.loadData().then(response => {
+                    this.dataLoaded = true;
+                    this.currentSelection = this.allStores;
+                });
+            },
+            watch: {
+                selected: function() {
+                    console.log(this.selected.value)
+                    var catName = this.selected.value;
+                    var storesByCategory = this.storesByCategoryName
+                    var sortedList = _.uniq(storesByCategory[catName]);
+                    if(this.selected.value == undefined){
+                        this.currentSelection = this.allStores;
+                    } else {
+                        this.currentSelection = sortedList;
+                    }
+                },
+            },
+            computed: {
+                ...Vuex.mapGetters([
+                    "property",
+                    "timezone",
+                    "stores",
+                    "processedStores",
+                    "processedCategories",
+                    "storesByCategoryName",
+                    "repos",
+                    "findRepoByName"
+                ]),
+                allStores() {
+                    return this.processedStores;
+                },
+                allCategories() {
+                    var categories = this.processedCategories
+                    var categoryData = [];
+                    _.forEach(categories, function(value, key) {
+                        if(value.store_ids != null){
+                            var name = value.name;
+                            var id = value.id;
+                            if(name != null && id != null){
+                                var object = {
+                                    'label': name,
+                                    'value': name
+                                }
+                                categoryData.push(object)
+                            }
+                        }
+                    });
+                    categoryData.unshift('All');
+                    return categoryData 
+                },
+                floorList () {
+                    var floor_list = [];
+                    
+                    var floor_1 = {};
+                    floor_1.id = "first-floor";
+                    floor_1.title = "Level One";
+                    floor_1.map = "//mallmaverick.com/system/site_images/photos/000/035/861/original/NorthPark_-_Dec-15-2017_-_Floor_1.svg";
+                    floor_1.minimap = "//codecloud.cdn.speedyrails.net/sites/5a4bb6d36e6f6473fa0a0000/image/png/1513365138000/NorthPark - Dec-15-2017 - Floor 1.png";
+                    floor_1.z_index = 1;
+                    floor_1.show = true;
+                    
+                    floor_list.push(floor_1);
+                    var floor_2 = {};
+                    floor_2.id = "second-floor";
+                    floor_2.title = "Level Two";
+                    floor_2.map = "//mallmaverick.com/system/site_images/photos/000/035/873/original/NorthPark_-_Dec-15-2017_-_Floor_2.svg";
+                    floor_2.minimap = "//codecloud.cdn.speedyrails.net/sites/5a4bb6d36e6f6473fa0a0000/image/png/1513365146000/NorthPark - Dec-15-2017 - Floor 2.png";
+                    floor_2.z_index = 2;
+                    floor_2.show = false;
+                    
+                    floor_list.push(floor_2);
+                    return floor_list;
+                }
+            },
+            methods: {
+                loadData: async function() {
+                    try {
+                        let results = await Promise.all([this.$store.dispatch("getData", "categories"), this.$store.dispatch("getData", "repos")]);
+                    } catch (e) {
+                        console.log("Error loading data: " + e.message);
+                    }
+                },
+                onOptionSelect(option) {
+                    this.$nextTick(function() {
+                        this.storeSearch = ""
+                    });
+                    this.$refs.mapplic_ref.showLocation(option.svgmap_region);
+                },
+                mapDownload: function mapDownload() {
+                    var repo = this.findRepoByName("maps").images;
+                    var map = _.filter(repo, function(o) {
+                        return o.id == "31625";
+                    });
+                    var mapURL = "http://www.mallmaverick.com" + map[0].photo_url;
+                    return mapURL;
+                },
+                dropPin(store) {
+                    this.$refs.mapplic_ref.showLocation(store.svgmap_region);
+                }
+            }
+            
+        });
+    });
+</script>
