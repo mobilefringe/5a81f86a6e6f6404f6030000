@@ -25,7 +25,7 @@
                     <div class="row">
                         <div class="col-md-3">
                             <div class="map_search_container">
-                                <search-component v-model="storeSearch" :list="processedStores" :suggestion-attribute="suggestionAttribute" @select="onOptionSelect">
+                                <search-component v-model="storeSearch" :list="processedStores" :suggestion-attribute="suggestionAttribute" @select="onOptionSelect" :placeholder="Search Store Name">
                                     <template slot="item" scope="option">
                                         <article class="media"><p>{{ option.data.name }}</p></article>
                                     </template>
