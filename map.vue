@@ -100,34 +100,31 @@
                     "timezone",
                     "repos",
                     "findRepoByName",
-                    "stores",
                     "processedStores",
                     'storesByAlphaIndex',
-                    "processedCategories",
-                    "storesByCategoryName",
                 ]),
-                allStores() {
-                    return this.processedStores;
-                },
-                allCategories() {
-                    var categories = this.processedCategories
-                    var categoryData = [];
-                    _.forEach(categories, function(value, key) {
-                        if(value.store_ids != null){
-                            var name = value.name;
-                            var id = value.id;
-                            if(name != null && id != null){
-                                var object = {
-                                    'label': name,
-                                    'value': name
-                                }
-                                categoryData.push(object)
-                            }
-                        }
-                    });
-                    categoryData.unshift('All');
-                    return categoryData 
-                },
+                // allStores() {
+                //     return this.processedStores;
+                // },
+                // allCategories() {
+                //     var categories = this.processedCategories
+                //     var categoryData = [];
+                //     _.forEach(categories, function(value, key) {
+                //         if(value.store_ids != null){
+                //             var name = value.name;
+                //             var id = value.id;
+                //             if(name != null && id != null){
+                //                 var object = {
+                //                     'label': name,
+                //                     'value': name
+                //                 }
+                //                 categoryData.push(object)
+                //             }
+                //         }
+                //     });
+                //     categoryData.unshift('All');
+                //     return categoryData 
+                // },
                 floorList () {
                     var floor_list = [];
                     
@@ -162,7 +159,7 @@
                 },
                 filterStores (letter) {
                     if(letter == "All"){
-                        this.filteredStores = this.storesByAlphaIndex; //this.storesByAlphaIndex;
+                        this.filteredStores = this.storesByAlphaIndex;
                     } else {
                         var filtered = _.filter(this.storesByAlphaIndex, function(o,i) { return _.lowerCase(i) == _.lowerCase(letter); })[0];
                         this.filteredStores = _.groupBy(filtered, store => (isNaN(store.name.charAt(0)) ? store.name.charAt(0) : "#"));
