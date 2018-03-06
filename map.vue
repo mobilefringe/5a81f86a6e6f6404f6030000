@@ -76,7 +76,7 @@
                     //     this.pageBanner = temp_repo.images[0];
                     // }
                     
-                    this.filteredStores = this.storesByAlphaIndex;
+                    this.filteredStores = this.processedStores;
                     console.log(this.filteredStores)
                     this.dataLoaded = true;
                 });
