@@ -35,8 +35,8 @@
                                 <i id="store_search_icon" class="fa fa-search" aria-hidden="true"></i>
                             </div>
                             <div class="store_list">
-                                <div class="store_list_container hidden-mobile" v-if="currentSelection">
-                                    <div class="store_name" v-for="store in currentSelection">
+                                <div class="store_list_container hidden-mobile" v-if="filteredStores">
+                                    <div class="store_name" v-for="store in filteredStores">
                                         <p @click="dropPin(store)">{{store.name}}</p>
                                     </div>
                                 </div>
