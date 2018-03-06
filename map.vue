@@ -19,6 +19,7 @@
                                 <a @click="filterStores('#')">#</a>
                                 <a v-for="letter in alphabet" @click="filterStores(letter)">{{letter}}</a>
                             </div>
+                            <hr>
                             <div class="margin_40"></div>
                         </div>
                     </div>
@@ -68,7 +69,6 @@
                     ],
                     suggestionAttribute: "name",
                     storeSearch: null,
-                    currentSelection: null,
                     filteredStores: null,
                 }
             },
@@ -80,23 +80,22 @@
                     // }
                     
                     this.filteredStores = this.processedStores;
-                    console.log(this.filteredStores)
                     this.dataLoaded = true;
                 });
             },
-            watch: {
-                selected: function() {
-                    console.log(this.selected.value)
-                    var catName = this.selected.value;
-                    var storesByCategory = this.storesByCategoryName
-                    var sortedList = _.uniq(storesByCategory[catName]);
-                    if(this.selected.value == undefined){
-                        this.currentSelection = this.allStores;
-                    } else {
-                        this.currentSelection = sortedList;
-                    }
-                },
-            },
+            // watch: {
+            //     selected: function() {
+            //         console.log(this.selected.value)
+            //         var catName = this.selected.value;
+            //         var storesByCategory = this.storesByCategoryName
+            //         var sortedList = _.uniq(storesByCategory[catName]);
+            //         if(this.selected.value == undefined){
+            //             this.currentSelection = this.allStores;
+            //         } else {
+            //             this.currentSelection = sortedList;
+            //         }
+            //     },
+            // },
             computed: {
                 ...Vuex.mapGetters([
                     "property",
@@ -109,25 +108,6 @@
                 allStores() {
                     return this.processedStores;
                 },
-                // allCategories() {
-                //     var categories = this.processedCategories
-                //     var categoryData = [];
-                //     _.forEach(categories, function(value, key) {
-                //         if(value.store_ids != null){
-                //             var name = value.name;
-                //             var id = value.id;
-                //             if(name != null && id != null){
-                //                 var object = {
-                //                     'label': name,
-                //                     'value': name
-                //                 }
-                //                 categoryData.push(object)
-                //             }
-                //         }
-                //     });
-                //     categoryData.unshift('All');
-                //     return categoryData 
-                // },
                 floorList () {
                     var floor_list = [];
                     
