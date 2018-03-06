@@ -6,8 +6,8 @@
                 <div class="page_header" v-if="pageBanner" v-bind:style="{ backgroundImage: 'url(' + pageBanner.image_url + ')' }">
         			<div class="site_container">
         				<div class="header_content caps">
-        				    <p>{{ $t("hours_page.header_desc") }}</p>
-        					<h1>{{$t("hours_page.hours")}}</h1>
+        				    <p>{{ $t("map_page.header_desc") }}</p>
+        					<h1>{{$t("map_page.header_title")}}</h1>
         				</div>
         			</div>
         		</div>  
