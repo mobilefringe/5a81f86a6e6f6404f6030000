@@ -171,14 +171,14 @@
                     });
                     this.$refs.mapplic_ref.showLocation(option.svgmap_region);
                 },
-                mapDownload: function mapDownload() {
-                    var repo = this.findRepoByName("maps").images;
-                    var map = _.filter(repo, function(o) {
-                        return o.id == "31625";
-                    });
-                    var mapURL = "http://www.mallmaverick.com" + map[0].photo_url;
-                    return mapURL;
-                },
+                // mapDownload: function mapDownload() {
+                //     var repo = this.findRepoByName("maps").images;
+                //     var map = _.filter(repo, function(o) {
+                //         return o.id == "31625";
+                //     });
+                //     var mapURL = "http://www.mallmaverick.com" + map[0].photo_url;
+                //     return mapURL;
+                // },
                 dropPin(store) {
                     this.$refs.mapplic_ref.showLocation(store.svgmap_region);
                 }
