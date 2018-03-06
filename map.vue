@@ -20,7 +20,7 @@
                                         <article class="media"><p>{{ option.data.name }}</p></article>
                                     </template>
                                 </search-component>
-                                <i id="store-search-icon" class="fa fa-search" aria-hidden="true"></i>
+                                <i id="store_search_icon" class="fa fa-search" aria-hidden="true"></i>
                             </div>
                             <div class="store_list">
                                 <div class="store_list_container hidden-mobile" v-if="currentSelection">
@@ -48,7 +48,7 @@
                 return {
                     dataLoaded: false,
                     pageBanner: null,
-                    selected: "Select a Category",
+                    
                     suggestionAttribute: "name",
                     storeSearch: null,
                     currentSelection: null,
