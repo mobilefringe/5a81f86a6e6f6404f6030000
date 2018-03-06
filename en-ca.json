@@ -99,6 +99,10 @@
         "form_success_msg" : "Thank you for contacting us. A member from our team will contact you shortly.",
         "form_error_msg" : "There was an error when trying to submit your request. Please try again later."
     },
+    "map_page" : {
+        "header_desc" : "Regular & Holiday Hours",
+        "header_title" : "Centre Map",
+    },
   "newsletter_page" : {
     "newsletter" : "Newsletter",
     "name" : "Name",
