@@ -7,7 +7,7 @@
 						<!--<img :src="banner.image_url" class="banner_img" alt="">-->
 						<div class="home_banner" v-bind:style="{ backgroundImage: 'url(' + banner.image_url + ')' }">
 						    <div class="home_banner_content" v-if="banner.name && banner.description">
-						        <p>{{ banner.name }}</p>
+						        <h1>{{ banner.name }}</h1>
 						        <p>{{ banner.description }}</p>
 						    </div>   
 						</div>
