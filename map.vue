@@ -159,7 +159,7 @@
                 },
                 filterStores (letter) {
                     console.log(letter)
-                    if(letter == "All"){
+                    if(letter == "All" || letter == undefined || letter == null){
                         this.filteredStores = this.storesByAlphaIndex;
                     } else {
                         var filtered = _.filter(this.storesByAlphaIndex, function(o,i) { return _.lowerCase(i) == _.lowerCase(letter); })[0];
