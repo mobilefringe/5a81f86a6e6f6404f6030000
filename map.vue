@@ -14,17 +14,6 @@
                 <div class="site_container">
                     <div class="row">
                         <div class="col-md-3">
-                            <h5>Store Directory</h5>
-                            <h2 class="hidden-mobile">Select A Category</h2>
-                            <div class="category-select-container map">
-                                <v-select 
-                                    v-if="allCategories"
-                                    v-model="selected" 
-                                    :options="allCategories" 
-                                    :searchable="false" 
-                                    class="category-select"
-                                ></v-select>
-                            </div>
                             <div class="store-search-container">
                                 <search-component v-model="storeSearch" :list="processedStores" :suggestion-attribute="suggestionAttribute" @select="onOptionSelect">
                                     <template slot="item" scope="option">
@@ -39,16 +28,6 @@
                                 <div class="storename" v-for="store in currentSelection">
                                     <p @click="dropPin(store)">{{store.name}}</p>
                                 </div>
-                            </div>
-                            <div class="store-map-download hidden-mobile" v-if="mapDownload">
-                                <a :href="mapDownload()" target="_blank">
-                                    <h5>Download Directory Map</h5>
-                                </a>
-                            </div>
-                            <div class="hidden-mobile">
-                                <a class="details-link" href="https://www.google.com/maps/place/NorthPark+Center/@32.868225,-96.773204,15z/data=!4m5!3m4!1s0x0:0x95fc10ba98f7aad4!8m2!3d32.8680671!4d-96.7735128?hl=en-US" target="_blank">
-                                    Get Directions <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                                </a>
                             </div>
                         </div>
                         <div class="margin-30 visible-mobile"></div>
