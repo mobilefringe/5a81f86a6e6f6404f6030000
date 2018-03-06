@@ -164,11 +164,11 @@
                         this.filteredStores = this.processedStores;
                     } else {
                         var filtered = _.filter(this.storesByAlphaIndex, function(o,i) { return _.lowerCase(i) == _.lowerCase(letter); })[0];
-                        if(filtered != undefined) {
+                        // if(filtered != undefined) {
                             this.filteredStores = filtered
-                        } else {
-                            this.noStores = true;
-                        }
+                        // } else {
+                        //     this.noStores = true;
+                        // }
                         // this.filteredStores = _.groupBy(filtered, store => (isNaN(store.name.charAt(0)) ? store.name.charAt(0) : "#"));
                     }
                 },
