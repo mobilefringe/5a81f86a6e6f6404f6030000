@@ -66,6 +66,7 @@
                     suggestionAttribute: "name",
                     storeSearch: null,
                     currentSelection: null,
+                    filteredStores: null,
                 }
             },
             created() {
@@ -75,7 +76,7 @@
                     //     this.pageBanner = temp_repo.images[0];
                     // }
                     
-                    this.currentSelection = this.allStores;
+                    this.filteredStores = this.storesByAlphaIndex;
                     
                     this.dataLoaded = true;
                 });
@@ -101,6 +102,7 @@
                     "findRepoByName",
                     "stores",
                     "processedStores",
+                    'storesByAlphaIndex',
                     "processedCategories",
                     "storesByCategoryName",
                 ]),
