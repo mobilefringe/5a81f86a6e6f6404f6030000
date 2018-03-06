@@ -103,9 +103,9 @@
                     "processedStores",
                     'storesByAlphaIndex',
                 ]),
-                // allStores() {
-                //     return this.processedStores;
-                // },
+                allStores() {
+                    return this.processedStores;
+                },
                 // allCategories() {
                 //     var categories = this.processedCategories
                 //     var categoryData = [];
