@@ -95,7 +95,9 @@
         "phone1" : "Customer Service",
         "phone2" : "Security",
         "email" : "Email",
-        "form_header" : "Stay in touch with us:"
+        "form_header" : "Stay in touch with us:",
+        "form_success_msg" : "Thank you for contacting us. A member from our team will contact you shortly.",
+        "form_error_msg" : "There was an error when trying to submit your request. Please try again later."
     },
   "newsletter_page" : {
     "newsletter" : "Newsletter",
