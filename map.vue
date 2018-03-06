@@ -77,10 +77,10 @@
             },
             created() {
                 this.loadData().then(response => {
-                    var temp_repo = this.findRepoByName('Hours Banner');
-                    if(temp_repo) {
-                        this.pageBanner = temp_repo.images[0];
-                    }
+                    // var temp_repo = this.findRepoByName('Hours Banner');
+                    // if(temp_repo) {
+                    //     this.pageBanner = temp_repo.images[0];
+                    // }
                     
                     this.currentSelection = this.allStores;
                     
