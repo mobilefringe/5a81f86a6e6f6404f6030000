@@ -19,7 +19,6 @@
                                 <a @click="filterStores('#')">#</a>
                                 <a v-for="letter in alphabet" @click="filterStores(letter)">{{letter}}</a>
                             </div>
-                            <hr>
                             <div class="margin_40"></div>
                         </div>
                     </div>
