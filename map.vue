@@ -24,7 +24,7 @@
                             </div>
                             <div class="store_list">
                                 <div class="store_list_container hidden-mobile" v-if="currentSelection">
-                                    <div class="storename" v-for="store in currentSelection">
+                                    <div class="store_name" v-for="store in currentSelection">
                                         <p @click="dropPin(store)">{{store.name}}</p>
                                     </div>
                                 </div>
