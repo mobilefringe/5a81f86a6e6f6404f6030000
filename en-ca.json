@@ -75,7 +75,8 @@
     },
     "map_page" : {
         "header_desc" : "Discover ",
-        "header_title" : "Centre Map"
+        "header_title" : "Centre Map",
+        "no_stores" : "0 Stores Match Search"
     },
     "newsletter_page" : {
         "newsletter" : "Newsletter",
