@@ -68,6 +68,7 @@
             data: function () {
                 return {
                     dataLoaded: false,
+                    pageBanner: null,
                     selected: "Select a Category",
                     suggestionAttribute: "name",
                     storeSearch: null,
@@ -76,8 +77,14 @@
             },
             created() {
                 this.loadData().then(response => {
-                    this.dataLoaded = true;
+                    var temp_repo = this.findRepoByName('Hours Banner');
+                    if(temp_repo) {
+                        this.pageBanner = temp_repo.images[0];
+                    }
+                    
                     this.currentSelection = this.allStores;
+                    
+                    this.dataLoaded = true;
                 });
             },
             watch: {
