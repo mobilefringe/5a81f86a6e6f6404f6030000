@@ -5,7 +5,9 @@
 				<slick ref="slick" :options="slickOptions">
 					<div class="" v-for="banner in banners" v-if="banners">
 						<!--<img :src="banner.image_url" class="banner_img" alt="">-->
-						<div class="home_banner" v-bind:style="{ backgroundImage: 'url(' + banner.image_url + ')' }"></div>
+						<div class="home_banner" v-bind:style="{ backgroundImage: 'url(' + banner.image_url + ')' }">
+						    
+						</div>
 					</div>
 				</slick>
 			</div>
@@ -134,11 +136,9 @@
                     'processedStores'
                 ]),
                 banners () {
+                    console.log(this.$store.state.banners)
                     return _.orderBy(this.$store.state.banners, ['position'], ['asc']);
                 },
-                // banner_features () {
-                //     return  _.slice(this.$store.state.feature_items, 0, 2);
-                // },
                 feature_items () {
                     // return this.$store.state.feature_items;
                     var features = this.$store.state.feature_items;
