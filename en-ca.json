@@ -94,7 +94,8 @@
         "phone_title" : "Phone",
         "phone1" : "Customer Service",
         "phone2" : "Security",
-        "email" : "Email"
+        "email" : "Email",
+        "form_header" : "Stay in touch with us:"
     },
   "newsletter_page" : {
     "newsletter" : "Newsletter",
