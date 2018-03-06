@@ -21,6 +21,7 @@
                                 <a v-for="letter in alphabet" @click="filterStores(letter)">{{letter}}</a>
                             </div>
                             <div class="margin_40"></div>
+                            
                         </div>
                     </div>
                     <div class="row">
@@ -155,6 +156,14 @@
                         let results = await Promise.all([this.$store.dispatch("getData", "categories"), this.$store.dispatch("getData", "repos")]);
                     } catch (e) {
                         console.log("Error loading data: " + e.message);
+                    }
+                },
+                filterStores (letter) {
+                    if(letter == "All"){
+                        this.filteredStores = this.storesByAlphaIndex; //this.storesByAlphaIndex;
+                    } else {
+                        var filtered = _.filter(this.storesByAlphaIndex, function(o,i) { return _.lowerCase(i) == _.lowerCase(letter); })[0];
+                        this.filteredStores = _.groupBy(filtered, store => (isNaN(store.name.charAt(0)) ? store.name.charAt(0) : "#"));
                     }
                 },
                 onOptionSelect(option) {
