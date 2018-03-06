@@ -13,6 +13,15 @@
         		</div>  
                 <div class="site_container">
                     <div class="row">
+                        <div class="col-md-12">
+                            <div class="alpha_list">
+                                <a @click="filterStores('All')" class="all_a">All</a>
+                                <a @click="filterStores('#')">#</a>
+                                <a v-for="letter in alphabet" @click="filterStores(letter)">{{letter}}</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
                         <div class="col-md-3">
                             <div class="map_search_container">
                                 <search-component v-model="storeSearch" :list="processedStores" :suggestion-attribute="suggestionAttribute" @select="onOptionSelect">
