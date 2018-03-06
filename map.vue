@@ -104,12 +104,12 @@
                 ...Vuex.mapGetters([
                     "property",
                     "timezone",
+                    "repos",
+                    "findRepoByName",
                     "stores",
                     "processedStores",
                     "processedCategories",
                     "storesByCategoryName",
-                    "repos",
-                    "findRepoByName"
                 ]),
                 allStores() {
                     return this.processedStores;
