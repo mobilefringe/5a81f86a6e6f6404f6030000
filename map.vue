@@ -77,7 +77,7 @@
                     // }
                     
                     this.filteredStores = this.storesByAlphaIndex;
-                    console.log(filteredStores)
+                    console.log(this.filteredStores)
                     this.dataLoaded = true;
                 });
             },
@@ -158,6 +158,7 @@
                     }
                 },
                 filterStores (letter) {
+                    console.log(letter)
                     if(letter == "All"){
                         this.filteredStores = this.storesByAlphaIndex;
                     } else {
