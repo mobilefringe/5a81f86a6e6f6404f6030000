@@ -22,7 +22,7 @@
                                 </search-component>
                                 <i id="store-search-icon" class="fa fa-search" aria-hidden="true"></i>
                             </div>
-                            <div class="storelist_container hidden-mobile" v-if="currentSelection">
+                            <div class="store_list_container hidden-mobile" v-if="currentSelection">
                                 <div class="storename" v-for="store in currentSelection">
                                     <p @click="dropPin(store)">{{store.name}}</p>
                                 </div>
