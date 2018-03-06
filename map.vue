@@ -39,6 +39,9 @@
                                     </div>
                                 </div>
                                 <div v-else>
+                                    <div class="store_name">
+                                        <p>{{ $t("map_page.no_stores") }}</p>
+                                    </div>
                                     No Stores
                                 </div>
                             </div>
