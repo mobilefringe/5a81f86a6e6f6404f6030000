@@ -77,7 +77,7 @@
                     // }
                     
                     this.filteredStores = this.storesByAlphaIndex;
-                    
+                    console.log(filteredStores)
                     this.dataLoaded = true;
                 });
             },
