@@ -17,14 +17,12 @@
                             <div class="store-search-container">
                                 <search-component v-model="storeSearch" :list="processedStores" :suggestion-attribute="suggestionAttribute" @select="onOptionSelect">
                                     <template slot="item" scope="option">
-                                        <article class="media">
-                                            <p>{{ option.data.name }}</p>
-                                        </article>
+                                        <article class="media"><p>{{ option.data.name }}</p></article>
                                     </template>
                                 </search-component>
                                 <i id="store-search-icon" class="fa fa-search" aria-hidden="true"></i>
                             </div>
-                            <div class="storelist-container hidden-mobile" v-if="currentSelection">
+                            <div class="storelist_container hidden-mobile" v-if="currentSelection">
                                 <div class="storename" v-for="store in currentSelection">
                                     <p @click="dropPin(store)">{{store.name}}</p>
                                 </div>
