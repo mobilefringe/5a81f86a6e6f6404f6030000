@@ -25,7 +25,7 @@
                 	    <div class="feature_item_container">
                 	        <a href="">
                     			<img :src="feature.image_url" alt="name">
-                    			<div class="feature_item_info">
+                    			<div class="feature_item_info" v-if="feature.name && feature.description ">
                     				<div class="feature_item_content">
                     					<p v-if="locale=='en-ca'">{{ feature.name }}</p>
                     					<p v-else>{{ feature.name_2 }}</p>
