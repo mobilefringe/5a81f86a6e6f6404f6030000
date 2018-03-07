@@ -35,7 +35,7 @@
 				    ></v-select>
 				</div>
 				<div class="stores_header_line hidden_phone"></div>
-				<div class="stores_button_container map_link">
+				<div class="stores_button_container map_link hidden_phone">
 				    <router-link to="/map">
 				        <div>{{$t("stores_page.view_map")}}</div>
 				    </router-link>
