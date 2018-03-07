@@ -86,6 +86,7 @@
                 this.loadData().then(response => {
                     this.dataloaded = true;
                     this.filteredStores = this.allStores;
+                    console.log(this.filteredStores)
 
                     var temp_repo = this.findRepoByName('Stores Banner');
                     if(temp_repo) {
