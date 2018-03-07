@@ -33,12 +33,7 @@
             data: function() {
                 return {
                     dataLoaded: false,
-                    currentStore: null,
-                    promotions : [],
-                    jobs:[],
-                    
-                    pageBanner : null ,
-                    storeHours :[]
+                    currentStore: null
                 }
             },
             props:['id', 'locale'],
@@ -51,15 +46,9 @@
             },
             created (){
                 this.loadData().then(response => {
-                    this.dataLoaded = true;
                     this.updateCurrentStore(this.id);
-                    // var temp_repo = this.findRepoByName('Stores Banner');
-                    // if(temp_repo) {
-                    //     this.pageBanner = temp_repo.images[0];
-                    // }
-                    // this.pageBanner = this.pageBanner;
+                    this.dataLoaded = true;
                 });
-                 console.log("locale created", this.locale);
             },
             watch: {
                 currentStore: function() {
@@ -69,56 +58,17 @@
                         
                         this.currentStore.store_front_url_abs = "//codecloud.cdn.speedyrails.net/sites/5a81f86a6e6f6404f6030000/image/png/1516652189884/ES_logo_red2.png";
                     }
-                    // var vm = this;
-                    // var temp_promo = [];
-                    // var temp_job = [];
-                    // _.forEach(this.currentStore.promotions, function(value, key) {
-                    //     var current_promo = vm.findPromoById(value);
-                    //     current_promo.description_short = _.truncate(current_promo.description, {
-                    //         'length': 70
-                    //     });
-                    //     temp_promo.push(current_promo);
-                    // });
-                    // _.forEach(this.currentStore.jobs, function(value, key) {
-                    //     var current_job = vm.findJobById(value);
-                    //     current_job.description_short = _.truncate(current_job.description, {
-                    //         'length': 70
-                    //     });
-                    //     temp_job.push(current_job);
-
-                    // })
-                    // this.promotions = temp_promo;
-                    // this.jobs = temp_job;
-                    
-                    // var storeHours = [];
-                    // var vm = this;
-                    // _.forEach(this.currentStore.store_hours, function (value, key) {
-                    //     var hour = vm.findHourById(value);
-                    //     if(hour.day_of_week === 0){
-                    //         hour.order = 7;
-                    //     }
-                    //     else {
-                    //         hour.order = hour.day_of_week;
-                    //     }
-                    //     storeHours.push(hour);
-                    // });
-                    //     this.storeHours = _.sortBy(storeHours, [function(o) { return o.order; }]);
-                    // setTimeout(function() {
-                    //     vm.addLandmark(vm.currentStore);
-                    // }, 500);
                 },
                 locale: function(val, oldVal) {
                     console.log("locale", this.locale);
-                },
+                }
             },
-            
             computed: {
                 ...Vuex.mapGetters([
                     'property',
                     'timezone',
                     'processedStores',
                     'findStoreBySlug',
-                    'findPromoById',
                     'findCategoryById'
                 ]),
                 storeCategory() {
@@ -141,13 +91,7 @@
                     if (this.currentStore === null || this.currentStore === undefined){
                         this.$router.replace({ name: '404'});
                     }
-                },
-                // updateSVGMap(map) {
-                //     this.map = map;
-                // },
-                // addLandmark(store) {
-                //     this.svgMapRef.addMarker(store);
-                // },
+                }
             }
         });
     });
