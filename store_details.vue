@@ -25,37 +25,6 @@
 	</div>
 </template>
 
-<!--<hr class="green_hr visible_phone">-->
-    				<!--<div class="col-sm-8 text-left">-->
-    				<!--	<h4 v-if="currentStore.rich_description" class="store_dets_title caps"> {{$t("stores_page.about_us")}}</h4>-->
-    				<!--	<div class="text-left promo_description">-->
-    				<!--		<p v-if="locale=='en-ca'" v-html="currentStore.rich_description"></p>-->
-    				<!--		<p v-else v-html="currentStore.rich_description_2"></p>-->
-    				<!--	</div>-->
-    				<!--	<div class="store_promo_container" v-if="promotions.length > 0">-->
-    				<!--		<div class="promo_container_title text-left caps"></div>-->
-    				<!--		<h4 v-if="currentStore.rich_description" class="store_dets_title caps margin_30">{{$t("promos_page.promotions")}}</h4>-->
-    				<!--		<div class="row store_promo_dets text-left" v-for="promo in promotions">-->
-    				<!--			<div class="col-sm-6 no_padding" >-->
-    				<!--				<div class="promo_div_image">-->
-    				<!--					<img v-lazy="promo.image_url" class="image" alt=""/>-->
-    				<!--				</div>-->
-    				<!--				<div class="store_promo_dets_container padding_tb_20">-->
-    				<!--				    <p class="promo_div_name" v-if="locale=='en-ca'">{{promo.name}}</p>-->
-    				<!--				    <p class="promo_div_name" v-else>{{promo.name_2}}</p>-->
-        <!--								<p class="promo_div_date"><i class="fa fa-calendar"></i>{{promo.start_date | moment("MMM D", timezone)}} - {{promo.end_date | moment("MMM D", timezone)}}</p>-->
-        <!--								<div class="text-center">-->
-        <!--								    <span class="store_dets_btn">-->
-        <!--    									<router-link :to="'/promotions/'+promo.slug" class="" >{{$t("promos_page.read_more")}}</router-link>-->
-        <!--    								</span>-->
-        <!--								</div>-->
-        								
-    				<!--				</div>-->
-    				<!--			</div>-->
-    				<!--		</div>-->
-    				<!--	</div>-->
-    				<!--</div>-->
-
 <script>
     define(['Vue', 'vuex', 'moment', 'vue-lazy-load'], function(Vue, Vuex, moment, VueLazyload) {
         Vue.use(VueLazyload);
