@@ -33,7 +33,7 @@
                     					<p v-else>{{ feature.name_2 }}</p>
                     					<h3 v-if="locale=='en-ca'">{{ feature.description }}</h3>
                     					<h3 v-else>{{ feature.description_2 }}</h3>
-                    					<div v-if="feature[5]" class="feature_item_more">
+                    					<div v-if="lastItem" class="feature_item_more">
                     					    {{ $t("home_page.subscribe") }}    
                     					</div>
                     					<div v-else class="feature_item_more">
@@ -101,7 +101,8 @@
                     show_popup: false,
                     popup: null,
                     formData : {},
-                    instaFeed: null
+                    instaFeed: null,
+                    lastItem: false
                 }
             },
             created () {
@@ -159,6 +160,8 @@
                             value.masonry_class = "grid-item--width2";
                         } else if ( _.includes([3], key) ){
                             value.masonry_class = "grid-item--height2";
+                        } else if ( _.includes([3], key) ){
+                            this.lastItem = true;
                         } else {
                             value.masonry_class = " ";
                         }
