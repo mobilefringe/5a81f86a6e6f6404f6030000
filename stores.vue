@@ -11,7 +11,7 @@
 		</div>
 		<div class="site_container page_content">
 			<div class="stores_header_container">
-			    <div class="stores_header_line"></div>
+			    <div class="stores_header_line hidden_phone"></div>
 				<div class="stores_button_container search position_relative">
 					<search-component :list="allStores" :placeholder="$t('stores_page.find_your_store')" suggestion-attribute="name" v-model="search_result" @select="onOptionSelect" class="text-left">
 						<template slot="item" scope="option" class="manual">
@@ -22,7 +22,7 @@
 					</search-component>
 					<img src="//codecloud.cdn.speedyrails.net/sites/5a81f86a6e6f6404f6030000/image/png/1517497861636/search_icon_2x.png" id="search_icon" alt="">
 				</div>
-				<div class="stores_header_line"></div>
+				<div class="stores_header_line hidden_phone"></div>
 				<div class="stores_button_container category">
 					<v-select 
 					    v-model="selectedCat" 
@@ -34,13 +34,13 @@
 					    id="selectByCat"
 				    ></v-select>
 				</div>
-				<div class="stores_header_line"></div>
+				<div class="stores_header_line hidden_phone"></div>
 				<div class="stores_button_container map_link">
 				    <router-link to="/map">
 				        <div>{{$t("stores_page.view_map")}}</div>
 				    </router-link>
 				</div>
-				<div class="stores_header_line"></div>
+				<div class="stores_header_line hidden_phone"></div>
 			</div>
 			<div class="row">
 				<div id="store_list_container">
