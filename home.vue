@@ -22,8 +22,8 @@
 		    <div v-masonry transition-duration="0.3s" item-selector=".grid-item" class="hidden_phone">
                 <div v-masonry-tile class="item" >
                     <div v-for="feature in feature_items" :class="'grid-item ' + feature.masonry_class ">
-                    	<a href="">
-                    	    <div class="feature_item_container ih-item circle effect19">
+                	    <div class="feature_item_container ih-item circle effect19">
+                	        <a href="">
                     			<img :src="feature.image_url" alt="name">
                     			<div class="feature_item_info info">
                     				<div class="feature_item_content content">
@@ -33,8 +33,8 @@
                     					<h3 v-else>{{ feature.description_2 }}</h3>
                     				</div>
                     			</div>
-                    	    </div>
-                    	</a>
+                    		</a>
+                	    </div>
                     </div>
                 </div>
             </div>
