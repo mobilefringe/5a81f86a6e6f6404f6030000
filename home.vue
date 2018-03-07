@@ -60,6 +60,15 @@
                     </div>
                 </div>
             </div>
+            <div>
+		      <h3 class="home_page_title caps">{{$t("home_page.our_feed")}}</h3>
+		    </div>
+		    <div class="insta-feed-container">
+                <div class="insta-feed-image col-xs-6 col-sm-3" v-for="(item, index) in instaFeed">
+                    <a :href="item.link" target="_blank"><img :src="item.images.thumbnail.url"/></a>
+                </div>
+            </div>
+            
 		</div>
 	</div>
 </template>
@@ -72,7 +81,8 @@
             props:['locale'],
             data: function() {
                 return {
-                    dataLoaded: false,
+                    suggestionAttribute: 'name',
+                    search: '',
                     slickOptions: {
                         arrows: false,
                         autoplay: true,
@@ -84,19 +94,28 @@
                         slidesToShow: 1,
                         speed: 1600
                     },
+                    dataLoaded: false,
                     show_popup: false,
                     popup: null,
+                    formData : {},
+                    instaFeed: null
                 }
             },
             created () {
                 this.loadData().then(response => {
+                    this.dataLoaded = true;
                     this.popup = this.$store.state.popups[0];
                     
                     console.log(response);
-                    
+                    var socialFeed = response[4].data;
+                    console.log("socialFeed", socialFeed);
+                    var social_feed = socialFeed.social.instagram;
+                    this.instaFeed = _.slice(social_feed, [0], [4]);
+                    this.instaFeed.map(insta => {
+                            insta.images.thumbnail.url = "http://via.placeholder.com/400x400";
+                    });
+                    // this.instaFeed = insta_feed
                     console.log("locale created", this.locale);
-                    
-                    this.dataLoaded = true;
                 });
             },
             watch : {
@@ -108,9 +127,13 @@
                         this.show_popup = true;
                         this.popup.image_url = "//mallmaverick.cdn.speedyrails.net" + this.popup.photo_url;
                         document.getElementById('popup_backdrop').style.display = "block";
-                    } else {
+                    }
+                    else {
                         document.getElementById('popup_backdrop').style.display = "none";
                     }
+                },
+                formData () {
+                    this.formData.name = this.formData.firstname + " " + this.formData.lastname; 
                 },
                 locale: function(val, oldVal) {
                     console.log("locale", this.locale);
@@ -123,6 +146,7 @@
                     'processedStores'
                 ]),
                 banners () {
+                    console.log(this.$store.state.banners)
                     return _.orderBy(this.$store.state.banners, ['position'], ['asc']);
                 },
                 feature_items () {
@@ -173,7 +197,7 @@
                 loadData: async function() {
                     try {
                         // avoid making LOAD_META_DATA call for now as it will cause the entire Promise.all to fail since no meta data is set up.
-                        let results = await Promise.all([this.$store.dispatch("getData", "banners"), this.$store.dispatch("getData", "feature_items"), this.$store.dispatch("getData", "popups")]);
+                        let results = await Promise.all([this.$store.dispatch("getData", "banners"), this.$store.dispatch("getData", "feature_items"), this.$store.dispatch("getData", "promotions"), this.$store.dispatch("getData", "popups"), this.$store.dispatch('LOAD_PAGE_DATA', {url: "http://northside.mallmaverick.com/api/v2/northside/social.json"})]);
                         return results;
                     } catch (e) {
                         console.log("Error loading data: " + e.message);
