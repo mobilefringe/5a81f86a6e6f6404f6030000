@@ -33,7 +33,7 @@
                     					<p v-else>{{ feature.name_2 }}</p>
                     					<h3 v-if="locale=='en-ca'">{{ feature.description }}</h3>
                     					<h3 v-else>{{ feature.description_2 }}</h3>
-                    					<div v-if="lastItem()" class="feature_item_more">
+                    					<div v-if="lastItem(feature)" class="feature_item_more">
                     					    {{ $t("home_page.subscribe") }}    
                     					</div>
                     					<div v-else class="feature_item_more">
@@ -212,6 +212,9 @@
                 closePopup() {
                     this.show_popup = false;
                     document.getElementById('popup_backdrop').style.display = "none";
+                },
+                lastItem(){
+                    
                 }
             }
         })
