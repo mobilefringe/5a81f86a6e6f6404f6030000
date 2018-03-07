@@ -213,8 +213,8 @@
                     this.show_popup = false;
                     document.getElementById('popup_backdrop').style.display = "none";
                 },
-                lastItem(){
-                    
+                lastItem(feature){
+                    console.log(feature)    
                 }
             }
         })
