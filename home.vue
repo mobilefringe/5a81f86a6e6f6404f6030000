@@ -60,15 +60,6 @@
                     </div>
                 </div>
             </div>
-            <div>
-		      <h3 class="home_page_title caps">{{$t("home_page.our_feed")}}</h3>
-		    </div>
-		    <div class="insta-feed-container">
-                <div class="insta-feed-image col-xs-6 col-sm-3" v-for="(item, index) in instaFeed">
-                    <a :href="item.link" target="_blank"><img :src="item.images.thumbnail.url"/></a>
-                </div>
-            </div>
-            
 		</div>
 	</div>
 </template>
