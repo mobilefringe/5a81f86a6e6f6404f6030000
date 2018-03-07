@@ -101,8 +101,7 @@
                     show_popup: false,
                     popup: null,
                     formData : {},
-                    instaFeed: null,
-                    lastItem: false
+                    instaFeed: null
                 }
             },
             created () {
@@ -160,8 +159,6 @@
                             value.masonry_class = "grid-item--width2";
                         } else if ( _.includes([3], key) ){
                             value.masonry_class = "grid-item--height2";
-                        } else if ( _.includes([5], key) ){
-                            value.lastItem = true;
                         } else {
                             value.masonry_class = " ";
                         }
