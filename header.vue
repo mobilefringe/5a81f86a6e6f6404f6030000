@@ -37,7 +37,7 @@
 					<div class="col-sm-12 col-md-8">
 					    <div class="nav_container">
     					    <transition name="custom-classes-transition" enter-active-class="'animated' + { slideInDown: isMobile }" leave-active-class="'animated' + { slideOutUp: isMobile }">
-        						<nav id="primary_nav" v-if="show_menu">
+        						<nav id="primary_nav" v-if="showMenu">
         							<ul>
         							    <li v-for="item in menu_items" class="menu_item" @click="toggleSubMenu(item.id)">
         							        <router-link :to="item.href">{{$t(item.name)}}</router-link>
@@ -145,46 +145,40 @@
             template: template, // the variable template will be injected,
             data: function () {
                 return {
-                    show_menu: false,
+                    suggestionAttribute: 'name',
+                    search: '', 
+                    showMenu: false,
                     isMobile: false,
                     show_mobile_menu: false,
-                    suggestionAttribute: 'name',
-                    search: '',  
+                     
                     showSubMenu: false,
-    
-                    // active: false, 
-                    // newsletter_email: "",
-                    // isOpen: false,
+
                     windowWidth: 0,
-                    // show_menu: true,
-                    // showSubMenu1: false,
-                    // showSubMenu2: false,
-                    // showSubMenu3: false
                 }
             },
             props:['menu_items', 'social_media'],
             watch: {
                 $route: function() {
                     if (this.windowWidth <= 768) {
-                        this.show_menu = false;
+                        this.showMenu = false;
                     }  
                 },
                 windowWidth: function() {
                     console.log(this.windowWidth)
                     if (this.windowWidth <= 768) {
-                        console.log(this.show_menu)
-                        this.show_menu = false;
+                        console.log(this.showMenu)
+                        this.showMenu = false;
                         this.isMobile = true;
                     } else {
-                        this.show_menu = true;
+                        this.showMenu = true;
                         this.isMobile = false;
                         document.body.classList.remove("no-scroll");
                     }
                 },
                 show_menu: function() {
-                    if(this.show_menu == true){
+                    if(this.showMenu == true){
                         document.body.classList.add("no-scroll");
-                    } else if (this.show_menu == false) {
+                    } else if (this.showMenu == false) {
                         document.body.classList.remove("no-scroll");
                     }
                 }
