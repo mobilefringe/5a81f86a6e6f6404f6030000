@@ -8,19 +8,17 @@
 					        <span @click="changeLocale('en-ca')">en</span> | <span @click="changeLocale('fr-ca')">fr</span>
 				        </div>	
 					</div>
-					<div class="col-xs-12 col-md-6">
-					    <div class="mobile_header">
-    					    <div class="property_logo center-block">
-    							<router-link to="/">
-    							    <img src="//codecloud.cdn.speedyrails.net/sites/5a81f86a6e6f6404f6030000/image/png/1519154972000/mm_logo.png" alt="Property Logo"/>
-    						    </router-link>
-    						</div>
-    						<div class="mobile_menu_icon" @click="show_menu = !show_menu">
-    					        <span>Menu</span>
-    				            <i v-if="!show_mobile_menu" class="fa fa-angle-down"></i>
-    				            <i v-if="show_mobile_menu" class="fa fa-angle-up"></i>
-    					    </div>
-    			        </div>
+					<div class="col-xs-12 col-md-6 mobile_header">
+					    <div class="property_logo center-block">
+							<router-link to="/">
+							    <img src="//codecloud.cdn.speedyrails.net/sites/5a81f86a6e6f6404f6030000/image/png/1519154972000/mm_logo.png" alt="Property Logo"/>
+						    </router-link>
+						</div>
+						<div class="mobile_menu_icon" @click="show_menu = !show_menu">
+					        <span>Menu</span>
+				            <i v-if="!show_mobile_menu" class="fa fa-angle-down"></i>
+				            <i v-if="show_mobile_menu" class="fa fa-angle-up"></i>
+					    </div>
 					</div>
 					<div class="col-md-3 hidden_phone">
 					    <div class="header_search_container">
