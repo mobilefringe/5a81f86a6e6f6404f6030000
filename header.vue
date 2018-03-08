@@ -8,7 +8,7 @@
 					        <span @click="changeLocale('en-ca')">en</span> | <span @click="changeLocale('fr-ca')">fr</span>
 				        </div>	
 					</div>
-					<div class="col-xs-12 col-md-6">
+					<div class="col-xs-12 col-md-6" style="z-index: 99999999999">
 					    <div class="property_logo center-block">
 							<router-link to="/">
 							    <img src="//codecloud.cdn.speedyrails.net/sites/5a81f86a6e6f6404f6030000/image/png/1519154972000/mm_logo.png" alt="Property Logo"/>
@@ -34,7 +34,7 @@
 				</div>
 				<div class="row">
 				    <div class="col-md-2 hidden_phone"></div>
-					<div class="col-sm-12 col-md-8" style="z-index: 99999999999999">
+					<div class="col-sm-12 col-md-8">
 					    <div class="nav_container">
     					    <transition name="custom-classes-transition" enter-active-class="animated slideInDown" leave-active-class="animated slideOutUp">
         						<nav id="primary_nav" v-if="show_menu">
