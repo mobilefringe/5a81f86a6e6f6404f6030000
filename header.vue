@@ -142,6 +142,7 @@
             template: template, // the variable template will be injected,
             data: function () {
                 return {
+                    show_menu: true,
                     show_mobile_menu: false,
                     suggestionAttribute: 'name',
                     search: '',  
