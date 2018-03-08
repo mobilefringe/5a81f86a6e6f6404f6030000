@@ -18,36 +18,24 @@
     define(["Vue", "vuex"], function(Vue, Vuex) {
         return Vue.component("page-details-component", {
             template: template, // the variable template will be injected,
+            props:['id', 'locale'],
             data: function() {
                 return {
                     dataLoaded: false,
                     currentPage: null
                 }
             },
-            props:['id', 'locale'],
-            // beforeRouteUpdate(to, from, next) {
-            //     this.loadData(to.params.id).then(response => {
-            //         this.currentPage = response[0].data;
-            //         var temp_repo = this.findRepoByName('Pages Banner');
-            //         if(temp_repo) {
-            //             this.pageBanner = temp_repo.images[0];
-            //         }
-            //         this.pageBanner = this.pageBanner;
-                    
-            //     });
-            //     next();
-            // },
-            created(){
-                this.loadData(this.id).then(response => {
-                    this.currentPage = response[0].data;
-                    this.dataLoaded = true;
-                });
+            created() {
+                this.updateCurrentPage(this.id);
+            },
+            watch: {
+                $route: function () {
+                    this.updateCurrentPage(this.$route.params.id);
+                }
             },
             computed: {
                 ...Vuex.mapGetters([
-                    'property',
-                    'timezone',
-                    'findRepoByName'
+                    'property'
                 ])
             },
             methods: {
