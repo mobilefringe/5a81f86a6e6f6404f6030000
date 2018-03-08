@@ -154,7 +154,7 @@
                     // active: false, 
                     // newsletter_email: "",
                     // isOpen: false,
-                    // windowWidth: 0,
+                    windowWidth: 0,
                     // show_menu: true,
                     // showSubMenu1: false,
                     // showSubMenu2: false,
