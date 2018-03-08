@@ -81,6 +81,7 @@
                     isMobile: false,
                     showMobileMenu: false,
                     showSubMenu: false,
+                    noScroll: false,
                     windowWidth: 0
                 }
             },
@@ -107,13 +108,13 @@
                         document.body.classList.remove("no-scroll");
                     }
                 },
-                // showMenu: function() {
-                //     if(this.showMenu == true){
-                //         document.body.classList.add("no-scroll");
-                //     } else if (this.showMenu == false) {
-                //         document.body.classList.remove("no-scroll");
-                //     }
-                // }
+                showMenu: function() {
+                    if(this.showMenu == true){
+                        document.body.classList.add("no-scroll");
+                    } else if (this.showMenu == false) {
+                        document.body.classList.remove("no-scroll");
+                    }
+                }
             },
             created() {
                 this.$nextTick(function() {
