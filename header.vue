@@ -28,10 +28,9 @@
 					</div>
 					<div class="position_relative">
 					    <div class="mobile_menu_icon">
-					        <p>Menu
-					            <i v-if="!show_mobile_menu" class="fas fa-angle-down"></i>
-					            <i v-if="show_mobile_menu" class="fas fa-angle-up"></i>
-					        </p>
+					        <span>Menu</span>
+				            <i v-if="!show_mobile_menu" class="fas fa-angle-down"></i>
+				            <i v-if="show_mobile_menu" class="fas fa-angle-up"></i>
 					    </div>
 					</div>
 				</div>
