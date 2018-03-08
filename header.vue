@@ -26,6 +26,14 @@
                             </search-component>	
                         </div>
 					</div>
+					<div class="position_relative">
+					    <div class="mobile_menu_icon">
+					        <p>Menu
+					            <i v-if="!show_mobile_menu" class="fas fa-angle-down"></i>
+					            <i v-if="show_mobile_menu" class="fas fa-angle-up"></i>
+					        </p>
+					    </div>
+					</div>
 				</div>
 				<div class="row">
 				    <div class="col-md-2 hidden_phone"></div>
