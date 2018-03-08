@@ -29,20 +29,22 @@
 				</div>
 				<div class="row">
 				    <div class="col-md-2 hidden_phone"></div>
-					<div class="col-sm-12 col-md-8 nav_container">
-						<nav id="primary_nav">
-							<ul>
-							    <li v-for="item in menu_items" class="menu_item">
-							        <router-link :to="item.href">{{$t(item.name)}}</router-link>
-							        <!--{{$t(item.name)}}-->
-							        <ul v-if="item.sub_menu">
-							            <li v-for="sub_menu in item.sub_menu" class="dropdown_item">
-							                <router-link :to="sub_menu.href">{{$t(sub_menu.name)}}</router-link>
-							            </li>
-									</ul>
-							    </li>
-							</ul>
-						</nav>
+					<div class="col-sm-12 col-md-8">
+					    <div class="nav_container">
+    						<nav id="primary_nav">
+    							<ul>
+    							    <li v-for="item in menu_items" class="menu_item">
+    							        <router-link :to="item.href">{{$t(item.name)}}</router-link>
+    							        <!--{{$t(item.name)}}-->
+    							        <ul v-if="item.sub_menu">
+    							            <li v-for="sub_menu in item.sub_menu" class="dropdown_item">
+    							                <router-link :to="sub_menu.href">{{$t(sub_menu.name)}}</router-link>
+    							            </li>
+    									</ul>
+    							    </li>
+    							</ul>
+    						</nav>
+    					</div>
 					</div>
 					<div class="col-md-2 hidden_phone">
 					    <div class="social_icons pull-right">
