@@ -172,6 +172,7 @@
                 },
                 windowWidth: function() {
                     if (this.windowWidth <= 768) {
+                        console.log(this.show_menu)
                         this.show_menu = false;
                     } else {
                         this.show_menu = true;
