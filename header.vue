@@ -210,17 +210,18 @@
                     this.windowWidth = window.innerWidth;
                 },
                 toggleSubMenu(id) {
-                    this.showSubMenu1 = false;
-                    this.showSubMenu2 = false;
-                    this.showSubMenu3 = false;
+                    console.log(id)
+                    // this.showSubMenu1 = false;
+                    // this.showSubMenu2 = false;
+                    // this.showSubMenu3 = false;
                     
-                    if(id == "dropDown1"){
-                        this.showSubMenu1 = true   
-                    } else if (id == "dropDown2"){
-                        this.showSubMenu2 = true 
-                    } else if (id == "dropDown3"){
-                        this.showSubMenu3 = true 
-                    }
+                    // if(id == "dropDown1"){
+                    //     this.showSubMenu1 = true   
+                    // } else if (id == "dropDown2"){
+                    //     this.showSubMenu2 = true 
+                    // } else if (id == "dropDown3"){
+                    //     this.showSubMenu3 = true 
+                    // }
                     
                 },
                 onOptionSelect(option) {
