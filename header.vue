@@ -8,7 +8,7 @@
 					        <span @click="changeLocale('en-ca')">en</span> | <span @click="changeLocale('fr-ca')">fr</span>
 				        </div>	
 					</div>
-					<div class="col-xs-12 col-md-6" style="z-index: 99999999999">
+					<div class="col-xs-12 col-md-6">
 					    <div class="mobile_header">
     					    <div class="property_logo center-block">
     							<router-link to="/">
