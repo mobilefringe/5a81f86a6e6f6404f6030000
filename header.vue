@@ -135,7 +135,8 @@
             data: function () {
                 return {
                     show_mobile_menu: false,
-                    
+                    suggestionAttribute: 'name',
+                    search: '',    
                     // active: false, 
                     // newsletter_email: "",
                     // isOpen: false,
@@ -216,6 +217,13 @@
                         this.showSubMenu3 = true 
                     }
                     
+                },
+                onOptionSelect(option) {
+                    console.log('Selected option:', option);
+                    this.$nextTick(function() {
+                        this.search = ""
+                    });
+                    this.$router.push("/stores/" + option.slug);
                 }
             },
             beforeDestroy: function() {
