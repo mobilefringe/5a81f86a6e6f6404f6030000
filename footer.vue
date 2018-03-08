@@ -73,6 +73,8 @@
             data: function data() {
                 return {
                     footerBanner: null,
+                    suggestionAttribute: 'name',
+                    search: '',
                     newsletter_email: "",
                 }
             },
