@@ -186,7 +186,7 @@
                     }
                 }
             },
-            mounted() {
+            created() {
                 this.$nextTick(function() {
                     window.addEventListener('resize', this.getWindowWidth);
                     //Init
