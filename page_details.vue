@@ -5,8 +5,10 @@
             <div v-if="dataLoaded" v-cloak>
                 <div class="site_container">
     				<div class="pages_content">
-    					<div class="page_body description_text text_left" v-if="locale=='en-ca'" v-html="currentPage.body"></div>
-                        <div class="page_body description_text text_left" v-else v-html="currentPage.body_2"></div>
+    				    <h3 v-if="locale=='en-ca'">{{ currentPage.title }}</h3>
+    				    <h3 v-else>{{ currentPage.title_2 }}</h3>
+    					<div class="page_body" v-if="locale=='en-ca'" v-html="currentPage.body"></div>
+                        <div class="page_body" v-else v-html="currentPage.body_2"></div>
     				</div>
     			</div>
 			</div>
