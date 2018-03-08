@@ -31,13 +31,15 @@
 				        </div>
 			        </div>
 			        <div class="col-sm-12 visible_phone">
-    			        <search-component v-model="search" :list="processedStores" :suggestion-attribute="suggestionAttribute" @select="onOptionSelect">
-                            <template slot="item" scope="option">
-                                <article class="media">
-                                    <p>{{ option.data.name }}</p>
-                                </article>
-                            </template>
-                        </search-component>
+			            <div class="header_search_container">
+        			        <search-component v-model="search" :list="processedStores" :suggestion-attribute="suggestionAttribute" @select="onOptionSelect">
+                                <template slot="item" scope="option">
+                                    <article class="media">
+                                        <p>{{ option.data.name }}</p>
+                                    </article>
+                                </template>
+                            </search-component>
+                        </div>
                     </div>
 			        <div class="col-md-6">
 			            <nav id="footer_nav">
