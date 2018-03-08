@@ -33,10 +33,9 @@
 					    <div class="nav_container">
     						<nav id="primary_nav">
     							<ul>
-    							    <li v-for="item in menu_items" class="menu_item">
+    							    <li v-for="item in menu_items" class="menu_item" @click="toggleSubMenu('dropDown1')">
     							        <router-link :to="item.href">{{$t(item.name)}}</router-link>
-    							        <!--{{$t(item.name)}}-->
-    							        <ul v-if="item.sub_menu">
+    							        <ul v-if="item.sub_menu" :class="{ show_submenu: showSubMenu1 }">
     							            <li v-for="sub_menu in item.sub_menu" class="dropdown_item">
     							                <router-link :to="sub_menu.href">{{$t(sub_menu.name)}}</router-link>
     							            </li>
@@ -140,7 +139,8 @@
                 return {
                     show_mobile_menu: false,
                     suggestionAttribute: 'name',
-                    search: '',    
+                    search: '',  
+                    showSubMenu: false,
                     // active: false, 
                     // newsletter_email: "",
                     // isOpen: false,
