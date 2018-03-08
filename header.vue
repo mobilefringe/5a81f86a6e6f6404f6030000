@@ -183,6 +183,7 @@
                     'timezone',
                     'hours',
                     'getTodayHours',
+                    'processedStores'
                 ]),
                 locale: {
                     get () {
