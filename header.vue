@@ -36,7 +36,7 @@
 				    <div class="col-md-2 hidden_phone"></div>
 					<div class="col-sm-12 col-md-8">
 					    <div class="nav_container">
-    					    <transition name="custom-classes-transition" :enter-active-class="'animated' + { slideInDown: isMobile }" :leave-active-class="'animated' + { slideOutUp: isMobile }">
+    					    <transition name="custom-classes-transition" enter-active-class="'animated' + { slideInDown: isMobile }" leave-active-class="'animated' + { slideOutUp: isMobile }">
         						<nav id="primary_nav" v-if="show_menu">
         							<ul>
         							    <li v-for="item in menu_items" class="menu_item" @click="toggleSubMenu(item.id)">
