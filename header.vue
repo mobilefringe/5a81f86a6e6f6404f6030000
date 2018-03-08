@@ -86,11 +86,11 @@
                 }
             },
             watch: {
-                $route: function() {
-                    if (this.windowWidth <= 768) {
-                        this.showMenu = false;
-                    }  
-                },
+                // $route: function() {
+                //     if (this.windowWidth <= 768) {
+                //         this.showMenu = false;
+                //     }  
+                // },
                 windowWidth: function() {
                     if (this.windowWidth <= 768) {
                         console.log(this.showMenu)
