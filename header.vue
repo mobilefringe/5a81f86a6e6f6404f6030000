@@ -45,7 +45,7 @@
 						</nav>
 					</div>
 					<div class="col-md-2 hidden_phone">
-					    <div class="social_icons">
+					    <div class="social_icons pull-right">
                             <span v-for="item in social_media">
                                 <a :href="item.url" target="_blank">
                                     <i :class="item.iconClass" aria-hidden="true"></i>
