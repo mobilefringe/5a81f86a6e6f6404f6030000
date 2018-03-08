@@ -14,6 +14,11 @@
 							    <img src="//codecloud.cdn.speedyrails.net/sites/5a81f86a6e6f6404f6030000/image/png/1519154972000/mm_logo.png" alt="Property Logo"/>
 						    </router-link>
 						</div>
+						<div class="mobile_menu_icon">
+					        <span>Menu</span>
+				            <i v-if="!show_mobile_menu" class="fa fa-angle-down"></i>
+				            <i v-if="show_mobile_menu" class="fa fa-angle-up"></i>
+					    </div>
 					</div>
 					<div class="col-md-3 hidden_phone">
 					    <div class="header_search_container">
@@ -25,13 +30,6 @@
                                 </template>
                             </search-component>	
                         </div>
-					</div>
-					<div class="position_relative">
-					    <div class="mobile_menu_icon">
-					        <span>Menu</span>
-				            <i v-if="!show_mobile_menu" class="fa fa-angle-down"></i>
-				            <i v-if="show_mobile_menu" class="fa fa-angle-up"></i>
-					    </div>
 					</div>
 				</div>
 				<div class="row">
