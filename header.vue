@@ -16,8 +16,8 @@
 						</div>
 						<div class="mobile_menu_icon visible_phone" @click="show_menu = !show_menu">
 					        <span>Menu</span>
-				            <i v-if="!show_mobile_menu" class="fa fa-angle-down"></i>
-				            <i v-if="show_mobile_menu" class="fa fa-angle-up"></i>
+				            <i v-if="!showMobileMenu" class="fa fa-angle-down"></i>
+				            <i v-if="showMobileMenu" class="fa fa-angle-up"></i>
 					    </div>
 					</div>
 					<div class="col-md-3 hidden_phone">
@@ -143,20 +143,18 @@
     define(["Vue", "vuex", "vue_router", "routes", "vue!today_hours.vue"], function (Vue, Vuex, VueRouter, appRoutes, TodayHoursComponent) {
         return Vue.component("header-component", {
             template: template, // the variable template will be injected,
+            props:['menu_items', 'social_media'],
             data: function () {
                 return {
                     suggestionAttribute: 'name',
                     search: '', 
                     showMenu: false,
                     isMobile: false,
-                    show_mobile_menu: false,
-                     
+                    showMobileMenu: false,
                     showSubMenu: false,
-
-                    windowWidth: 0,
+                    windowWidth: 0
                 }
             },
-            props:['menu_items', 'social_media'],
             watch: {
                 $route: function() {
                     if (this.windowWidth <= 768) {
@@ -186,7 +184,6 @@
             created() {
                 this.$nextTick(function() {
                     window.addEventListener('resize', this.getWindowWidth);
-                    //Init
                     this.getWindowWidth();
                 });
             },
@@ -194,8 +191,6 @@
                 ...Vuex.mapGetters([
                     'property',
                     'timezone',
-                    'hours',
-                    'getTodayHours',
                     'processedStores'
                 ]),
                 locale: {
@@ -205,9 +200,6 @@
                     set (value) {
                         this.$store.commit('SET_LOCALE', { lang: value })
                     }
-                },
-                todays_hours() {
-                    return this.getTodayHours;
                 }
             },
             methods: {
