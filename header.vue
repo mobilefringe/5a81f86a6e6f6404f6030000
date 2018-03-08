@@ -36,20 +36,21 @@
 				    <div class="col-md-2 hidden_phone"></div>
 					<div class="col-sm-12 col-md-8">
 					    <transition name="custom-classes-transition" enter-active-class="animated slideInDown" leave-active-class="animated slideOutdown">
-					    <div class="nav_container">
-    						<nav id="primary_nav" v-if="show_menu">
-    							<ul>
-    							    <li v-for="item in menu_items" class="menu_item" @click="toggleSubMenu(item.id)">
-    							        <router-link :to="item.href">{{$t(item.name)}}</router-link>
-    							        <ul v-if="item.sub_menu" :class="{ show_submenu: showSubMenu }">
-    							            <li v-for="sub_menu in item.sub_menu" class="dropdown_item">
-    							                <router-link :to="sub_menu.href">{{$t(sub_menu.name)}}</router-link>
-    							            </li>
-    									</ul>
-    							    </li>
-    							</ul>
-    						</nav>
-    					</div>
+    					    <div class="nav_container">
+        						<nav id="primary_nav" v-if="show_menu">
+        							<ul>
+        							    <li v-for="item in menu_items" class="menu_item" @click="toggleSubMenu(item.id)">
+        							        <router-link :to="item.href">{{$t(item.name)}}</router-link>
+        							        <ul v-if="item.sub_menu" :class="{ show_submenu: showSubMenu }">
+        							            <li v-for="sub_menu in item.sub_menu" class="dropdown_item">
+        							                <router-link :to="sub_menu.href">{{$t(sub_menu.name)}}</router-link>
+        							            </li>
+        									</ul>
+        							    </li>
+        							</ul>
+        						</nav>
+        					</div>
+        				</transition>
 					</div>
 					<div class="col-md-2 hidden_phone">
 					    <div class="social_icons pull-right">
