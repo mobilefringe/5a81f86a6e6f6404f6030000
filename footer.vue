@@ -91,6 +91,7 @@
                 ...Vuex.mapGetters([
                     'property',
                     'findRepoByName',
+                    'processedStores'
                 ]),
                 copyright_year() {
                     return moment().year();
