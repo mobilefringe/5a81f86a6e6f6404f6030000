@@ -16,7 +16,13 @@
 						</div>
 					</div>
 					<div class="col-md-3 hidden_phone">
-						
+					    <search-component v-model="search" :list="processedStores" :suggestion-attribute="suggestionAttribute" @select="onOptionSelect">
+                            <template slot="item" scope="option">
+                                <article class="media">
+                                    <p>{{ option.data.name }}</p>
+                                </article>
+                            </template>
+                        </search-component>	
 					</div>
 				</div>
 				<div class="row">
