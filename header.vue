@@ -175,7 +175,7 @@
                         document.body.classList.remove("no-scroll");
                     }
                 },
-                show_menu: function() {
+                showMenu: function() {
                     if(this.showMenu == true){
                         document.body.classList.add("no-scroll");
                     } else if (this.showMenu == false) {
