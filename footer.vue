@@ -25,7 +25,7 @@
 				            </router-link>
 				        </div>    
 			        </div>
-			        <div class="col-sm-12 visible_phone">
+			        <div class="col-xs-12 visible_phone">
 			            <div class="row">
 			                <div class="col-xs-4">
 			                    <div class="language_select">
