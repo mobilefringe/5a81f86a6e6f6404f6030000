@@ -35,6 +35,7 @@
 				<div class="row">
 				    <div class="col-md-2 hidden_phone"></div>
 					<div class="col-sm-12 col-md-8">
+					    <transition name="custom-classes-transition" enter-active-class="animated slideInDown" leave-active-class="animated slideOutdown">
 					    <div class="nav_container">
     						<nav id="primary_nav" v-if="show_menu">
     							<ul>
