@@ -29,7 +29,7 @@
 			            <div class="row">
 			                <div class="col-xs-3">
 			                    <div class="language_select">
-					                <span @click="changeLocale('en-ca')">en</span> | <span @click="changeLocale('fr-ca')">fr</span>
+					                <span @click="changeLocale('en-ca')">EN</span> | <span @click="changeLocale('fr-ca')">FR</span>
 				                </div>    
 			                </div>
 			                <div class="col-xs-9">
