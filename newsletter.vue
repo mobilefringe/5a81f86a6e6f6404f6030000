@@ -4,7 +4,7 @@
         <transition name="fade">
             <div v-if="dataLoaded" v-cloak>
         		<div class="site_container">
-                    <div class="contact_container">
+                    <div class="news_letter_container contact_container">
                         <div class="row">
                             <div class="col-md-6">
                                 
