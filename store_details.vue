@@ -11,7 +11,7 @@
     
 					<div class="details_store_image">
 						<img v-lazy="currentStore.store_front_url_abs" class="image"/>
-						<h4 v-if="currentStore.phone" class="details_store_phone">{{$t("stores_page.store_phone")}}:<br class="visible_phone"> {{ currentStore.phone }}</h4>
+						<h4 v-if="currentStore.phone" class="details_store_phone">{{$t("stores_page.store_phone")}}:<br class="visible_mobile"> {{ currentStore.phone }}</h4>
 					</div>
     				<div class="details_store_desc">
     				    <div v-html="currentStore.description"></div>
