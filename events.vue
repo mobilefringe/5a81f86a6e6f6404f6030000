@@ -17,7 +17,7 @@
         		            <h3 class="promo_page_title center">{{ $t("events_page.events_title") }}</h3>
         		        </div>
         		    </div>
-        			<div id="promos_container" v-if="promos.length > 0">
+        			<div id="promos_container" class="clearfix" v-if="promos.length > 0">
         				<paginate name="promos" v-if="promos" :list="promos" class="paginate-list margin-60" :per="3">
         					<div class="promo_container" v-for="(promo, index) in paginated('promos')">
         					    <div class="promo_img" v-if="locale=='en-ca'" v-lazy:background-image="promo.image_url"></div>
