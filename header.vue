@@ -35,10 +35,9 @@
 				<div class="row">
 				    <div class="col-md-2 hidden_phone"></div>
 					<div class="col-sm-12 col-md-8">
-					    <transition name="custom-classes-transition" enter-active-class="animated slideInDown" leave-active-class="animated slideOutUp">
-					        <div class="nav_container">
-    					    
-        						<nav id="primary_nav" v-if="showMenu">
+				        <div class="nav_container">
+					        <transition name="custom-classes-transition" enter-active-class="animated slideInDown" leave-active-class="animated slideOutUp">
+        						<nav id="primary_nav" v-if="showMenu" :class="{ mobileMenuScroll: showMenu }">
         							<ul>
         							    <li v-for="item in menu_items" class="menu_item" @click="toggleSubMenu(item.id)">
         							        <router-link :to="item.href">{{$t(item.name)}}</router-link>
@@ -50,8 +49,8 @@
         							    </li>
         							</ul>
         						</nav>
-        					</div>
-    				    </transition>
+    					    </transition>
+    					</div>
 					</div>
 					<div class="col-md-2 hidden_phone">
 					    <div class="social_icons pull-right">
