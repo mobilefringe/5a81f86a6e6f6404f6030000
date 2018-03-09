@@ -5,43 +5,50 @@
             <div v-if="dataLoaded" v-cloak>
         		<div class="site_container">
                     <div class="contact_container">
-                        <form class="form-horizontal" action="https://mobilefringe.createsend.com/t/d/s/bidirr/" method="post" @submit.prevent="validateBeforeSubmit">
-                            <div class="form-group ">
-                                <div class="col-sm-6 col-xs-12" >
-                                    <label class="label" for="cm-name">{{$t("newsletter_page.name")}}</label>
-                                    <input v-model="form_data.name" required class="form-control" name="cm-name" type="text" placeholder="Name">
-                                </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                
                             </div>
-                            <div class="form-group">
-                                <div class="col-sm-6 col-xs-12">
-                                    <label class="label" for="cm-irudui-irudui">{{$t("newsletter_page.email")}}</label>
-                                    <input v-model="form_data.email" required class="form-control" name="cm-bidirr-bidirr" type="email" placeholder="Email" id="newsletter_email">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="col-xs-12">
-        					        <label class="checkbox">
-                                        <input name="agree_newsletter" required  type="checkbox">
-                                            {{$t("newsletter_page.agree")}} {{property.name}}. 
-                                    </label>
-        					    </div>
-        					</div>
-        					<div class="form-group">
-                                <div class="col-xs-12">
-                                    <button class="contest_btn" type="submit" :disabled="formSuccess">{{$t("newsletter_page.subscribe")}}</button>
-                                </div>
-                            </div>
-                        </form>
+                            <div class="col-md-9">
+                                <form class="form-horizontal" action="https://mobilefringe.createsend.com/t/d/s/bidirr/" method="post" @submit.prevent="validateBeforeSubmit">
+                                    <div class="form-group ">
+                                        <div class="col-sm-6 col-xs-12" >
+                                            <label class="label" for="cm-name">{{$t("newsletter_page.name")}}</label>
+                                            <input v-model="form_data.name" required class="form-control" name="cm-name" type="text" placeholder="Name">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-sm-6 col-xs-12">
+                                            <label class="label" for="cm-irudui-irudui">{{$t("newsletter_page.email")}}</label>
+                                            <input v-model="form_data.email" required class="form-control" name="cm-bidirr-bidirr" type="email" placeholder="Email" id="newsletter_email">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-xs-12">
+                					        <label class="checkbox">
+                                                <input name="agree_newsletter" required  type="checkbox">
+                                                    {{$t("newsletter_page.agree")}} {{property.name}}. 
+                                            </label>
+                					    </div>
+                					</div>
+                					<div class="form-group">
+                                        <div class="col-xs-12">
+                                            <button class="contest_btn" type="submit" :disabled="formSuccess">{{$t("newsletter_page.subscribe")}}</button>
+                                        </div>
+                                    </div>
+                                </form>
                             
-                        <div id="send_contact_success" class="alert alert-success" role="alert" v-show="formSuccess">
-                            <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
-                            <span class="sr-only">{{$t("newsletter_page.success")}} : </span>
-                            {{$t("newsletter_page.thank_you_message")}}
-                        </div>
-                        <div id="send_contact_error" class="alert alert-danger" role="alert" v-show="formError">
-                            <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-                            <span class="sr-only">{{$t("newsletter_page.error")}} : </span>
-                            {{$t("newsletter_page.error_message")}}
+                                <div id="send_contact_success" class="alert alert-success" role="alert" v-show="formSuccess">
+                                    <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+                                    <span class="sr-only">{{$t("newsletter_page.success")}} : </span>
+                                    {{$t("newsletter_page.thank_you_message")}}
+                                </div>
+                                <div id="send_contact_error" class="alert alert-danger" role="alert" v-show="formError">
+                                    <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                                    <span class="sr-only">{{$t("newsletter_page.error")}} : </span>
+                                    {{$t("newsletter_page.error_message")}}
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
