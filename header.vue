@@ -91,14 +91,11 @@
                     }  
                 },
                 windowWidth: function() {
-                    if (this.windowWidth <= 768) {
-                        this.showMenu = false;
-                        // this.isMobile = true;
-                    } else {
+                    if (this.windowWidth >= 768) {
                         document.body.classList.remove("no-scroll");
                         this.showMenu = true;
-                        // this.isMobile = false;
-                        
+                    } else {
+                        this.showMenu = false;
                     }
                 },
                 showMenu: function() {
