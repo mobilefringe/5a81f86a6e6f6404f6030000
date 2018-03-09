@@ -51,28 +51,23 @@
 </template>
 
 <script>
-    define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "vue-meta", 'vee-validate', 'jquery', 'utility'], function(Vue, Vuex, moment, tz, VueMoment, Meta, VeeValidate, $, Utility) {
+    define(["Vue", "vuex", "vue-meta", "vee-validate", "jquery", "utility"], function(Vue, Vuex, Meta, VeeValidate, $, Utility) {
         Vue.use(Meta);
         Vue.use(VeeValidate);
         return Vue.component("newsletter-component", {
             template: template, // the variable template will be injected
             data: function() {
                 return {
+                    dataLoaded: false,
                     currentPage: null,
                     form_data : {},
                     formSuccess : false,
-                    formError: false,
-                    pageBanner: null
+                    formError: false
                 }
             },
             created () {
                 this.loadData().then(response => {
-                    var temp_repo = this.findRepoByName('Newsletter Banner');
-                    if(temp_repo) {
-                        this.pageBanner = temp_repo.images[0];
-                    }
-                    // this.pageBanner = this.findRepoByName('Contact Us Banner').images[0];
-                   console.log(this.pageBanner); 
+                   this.dataLoaded = true;
                 });    
             },
             mounted () {
@@ -88,8 +83,7 @@
             computed: {
                 ...Vuex.mapGetters([
                     'property',
-                    'timezone',
-                    'findRepoByName'
+                    'timezone'
                 ])
             },
             methods: {
@@ -101,8 +95,7 @@
                             if(errors.length > 0) {
                                 console.log("Error");
                                 this.formError = true;
-                            }
-                            else {
+                            } else {
                                 form.preventDefault();
                                 console.log("No Error", form);
                                 var vm = this;
@@ -116,7 +109,6 @@
                                         vm.formSuccess = true;
                                     }
                                 });
-                                
                             }
                         }
                     })
