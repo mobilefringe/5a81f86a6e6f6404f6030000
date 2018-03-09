@@ -10,7 +10,7 @@
                                 
                             </div>
                             <div class="col-md-6">
-                                <form class="form-horizontal" action="https://mobilefringe.createsend.com/t/d/s/bidirr/" method="post" @submit.prevent="validateBeforeSubmit">
+                                <form id="contact_form" class="form-horizontal" action="https://mobilefringe.createsend.com/t/d/s/bidirr/" method="post" @submit.prevent="validateBeforeSubmit">
                                     <div class="form-group ">
                                         <div class="col-xs-12" >
                                             <label class="label" for="cm-name">{{$t("newsletter_page.name")}}</label>
