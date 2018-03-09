@@ -66,16 +66,17 @@
             data: function() {
                 return {
                     dataLoaded: false,
-                    currentPage: null,
+                    currentPage: null
                     form_data : {},
                     formSuccess : false,
                     formError: false
                 }
             },
-            created () {
+            created() {
                 this.loadData().then(response => {
-                   this.dataLoaded = true;
-                });    
+                    this.currentPage = response[0].data;
+                    this.dataLoaded = true;
+                });
             },
             mounted () {
                 this.form_data.email = this.$route.query.email;
@@ -94,6 +95,14 @@
                 ])
             },
             methods: {
+                loadData: async function () {
+                    try {
+                        let results = await Promise.all([this.$store.dispatch('LOAD_PAGE_DATA', {url: this.property.mm_host + "/pages/stlaurent-newsletter-sign-up.json"})]);
+                        return results;
+                    } catch (e) {
+                        console.log("Error loading data: " + e.message);
+                    }
+                },
                 validateBeforeSubmit(form) {
                     this.$validator.validateAll().then((result) => {
                         if (result) {
@@ -119,16 +128,7 @@
                             }
                         }
                     })
-                },
-                loadData: async function() {
-                    try {
-                        // avoid making LOAD_META_DATA call for now as it will cause the entire Promise.all to fail since no meta data is set up.
-                        let results = await Promise.all([,this.$store.dispatch("getData", "repos")]);
-                        return results;
-                    } catch (e) {
-                        console.log("Error loading data: " + e.message);
-                    }
-                },
+                }
             }
         });
     });
