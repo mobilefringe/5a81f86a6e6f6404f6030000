@@ -12,18 +12,18 @@
                             <div class="col-md-6">
                                 <form class="form-horizontal" action="https://mobilefringe.createsend.com/t/d/s/bidirr/" method="post" @submit.prevent="validateBeforeSubmit">
                                     <div class="form-group ">
-                                        <div class="col-sm-6 col-xs-12" >
+                                        <div class="col-xs-12" >
                                             <label class="label" for="cm-name">{{$t("newsletter_page.name")}}</label>
                                             <input v-model="form_data.name" required class="form-control" name="cm-name" type="text" placeholder="Name">
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <div class="col-sm-6 col-xs-12">
+                                        <div class="col-xs-12">
                                             <label class="label" for="cm-irudui-irudui">{{$t("newsletter_page.email")}}</label>
                                             <input v-model="form_data.email" required class="form-control" name="cm-bidirr-bidirr" type="email" placeholder="Email" id="newsletter_email">
                                         </div>
                                     </div>
-                                    <div class="form-group">
+                                    <div>
                                         <div class="col-xs-12">
                 					        <label class="checkbox">
                                                 <input name="agree_newsletter" required  type="checkbox">
@@ -33,7 +33,7 @@
                 					</div>
                 					<div class="form-group">
                                         <div class="col-xs-12">
-                                            <button class="contest_btn" type="submit" :disabled="formSuccess">{{$t("newsletter_page.subscribe")}}</button>
+                                            <button class="contest_btn animated_btn" type="submit" :disabled="formSuccess">{{$t("newsletter_page.subscribe")}}</button>
                                         </div>
                                     </div>
                                 </form>
