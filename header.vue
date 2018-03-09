@@ -49,8 +49,7 @@
         							    </li>
         							</ul>
         						</nav>
-        					
-        				</transition>
+        				    </transition>
         				</div>
 					</div>
 					<div class="col-md-2 hidden_phone">
@@ -93,19 +92,13 @@
                 },
                 windowWidth: function() {
                     if (this.windowWidth <= 768) {
-                        console.log(this.showMenu)
                         this.showMenu = false;
-                        this.isMobile = true;
-                        
-                        if(this.showMenu == true){
-                            document.body.classList.add("no-scroll");
-                        } else if (this.showMenu == false) {
-                            document.body.classList.remove("no-scroll");
-                        }
+                        // this.isMobile = true;
                     } else {
-                        this.showMenu = true;
-                        this.isMobile = false;
                         document.body.classList.remove("no-scroll");
+                        this.showMenu = true;
+                        // this.isMobile = false;
+                        
                     }
                 },
                 showMenu: function() {
