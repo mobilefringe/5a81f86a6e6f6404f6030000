@@ -37,7 +37,7 @@
 					<div class="col-sm-12 col-md-8">
 				        <div class="nav_container">
 					        <!--<transition name="custom-classes-transition" enter-active-class="animated slideInDown" leave-active-class="animated slideOutUp">-->
-        						<nav id="primary_nav" v-if="showMenu" :class="{ slideInDown: showMenu, slideOutUp: !showMenu }">
+        						<nav id="primary_nav"  :class="{ slideInDown: showMenu, slideOutUp: !showMenu }">
         							<ul>
         							    <li v-for="item in menu_items" class="menu_item" @click="toggleSubMenu(item.id)">
         							        <router-link :to="item.href">{{$t(item.name)}}</router-link>
