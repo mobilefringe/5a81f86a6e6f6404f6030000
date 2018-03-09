@@ -81,6 +81,7 @@
         "no_stores" : "0 Stores Match Search"
     },
     "newsletter_page" : {
+        "subscribe_title": "Subscribe",
         "newsletter" : "Newsletter",
         "name" : "Name",
         "email" : "Email",
