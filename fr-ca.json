@@ -39,23 +39,23 @@
         "subscribe" : "Inscription"
     },
     "contact_page" : {
-        "location" : "Location",
-        "phone_title" : "Phone",
-        "phone1" : "Customer Service",
-        "phone2" : "Security",
+        "location" : "Emplacement",
+        "phone_title" : "Téléphone",
+        "phone1" : "Service Clients",
+        "phone2" : "Sécurité",
         "email" : "Email",
-        "form_header" : "Stay in touch with us:",
-        "form_success_msg" : "Thank you for contacting us. A member from our team will contact you shortly.",
-        "form_error_msg" : "There was an error when trying to submit your request. Please try again later."
+        "form_header" : "Restez en contact avec nous:",
+        "form_success_msg" : "Merci de nous contacter. Un membre de notre équipe vous contactera sous peu.",
+        "form_error_msg" : "Une erreur s'est produite lors de l'envoi de votre demande. Veuillez réessayer plus tard."
     },
     "events_page": {
-        "events_header_desc" : " is the Place to Be ",
-        "events_header" : "Events",
-        "events_title" : "Upcoming Events",
-        "events" : "Event",
-        "read_more" : "Check It Out",
-        "no_event_message" : "There are no Events at this time. Please check back soon.",
-        "back_to_events" : "Back to Events"
+        "events_header_desc" : " est l'endroit où il faut être!",
+        "events_header" : "Événements",
+        "events_title" : "Évènements à venir",
+        "events" : "un événement",
+        "read_more" : "Vérifiez-le",
+        "no_event_message" : "Il n'y a aucun événement en ce moment. S'il vous plaît revenez bientôt.",
+        "back_to_events" : "Retour aux événements"
     },
     "hours_page" : {
         "header_desc" : "Regular & Holiday Hours",
