@@ -1,8 +1,8 @@
 {
     "header": {
-        "open_today": "Ouvert aujourd'hui",
-        "closed": "Fermé aujourd'hui",
-        "sign_up": "Inscription"
+        "open_today": "Open Today",
+        "closed": "Closed Today",
+        "sign_up": "Sign Up"
     },
     "nav": {
         "directory" : "Directory",
@@ -17,69 +17,105 @@
         "hours": "Horaires",
         "directions": "Directions",
         "leasing": "Leasing",
-        "jobs" : "Carrières"
+        "jobs" : "Carrières",
+        "privacy" : "Règles de confidentialité",
+        "terms" : "Termes et conditions"
     },
     "footer": {
-        "stay_uptodate" : "Restez au courant de notre actualité",
-        "enter_email" : "Inscrire votre courriel",
-        "subscribe_thankyou" : "Nous vous remercions de vous être inscrits à notre Newsletter.",
-        "all_rights" : "Tous droits réservés.",
-        "privacy_policy" : "Règles de confidentialité",
-        "powered_by" : "Géré par"
+        "newsletter" : "Newsletter",
+        "subscription": "Subscription",
+        "newsletter_desc" : "For updates, promotions, events & more",
+        "enter_email" : "Enter Your Email",
+        "subscribe" : "Subscribe",
+        "subscribe_thankyou" : "Thank you for subscribing to our newsletter.",
+        "all_rights" : "All Rights Reserved.",
+        "privacy_policy" : "Privacy Policy",
+        "powered_by" : "Powered by"
     },
-  "home_page": {
-    "explore" : "Explorer",
-    "our_feed" : "Notre actualité"
-  },
-  "stores_page" : {
-    "shopping" : "Magasiner",
-    "map" : "Carte",
-    "find_your_store": "Trouver un magasin",
-    "sort_by_cats" : "Classer par catégorie",
-    "view_map": "Voir la carte",
-    "new_store" : "Nouveau Magasin",
-    "coming_soon" : "Arrive Prochainement",
-    "store_website": "Site internet du magasin",
-    "store_hours" : "Horaires du magasin",
-    "store_dets_loc" : "Details et localisation du magasin",
-    "about_us" : "A propos de nous",
-    "find_store" : "Trouver un magasin"
-  },
-    "promos_page": {
-        "promotions_title" : "Promotions à venir",
-        "promotions" : "Promotion",
-        "read_more" : "Vérifiez-le",
-        "no_promo_message" : "Il n'y a pas de promotions pour le moment. Revenez prochainement.",
-        "back_to_promos" : "Retour aux promotions"
+    "home_page": {
+        "read_more" : "Read More",
+        "explore" : "Explore",
+        "our_feed" : "Instagram Feed",
+        "subscribe" : "Subscribe"
+    },
+    "contact_page" : {
+        "location" : "Location",
+        "phone_title" : "Phone",
+        "phone1" : "Customer Service",
+        "phone2" : "Security",
+        "email" : "Email",
+        "form_header" : "Stay in touch with us:",
+        "form_success_msg" : "Thank you for contacting us. A member from our team will contact you shortly.",
+        "form_error_msg" : "There was an error when trying to submit your request. Please try again later."
     },
     "events_page": {
-        "events" : "Evènements",
-        "read_more" : "En savoir plus",
-        "no_event_message" : "Il n'y a pas d'évènements pour le moment. Nous vous tiendrons au courant ici.",
-        "back_to_events" : "Retour aux évènements"
-    },
-    "jobs_page": {
-        "jobs" : "Carrières",
-        "read_more" : "Voir plus",
-        "no_job_message" : "Il n'y a pas de jobs disponibles pour le moment. Revenez ultérieurement.",
-        "back_to_jobs" : "Retour à Carrières"
+        "events_header_desc" : " is the Place to Be ",
+        "events_header" : "Events",
+        "events_title" : "Upcoming Events",
+        "events" : "Event",
+        "read_more" : "Check It Out",
+        "no_event_message" : "There are no Events at this time. Please check back soon.",
+        "back_to_events" : "Back to Events"
     },
     "hours_page" : {
         "header_desc" : "Regular & Holiday Hours",
-        "hours" : "Horaires",
-        "reg_hours" : "Horaires habituels du centre",
-        "holiday_hours" : "Heures de vacances",
-        "closed" : "Fermé"
+        "hours" : "Hours",
+        "reg_hours" : "Regular Hours",
+        "holiday_hours" : "Holiday Hours",
+        "closed" : "Closed"
+    },
+    "jobs_page": {
+        "jobs_header_desc" : "Work at ",
+        "jobs" : "Careers",
+        "position": "Position",
+        "job_type" : "Job Type",
+        "end_date" : "End Date",
+        "read_more" : "Read More",
+        "no_job_message" : "There are no Jobs at this time. Please check back soon.",
+        "back_to_jobs" : "Back to Jobs",
+        "desc_title" : "Job Description"
+    },
+    "map_page" : {
+        "header_desc" : "Discover ",
+        "header_title" : "Centre Map",
+        "no_stores" : "0 Stores Match Search"
     },
     "newsletter_page" : {
+        "subscribe_title": "Subscribe",
         "newsletter" : "Newsletter",
-        "name" : "Nom et Prénom",
-        "email" : "E-mail",
-        "agree" : "Oui, j'aimerais recevoir des nouvelles concernant les évènements, promotions et annonces diverses de votre part",
-        "subscribe" : "Inscription",
-        "success" : "Réussie", 
-        "error": "Erreur",
-        "thank_you_message" : "Nous vous remercions de votre inscription à notre newsletter. Vous aurez de nos nouvelles prochainement!",
-        "error_message" : "Il semblerait qu'une erreur se soit produite lors de la transmission de votre demande. Merci de réessayer dans quelques instants."
+        "name" : "Name",
+        "email" : "Email",
+        "agree" : "Yes, I would like to receive ongoing news related to events, promotions and special announcements from",
+        "subscribe" : "Subscribe",
+        "success" : "Success", 
+        "error": "Error",
+        "thank_you_message" : "Thank you for subcribing to our newsletter. You'll hear from us soon!",
+        "error_message" : "There was an error when trying to submit your request. Please try again later."
+    },
+    "promos_page": {
+        "promos_header_desc" : "Find The Best Deals at ",
+        "promos_header" : "Promotions",
+        "promotions_title" : "Upcoming Promotions",
+        "promotions" : "Promotion",
+        "read_more" : "Check It Out",
+        "no_promo_message" : "There are no Promotions at this time. Please check back soon.",
+        "back_to_promos" : "Back to Promotions"
+    },
+    "stores_page" : {
+        "header_desc" : "Discover ",
+        "directory" : "Store Directory", 
+        "shopping" : "shopping",
+        "map" : "Map",
+        "find_your_store": "Find Store",
+        "sort_by_cats" : "Sort By Categories",
+        "view_map": "View Map",
+        "new_store" : "New Store",
+        "coming_soon" : "Coming Soon",
+        "store_website": "Visit Website",
+        "store_phone": "Phone Number",
+        "store_hours" : "Store Hours",
+        "store_dets_loc" : "Store Details & Location",
+        "about_us" : "About Us",
+        "find_store" : "Find Store"
     }
 }
