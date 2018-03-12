@@ -45,6 +45,10 @@
         "phone2" : "Sécurité",
         "email" : "Email",
         "form_header" : "Restez en contact avec nous:",
+        "form_name" : "Votre nom",
+        "form_email" : "Votre email",
+        "form_phone" : "Votre Téléphone",
+        "form_message" : "Votre message",
         "form_success_msg" : "Merci de nous contacter. Un membre de notre équipe vous contactera sous peu.",
         "form_error_msg" : "Une erreur s'est produite lors de l'envoi de votre demande. Veuillez réessayer plus tard."
     },
