@@ -58,7 +58,7 @@
                                         </div> 
                                         <div class="center">
                                             <p>{{ property.name }}<br>
-                                                <a href="" target="_blank">{{ property.address1 }} {{ property.city }} {{ property.province_state }} {{ property.postal_code }}</a>
+                                                <a href="https://goo.gl/maps/RJ5dV8dxP1y" target="_blank">{{ property.address1 }} {{ property.city }} {{ property.province_state }} {{ property.postal_code }}</a>
                                             </p>
                                             
                                         </div>
