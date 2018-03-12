@@ -35,7 +35,7 @@
 				<div class="row">
 				    <div class="col-md-2 hidden_phone"></div>
 					<div class="col-sm-12 col-md-8">
-						<nav id="primary_nav">
+						<nav id="primary_nav" class="hidden_phone">
 							<ul>
 							    <li class="menu_item" v-for="item in menu_items" :id="item.id" @click="toggleSubMenu(item.id)">
 							        <router-link :to="item.href">{{$t(item.name)}}</router-link>
