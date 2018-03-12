@@ -12,7 +12,7 @@
         			</div>
         		</div>  
                 <div class="site_container">
-                    <div class="row">
+                    <div class="row hidden_mobile">
                         <div class="col-md-12">
                             <div class="alpha_list">
                                 <a @click="filterStores('All')" class="all_a">All</a>
