@@ -49,7 +49,7 @@
         							    </li>
         							</ul>
         							<div class="mobile_nav_content visible_phone">
-        							    <div class="social_icons">
+        							    <div class="social_icons center">
                                             <span v-for="item in social_media">
                                                 <a :href="item.url" target="_blank">
                                                     <i :class="item.iconClass" aria-hidden="true"></i>
