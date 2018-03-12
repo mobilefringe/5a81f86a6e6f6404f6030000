@@ -49,6 +49,7 @@
         "form_email" : "Your Email",
         "form_phone" : "Your Phone",
         "form_message" : "Your Message",
+        "form_send" : "Send",
         "form_success_msg" : "Thank you for contacting us. A member from our team will contact you shortly.",
         "form_error_msg" : "There was an error when trying to submit your request. Please try again later."
     },
