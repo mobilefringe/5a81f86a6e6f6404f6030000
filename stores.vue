@@ -126,12 +126,19 @@
                 ]),
                 allStores() {
                     console.log(this.processedStores);
-                    // var store_list = this.processedStores
-                    // _.forEach(store_list, function(value, key) {
-                    //     if(value.assets != undefined){
-                            
-                    //     }    
-                    // });
+                    var store_list = this.processedStores
+                    _.forEach(store_list, function(value, key) {
+                        if(value.assets != undefined){
+                            //Stores JSON
+                            var store_id = value.id
+                            this.$store.dispatch('LOAD_PAGE_DATA', { url: this.property.mm_host + "/api/v4/northpark/stores/" + store_id + "/store_files.json" }).then(response => {
+                                this.currentDetails = response.data;
+                            }, error => {
+                                console.error("Could not retrieve data from server. Please check internet connection and try again.");
+                                this.$router.replace({ name: '404' });
+                            });
+                        }    
+                    });
                     
                     // var store_id = id;
                     // var store_assets = "https://thegateway.mallmaverick.com/api/v4/thegateway/stores/" + store_id + "/store_files.json"
