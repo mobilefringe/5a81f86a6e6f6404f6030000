@@ -22,9 +22,9 @@
         "terms" : "Termes et conditions"
     },
     "footer": {
-        "newsletter" : "Newsletter",
-        "subscription": "Subscription",
-        "newsletter_desc" : "For updates, promotions, events & more",
+        "newsletter" : "Bulletin",
+        "subscription": "Abonnement",
+        "newsletter_desc" : "Pour les mises à jour, les promotions, les événements et plus encore",
         "enter_email" : "Enter Your Email",
         "subscribe" : "Subscribe",
         "subscribe_thankyou" : "Thank you for subscribing to our newsletter.",
