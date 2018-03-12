@@ -33,10 +33,10 @@
         "powered_by" : "Géré par"
     },
     "home_page": {
-        "read_more" : "Read More",
-        "explore" : "Explore",
-        "our_feed" : "Instagram Feed",
-        "subscribe" : "Subscribe"
+        "read_more" : "Voir plus",
+        "explore" : "Explorer",
+        "our_feed" : "Notre actualité",
+        "subscribe" : "Inscription"
     },
     "contact_page" : {
         "location" : "Location",
