@@ -70,20 +70,20 @@
         "closed" : "Fermé"
     },
     "jobs_page": {
-        "jobs_header_desc" : "Work at ",
-        "jobs" : "Careers",
+        "jobs_header_desc" : "Travailler à ",
+        "jobs" : "Carrières",
         "position": "Position",
-        "job_type" : "Job Type",
-        "end_date" : "End Date",
-        "read_more" : "Read More",
+        "job_type" : "Type d'emploi",
+        "end_date" : "Date de fin",
+        "read_more" : "Vérifiez-le",
         "no_job_message" : "There are no Jobs at this time. Please check back soon.",
-        "back_to_jobs" : "Back to Jobs",
-        "desc_title" : "Job Description"
+        "back_to_jobs" : "Il n'y a pas d'emploi en ce moment. S'il vous plaît revenez bientôt.",
+        "desc_title" : "Description de l'emploi"
     },
     "map_page" : {
-        "header_desc" : "Discover ",
-        "header_title" : "Centre Map",
-        "no_stores" : "0 Stores Match Search"
+        "header_desc" : "Découvrez ",
+        "header_title" : "Carte du Centre",
+        "no_stores" : "0 Magasins Recherche par match"
     },
     "newsletter_page" : {
         "subscribe_title": "Subscribe",
