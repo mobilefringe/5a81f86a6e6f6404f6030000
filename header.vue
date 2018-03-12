@@ -58,7 +58,7 @@
                                         </div> 
                                         <div class="">
                                             <p>{{ property.name }}<br>
-                                                {{ property.address1 }}, {{ property.city }} {{property.province }}
+                                                {{ property.address1 }} {{ property.city }} {{property.province_state }}
                                             </p>
                                             
                                         </div>
