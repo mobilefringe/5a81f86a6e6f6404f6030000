@@ -86,30 +86,29 @@
         "no_stores" : "0 Magasins Recherche par match"
     },
     "newsletter_page" : {
-        "subscribe_title": "Subscribe",
-        "newsletter" : "Newsletter",
-        "name" : "Name",
+        "subscribe_title": "Inscription",
+        "newsletter" : "Bulletin",
+        "name" : "Nom",
         "email" : "Email",
-        "agree" : "Yes, I would like to receive ongoing news related to events, promotions and special announcements from",
-        "subscribe" : "Subscribe",
+        "agree" : "Oui, j'aimerais recevoir des nouvelles continues concernant les événements, les promotions et les annonces spéciales de",
+        "subscribe" : "Inscription",
         "success" : "Success", 
         "error": "Error",
-        "thank_you_message" : "Thank you for subcribing to our newsletter. You'll hear from us soon!",
-        "error_message" : "There was an error when trying to submit your request. Please try again later."
+        "thank_you_message" : "Merci de vous être abonné à notre newsletter. Vous aurez de nos nouvelles bientôt!",
+        "error_message" : "Une erreur s'est produite lors de l'envoi de votre demande. Veuillez réessayer plus tard."
     },
     "promos_page": {
-        "promos_header_desc" : "Find The Best Deals at ",
+        "promos_header_desc" : "Trouvez les meilleures offres à ",
         "promos_header" : "Promotions",
-        "promotions_title" : "Upcoming Promotions",
+        "promotions_title" : "Promotions à venir",
         "promotions" : "Promotion",
-        "read_more" : "Check It Out",
-        "no_promo_message" : "There are no Promotions at this time. Please check back soon.",
-        "back_to_promos" : "Back to Promotions"
+        "read_more" : "Vérifiez-le",
+        "no_promo_message" : "Il n'y a pas de promotions pour le moment. S'il vous plaît revenez bientôt.",
+        "back_to_promos" : "Retour aux promotions"
     },
     "stores_page" : {
-        "header_desc" : "Discover ",
-        "directory" : "Store Directory", 
-        "shopping" : "shopping",
+        "header_desc" : "Découvrir ",
+        "directory" : "Répertoire de magasins", 
         "map" : "Map",
         "find_your_store": "Find Store",
         "sort_by_cats" : "Sort By Categories",
