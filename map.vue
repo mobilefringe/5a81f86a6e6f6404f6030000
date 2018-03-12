@@ -146,12 +146,7 @@
                         this.filteredStores = this.processedStores;
                     } else {
                         var filtered = _.filter(this.storesByAlphaIndex, function(o,i) { return _.lowerCase(i) == _.lowerCase(letter); })[0];
-                        // if(filtered != undefined) {
-                            this.filteredStores = filtered
-                        // } else {
-                        //     this.noStores = true;
-                        // }
-                        // this.filteredStores = _.groupBy(filtered, store => (isNaN(store.name.charAt(0)) ? store.name.charAt(0) : "#"));
+                        this.filteredStores = filtered
                     }
                 },
                 onOptionSelect(option) {
@@ -160,19 +155,10 @@
                     });
                     this.$refs.mapplic_ref.showLocation(option.svgmap_region);
                 },
-                // mapDownload: function mapDownload() {
-                //     var repo = this.findRepoByName("maps").images;
-                //     var map = _.filter(repo, function(o) {
-                //         return o.id == "31625";
-                //     });
-                //     var mapURL = "http://www.mallmaverick.com" + map[0].photo_url;
-                //     return mapURL;
-                // },
                 dropPin(store) {
                     this.$refs.mapplic_ref.showLocation(store.svgmap_region);
                 }
             }
-            
         });
     });
 </script>
