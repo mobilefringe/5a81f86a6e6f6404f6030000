@@ -64,10 +64,10 @@
     },
     "hours_page" : {
         "header_desc" : "Regular & Holiday Hours",
-        "hours" : "Hours",
-        "reg_hours" : "Regular Hours",
-        "holiday_hours" : "Holiday Hours",
-        "closed" : "Closed"
+        "hours" : "Horaires",
+        "reg_hours" : "Horaires habituels du centre",
+        "holiday_hours" : "Heures de vacances",
+        "closed" : "Fermé"
     },
     "jobs_page": {
         "jobs_header_desc" : "Work at ",
