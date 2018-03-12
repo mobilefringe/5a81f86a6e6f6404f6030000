@@ -109,8 +109,6 @@
     "stores_page" : {
         "header_desc" : "Discover ",
         "directory" : "Store Directory", 
-        "shopping" : "shopping",
-        "map" : "Map",
         "find_your_store": "Find Store",
         "sort_by_cats" : "Sort By Categories",
         "view_map": "View Map",
