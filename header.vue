@@ -57,7 +57,7 @@
                                             </span>
                                         </div> 
                                         <div class="">
-                                            <p>{{ propery.name }}<br>
+                                            <p>{{ property.name }}<br>
                                                 {{ property.address1 }}, {{ property.city }} {{property.province }}
                                             </p>
                                             
