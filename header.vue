@@ -56,7 +56,7 @@
                                                 </a>
                                             </span>
                                         </div> 
-                                        <div class="">
+                                        <div class="center">
                                             <p>{{ property.name }}<br>
                                                 <a href="" target="_blank">{{ property.address1 }} {{ property.city }} {{ property.province_state }} {{ property.postal_code }}</a>
                                             </p>
