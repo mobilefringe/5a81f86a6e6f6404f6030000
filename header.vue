@@ -49,7 +49,7 @@
 						</nav>
 					</div>
 					<div class="nav_container" :class="{ slideInDown: showMenu, slideOutUp: !showMenu }">
-					    <nav id="primary_nav" class="hidden_phone">
+					    <nav id="mobile_nav" class="hidden_phone">
 					        <ul>
 					            <li v-for="(item,key) in menu_items" class="menu_item">
 							        <router-link :to="item.href" v-if="item.sub_menu == undefined">{{$t(item.name)}}</router-link>
