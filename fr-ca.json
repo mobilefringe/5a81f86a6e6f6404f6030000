@@ -25,12 +25,12 @@
         "newsletter" : "Bulletin",
         "subscription": "Abonnement",
         "newsletter_desc" : "Pour les mises à jour, les promotions, les événements et plus encore",
-        "enter_email" : "Enter Your Email",
-        "subscribe" : "Subscribe",
+        "enter_email" : "Entrer votre Email",
+        "subscribe" : "Souscrire",
         "subscribe_thankyou" : "Thank you for subscribing to our newsletter.",
-        "all_rights" : "All Rights Reserved.",
-        "privacy_policy" : "Privacy Policy",
-        "powered_by" : "Powered by"
+        "all_rights" : "Tous les droits sont réservés.",
+        "privacy_policy" : "Règles de confidentialité",
+        "powered_by" : "Géré par"
     },
     "home_page": {
         "read_more" : "Read More",
