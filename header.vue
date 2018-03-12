@@ -55,7 +55,13 @@
                                                     <i :class="item.iconClass" aria-hidden="true"></i>
                                                 </a>
                                             </span>
-                                        </div>    
+                                        </div> 
+                                        <div class="">
+                                            <p>{{ propery.name }}<br>
+                                                {{ property.address1 }}, {{ property.city }} {{property.province }}
+                                            </p>
+                                            
+                                        </div>
         							</div>
         						</nav>
     					    <!--</transition>-->
