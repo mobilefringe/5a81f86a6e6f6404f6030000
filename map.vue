@@ -83,19 +83,6 @@
                     this.dataLoaded = true;
                 });
             },
-            // watch: {
-            //     selected: function() {
-            //         console.log(this.selected.value)
-            //         var catName = this.selected.value;
-            //         var storesByCategory = this.storesByCategoryName
-            //         var sortedList = _.uniq(storesByCategory[catName]);
-            //         if(this.selected.value == undefined){
-            //             this.currentSelection = this.allStores;
-            //         } else {
-            //             this.currentSelection = sortedList;
-            //         }
-            //     },
-            // },
             computed: {
                 ...Vuex.mapGetters([
                     "property",
@@ -141,7 +128,6 @@
                     }
                 },
                 filterStores (letter) {
-                    console.log(letter)
                     if(letter == "All" || letter == undefined || letter == null){
                         this.filteredStores = this.processedStores;
                     } else {
