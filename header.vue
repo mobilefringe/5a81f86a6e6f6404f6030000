@@ -105,7 +105,8 @@
 </template>
 
 <script>
-    define(["Vue", "vuex", "vue_router", "routes"], function (Vue, Vuex, VueRouter, appRoutes) {
+    define(["Vue", "vuex", "vue_router", "routes", "bootstrap-vue"], function (Vue, Vuex, VueRouter, appRoutes, BootstrapVue) {
+        Vue.use(BootstrapVue);
         return Vue.component("header-component", {
             template: template, // the variable template will be injected,
             props:['menu_items', 'social_media'],
