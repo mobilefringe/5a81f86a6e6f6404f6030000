@@ -58,7 +58,7 @@
                                         </div> 
                                         <div class="">
                                             <p>{{ property.name }}<br>
-                                                {{ property.address1 }} {{ property.city }} {{property.province_state }}
+                                                <a href="" target="_blank">{{ property.address1 }} {{ property.city }} {{ property.province_state }} {{ property.postal_code }}</a>
                                             </p>
                                             
                                         </div>
