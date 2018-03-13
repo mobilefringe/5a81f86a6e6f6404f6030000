@@ -118,7 +118,7 @@
                     search: '', 
                     showMenu: false,
                     // isMobile: false,
-                    // showMobileMenu: false,
+                    showMobileMenu: false,
                     // showSubMenu: false,
                     noScroll: false,
                     windowWidth: 0
