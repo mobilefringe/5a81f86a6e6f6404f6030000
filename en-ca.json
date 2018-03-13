@@ -1,8 +1,6 @@
 {
     "header": {
-        "open_today": "Open Today",
-        "closed": "Closed Today",
-        "sign_up": "Sign Up"
+        "search": "Search..."
     },
     "nav": {
         "directory" : "Directory",
