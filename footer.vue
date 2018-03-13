@@ -101,6 +101,14 @@
                     'findRepoByName',
                     'processedStores'
                 ]),
+                locale: {
+                    get () {
+                        return this.$store.state.locale
+                    },
+                    set (value) {
+                        this.$store.commit('SET_LOCALE', { lang: value })
+                    }
+                }
                 copyright_year() {
                     return moment().year();
                 }
