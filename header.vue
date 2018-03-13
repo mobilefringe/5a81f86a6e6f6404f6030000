@@ -48,8 +48,8 @@
 							</ul>
 						</nav>
 					</div>
-					<transition name="custom-classes-transition" enter-active-class="animated slideInDown" leave-active-class="animated slideOutUp">
-    					<div class="nav_container">
+					<div class="nav_container">
+					    <transition name="custom-classes-transition" enter-active-class="animated slideInDown" leave-active-class="animated slideOutUp">
     					    <nav id="mobile_nav" v-show="showMenu" class="">
     					        <ul>
     					            <li v-for="(item,key) in menu_items" class="menu_item">
@@ -88,8 +88,8 @@
                                     </div>
     							</div>
     						</nav>
-    					</div>
-    				</transition>
+    				    </transition>
+    				</div>
         							
 					<div class="col-md-2 hidden_phone">
 					    <div class="social_icons pull-right">
