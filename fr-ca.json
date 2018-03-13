@@ -1,22 +1,20 @@
 {
     "header": {
-        "open_today": "Open Today",
-        "closed": "Closed Today",
-        "sign_up": "Sign Up"
+        "search": ""
     },
     "nav": {
-        "directory" : "Directory",
+        "directory" : "Liste",
         "stores" : "Magasins",
         "centre_map" : "Carte du centre",
         "promos" : "Promotions",
         "events" : "Evènements",
-        "guest_services" : "Guest Services",
+        "guest_services" : "Service à la clientèle",
         "services" : "Services",
         "gift_card" : "Cartes cadeaux",
         "contact" : "Contact",
         "hours": "Horaires",
         "directions": "Directions",
-        "leasing": "Leasing",
+        "leasing": "Location",
         "jobs" : "Carrières",
         "privacy" : "Règles de confidentialité",
         "terms" : "Termes et conditions"
@@ -25,9 +23,9 @@
         "newsletter" : "Bulletin",
         "subscription": "Abonnement",
         "newsletter_desc" : "Pour les promotions, les événements et plus encore",
-        "enter_email" : "Entrer votre Email",
+        "enter_email" : "Inscrivez votre Email",
         "subscribe" : "Souscrire",
-        "subscribe_thankyou" : "Thank you for subscribing to our newsletter.",
+        "subscribe_thankyou" : "Nous vous remercions de vous être inscrit à notre bulletin.",
         "all_rights" : "Tous les droits sont réservés.",
         "privacy_policy" : "Règles de confidentialité",
         "powered_by" : "Géré par"
@@ -44,56 +42,56 @@
         "phone1" : "Service Clients",
         "phone2" : "Sécurité",
         "email" : "Email",
-        "form_header" : "Restez en contact avec nous:",
+        "form_header" : "Restez en contact avec nous",
         "form_name" : "Votre nom",
-        "form_email" : "Votre email",
+        "form_email" : "Votre courriel",
         "form_phone" : "Votre Téléphone",
         "form_message" : "Votre message",
         "form_send" : "Envoyer",
         "form_success_msg" : "Merci de nous contacter. Un membre de notre équipe vous contactera sous peu.",
-        "form_error_msg" : "Une erreur s'est produite lors de l'envoi de votre demande. Veuillez réessayer plus tard."
+        "form_error_msg" : "Une erreur s'est produite lors de l'envoi de votre demande. Veuillez réessayer ultérieurement."
     },
     "events_page": {
         "events_header_desc" : " est l'endroit où il faut être!",
         "events_header" : "Événements",
         "events_title" : "Évènements à venir",
         "events" : "un événement",
-        "read_more" : "Vérifiez-le",
-        "no_event_message" : "Il n'y a aucun événement en ce moment. S'il vous plaît revenez bientôt.",
+        "read_more" : "En savoir plus",
+        "no_event_message" : "Il n'y a aucun événement en ce moment. S'il vous plaît revenez plus tard.",
         "back_to_events" : "Retour aux événements"
     },
     "hours_page" : {
-        "header_desc" : "Heures régulières et vacances",
+        "header_desc" : "Horaires normaux et de vacances",
         "hours" : "Horaires",
         "reg_hours" : "Horaires habituels du centre",
-        "holiday_hours" : "Heures de vacances",
+        "holiday_hours" : "Horaires de vacances",
         "closed" : "Fermé"
     },
     "jobs_page": {
         "jobs_header_desc" : "Travailler à ",
         "jobs" : "Carrières",
-        "position": "Position",
+        "position": "Poste",
         "job_type" : "Type d'emploi",
         "end_date" : "Date de fin",
-        "read_more" : "Vérifiez-le",
-        "no_job_message" : "There are no Jobs at this time. Please check back soon.",
-        "back_to_jobs" : "Il n'y a pas d'emploi en ce moment. S'il vous plaît revenez bientôt.",
+        "read_more" : "En savoir plus",
+        "no_job_message" : "Aucun poste n'est disponible pour le moment. Merci de revenir sur la page ultérieurement.",
+        "back_to_jobs" : "Retour à Carrière",
         "desc_title" : "Description de l'emploi"
     },
     "map_page" : {
         "header_desc" : "Découvrez ",
         "header_title" : "Carte du Centre",
-        "no_stores" : "0 Magasins Recherche par match"
+        "no_stores" : "0 Magasins Recherche par correspondance"
     },
     "newsletter_page" : {
         "subscribe_title": "Inscription",
         "newsletter" : "Bulletin",
         "name" : "Nom",
-        "email" : "Email",
+        "email" : "Courriel",
         "agree" : "Oui, j'aimerais recevoir des nouvelles continues concernant les événements, les promotions et les annonces spéciales de",
         "subscribe" : "Inscription",
-        "success" : "Success", 
-        "error": "Error",
+        "success" : "Succès", 
+        "error": "Erreur",
         "thank_you_message" : "Merci de vous être abonné à notre newsletter. Vous aurez de nos nouvelles bientôt!",
         "error_message" : "Une erreur s'est produite lors de l'envoi de votre demande. Veuillez réessayer plus tard."
     },
@@ -102,8 +100,8 @@
         "promos_header" : "Promotions",
         "promotions_title" : "Promotions à venir",
         "promotions" : "Promotion",
-        "read_more" : "Vérifiez-le",
-        "no_promo_message" : "Il n'y a pas de promotions pour le moment. S'il vous plaît revenez bientôt.",
+        "read_more" : "En savoir plus",
+        "no_promo_message" : "Il n'y a pas de promotions disponibles pour le moment. S'il vous plaît revenez bientôt.",
         "back_to_promos" : "Retour aux promotions"
     },
     "stores_page" : {
@@ -116,7 +114,7 @@
         "coming_soon" : "Arrive Prochainement",
         "store_website": "Site internet du magasin",
         "store_hours" : "Horaires du magasin",
-        "store_dets_loc" : "Details et localisation du magasin",
+        "store_dets_loc" : "Détails et localisation du magasin",
         "about_us" : "A propos de nous",
         "find_store" : "Trouver un magasin"
     }
