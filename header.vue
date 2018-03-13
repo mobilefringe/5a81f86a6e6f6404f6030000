@@ -50,7 +50,7 @@
 					</div>
 					<transition name="custom-classes-transition" enter-active-class="animated slideInDown" leave-active-class="animated slideOutUp">
     					<div class="nav_container">
-    					    <nav id="mobile_nav" v-if="showMenu" class="">
+    					    <nav id="mobile_nav" v-show="showMenu" class="">
     					        <ul>
     					            <li v-for="(item,key) in menu_items" class="menu_item">
     							        <router-link :to="item.href" v-if="item.sub_menu == undefined">{{$t(item.name)}}</router-link>
