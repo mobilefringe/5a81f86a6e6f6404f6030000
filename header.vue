@@ -117,7 +117,6 @@
                     suggestionAttribute: 'name',
                     search: '', 
                     showMenu: false,
-                    // isMobile: false,
                     showMobileMenu: false,
                     noScroll: false,
                     windowWidth: 0
