@@ -140,9 +140,7 @@
                 // },
                 showMenu: function() {
                     if(this.showMenu == true){
-                        if (this.windowWidth <= 768) {
-                            document.body.classList.add("no-scroll");
-                        }
+                        document.body.classList.add("no-scroll");
                     } else if (this.showMenu == false) {
                         document.body.classList.remove("no-scroll");
                     }
