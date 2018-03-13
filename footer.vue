@@ -27,12 +27,12 @@
 			        </div>
 			        <div class="col-xs-12 visible_phone">
 			            <div class="row">
-			                <div class="col-xs-3">
+			                <div class="col-xs-4">
 			                    <div class="language_select">
 					                <span @click="changeLocale('en-ca')">EN</span> | <span @click="changeLocale('fr-ca')">FR</span>
 				                </div>    
 			                </div>
-			                <div class="col-xs-9">
+			                <div class="col-xs-8">
 			                    <div class="header_search_container">
                 			        <search-component v-model="search" :list="processedStores" :suggestion-attribute="suggestionAttribute" @select="onOptionSelect">
                                         <template slot="item" scope="option">
