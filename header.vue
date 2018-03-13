@@ -130,14 +130,6 @@
                         this.showMenu = false;
                     }  
                 },
-                // windowWidth: function() {
-                //     if (this.windowWidth >= 768) {
-                //         document.body.classList.remove("no-scroll");
-                //         this.showMenu = true;
-                //     } else {
-                //         this.showMenu = false;
-                //     }
-                // },
                 showMenu: function() {
                     if(this.showMenu == true){
                         document.body.classList.add("no-scroll");
