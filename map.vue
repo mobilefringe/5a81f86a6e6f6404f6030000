@@ -128,7 +128,7 @@
                         this.filteredStores = filtered
                     }
                 },
-                onOptionSelect(option) {
+                onOptionSelect(store) {
                     this.$nextTick(function() {
                         this.storeSearch = ""
                     });
