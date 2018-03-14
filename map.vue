@@ -134,6 +134,7 @@
                     // console.log("in updatepng")
                 },
                 addLandmark(store) {
+                    console.log(store)
                     this.svgMapRef.addMarker(store);
                 }
             }
