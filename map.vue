@@ -135,7 +135,7 @@
                 },
                 addLandmark(store) {
                     console.log(store)
-                    this.pngmap_ref.addMarker(store);
+                    this.svgMapRef.addMarker(store);
                 }
             }
         });
