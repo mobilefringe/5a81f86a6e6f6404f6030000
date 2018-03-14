@@ -66,7 +66,7 @@
                                                 <b-collapse v-model="item.show_sub_menu" :id="$t(item.name)" :visible="item.show_sub_menu" :accordion="$t(item.name)" role="tabpanel" class="accordion_body">
                                                     <b-card-body v-for="sub_menu in item.sub_menu">
                                                         <p class="card-text">
-                                                            <router-link :to="sub_menu.href" @click="closeMenu()">
+                                                            <router-link :to="sub_menu.href" @click="closeMenu(this)">
                                                                 {{$t(sub_menu.name)}}
                                                             </router-link>
                                                         </p>
@@ -175,7 +175,7 @@
                     this.$router.push("/stores/" + option.slug);
                 },
                 closeMenu() {
-                    console.log(this.$refs.menuBtn)
+                    console.log(this)
                     this.$refs.menuBtn.click()
                 }
             },
