@@ -65,7 +65,11 @@
                                                 </b-card-header>
                                                 <b-collapse v-model="item.show_sub_menu" :id="$t(item.name)" :visible="item.show_sub_menu" :accordion="$t(item.name)" role="tabpanel" class="accordion_body">
                                                     <b-card-body v-for="sub_menu in item.sub_menu">
-                                                        <p class="card-text"><router-link :to="sub_menu.href">{{$t(sub_menu.name)}}</router-link></p>
+                                                        <p class="card-text">
+                                                            <router-link :to="sub_menu.href" @click="item.show_sub_menu = !item.show_sub_menu">
+                                                                {{$t(sub_menu.name)}}
+                                                            </router-link>
+                                                        </p>
                                                     </b-card-body>
                                                 </b-collapse>
                                             </b-card>
@@ -90,7 +94,6 @@
     						</nav>
     				    </transition>
     				</div>
-        							
 					<div class="col-md-2 hidden_phone">
 					    <div class="social_icons pull-right">
                             <span v-for="item in social_media">
