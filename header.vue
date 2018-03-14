@@ -175,7 +175,7 @@
                     this.$router.push("/stores/" + option.slug);
                 },
                 closeMenu() {
-                    console.log("Clicked!")
+                    console.log(this.$refs.menuBtn)
                     this.$refs.menuBtn.click()
                 }
             },
