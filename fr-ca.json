@@ -107,7 +107,7 @@
     "stores_page" : {
         "header_desc" : "Découvrir ",
         "directory" : "Répertoire de magasins", 
-        "find_your_store": "Trouver un magasin",
+        "find_your_store": "Trouver",
         "sort_by_cats" : "Classer par catégorie",
         "view_map": "Voir la carte",
         "new_store" : "Nouveau Magasin",
