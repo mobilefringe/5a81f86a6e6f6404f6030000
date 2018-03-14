@@ -174,7 +174,7 @@
                     });
                     this.$router.push("/stores/" + option.slug);
                 },
-                closeMenu() {
+                closeMenu(this) {
                     console.log(this)
                     this.$refs.menuBtn.click()
                 }
