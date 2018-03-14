@@ -132,7 +132,7 @@
                     this.$nextTick(function() {
                         this.storeSearch = ""
                     });
-                    this.$refs.mapplic_ref.showLocation(option.svgmap_region);
+                    this.svgMapRef.addMarker(store);
                 },
                 updatePNGMap(map) {
                     this.map = map;
