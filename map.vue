@@ -128,11 +128,11 @@
                         this.filteredStores = filtered
                     }
                 },
-                onOptionSelect(store) {
+                onOptionSelect(option) {
                     this.$nextTick(function() {
                         this.storeSearch = ""
                     });
-                    this.svgMapRef.addMarker(store);
+                    this.svgMapRef.addMarker(option);
                 },
                 updatePNGMap(map) {
                     this.map = map;
