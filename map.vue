@@ -39,7 +39,7 @@
                             <div class="store_list">
                                 <div class="store_list_container hidden-mobile" v-if="filteredStores">
                                     <div class="store_name" v-for="store in filteredStores">
-                                        <p @click="addLandmark(store)">{{store.name}}</p>
+                                        <p @click="addLandmark">{{store.name}}</p>
                                     </div>
                                 </div>
                                 <div v-else>
