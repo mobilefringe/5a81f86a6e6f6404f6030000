@@ -173,6 +173,9 @@
                         this.search = ""
                     });
                     this.$router.push("/stores/" + option.slug);
+                },
+                closeMenu() {
+                    console.log(this)
                 }
             },
             beforeDestroy: function() {
