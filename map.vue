@@ -104,6 +104,7 @@
                     return this.processedStores;
                 },
                 getPNGurl() {
+                    console.log("https://www.mallmaverick.com" + this.property.map_url)
                     return "https://www.mallmaverick.com" + this.property.map_url;
                 },
                 svgMapRef() {
