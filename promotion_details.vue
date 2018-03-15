@@ -59,15 +59,15 @@
             watch: {
                 currentPromo : function (){
                     if(this.currentPromo != null) {
-                        console.log(this.currentPromo);
-                        if (this.currentPromo.store != null && this.currentPromo.store != undefined) {
-                            if(_.includes(this.currentPromo.store.image_url, 'missing')) {
-                                this.currentPromo.store.image_url = "http://via.placeholder.com/400x400/757575";
-                            }
-                        } else if (this.currentPromo.store == null || this.currentPromo.store == undefined) {
-                            this.currentPromo.store = {};
-                            this.currentPromo.store.image_url =  "http://via.placeholder.com/400x400/757575";
+                        // console.log(this.currentPromo);
+                        // if (this.currentPromo.store != null && this.currentPromo.store != undefined) {
+                        if(_.includes(this.currentPromo.store.image_url, 'missing')) {
+                            this.currentPromo.store.image_url = "http://via.placeholder.com/400x400/757575";
                         }
+                        // } else if (this.currentPromo.store == null || this.currentPromo.store == undefined) {
+                        //     this.currentPromo.store = {};
+                        //     this.currentPromo.store.image_url =  "http://via.placeholder.com/400x400/757575";
+                        // }
                     }
                 }
             },
