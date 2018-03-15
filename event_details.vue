@@ -56,14 +56,12 @@
             },
             watch: {
                 currentEvent : function (){
-                    if(this.currentEvent != null) {
-                        if (this.currentEvent != null && this.currentEvent != undefined) {
-                            if(_.includes(this.currentEvent.image_url, 'missing')) {
-                                this.currentEvent.image_url = "http://via.placeholder.com/1560x800/757575";
-                            }
-                            if(_.includes(this.currentEvent.event_image2_url_abs, 'missing')) {
-                                this.currentEvent.event_image2_url_abs = "http://via.placeholder.com/1560x800/757575";
-                            }
+                    if (this.currentEvent != null && this.currentEvent != undefined) {
+                        if(_.includes(this.currentEvent.image_url, 'missing')) {
+                            this.currentEvent.image_url = "http://via.placeholder.com/1560x800/757575";
+                        }
+                        if(_.includes(this.currentEvent.event_image2_url_abs, 'missing')) {
+                            this.currentEvent.event_image2_url_abs = "http://via.placeholder.com/1560x800/757575";
                         }
                     }
                 }
