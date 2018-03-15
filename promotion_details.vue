@@ -62,7 +62,7 @@
                         // console.log(this.currentPromo);
                         // if (this.currentPromo.store != null && this.currentPromo.store != undefined) {
                         if(_.includes(this.currentPromo.store.image_url, 'missing')) {
-                            this.currentPromo.store.image_url = "http://via.placeholder.com/400x400/757575";
+                            this.currentPromo.store.image_url = "http://via.placeholder.com/1560x800/757575";";
                         }
                         // } else if (this.currentPromo.store == null || this.currentPromo.store == undefined) {
                         //     this.currentPromo.store = {};
