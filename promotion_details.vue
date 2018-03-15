@@ -59,7 +59,7 @@
             watch: {
                 currentPromo : function (){
                     if(this.currentPromo != null) {
-                        console.log(this.currentPromo.store);
+                        console.log(this.currentPromo);
                         if (this.currentPromo.store != null && this.currentPromo.store != undefined) {
                             if(_.includes(this.currentPromo.store.image_url, 'missing')) {
                                 this.currentPromo.store.image_url = "http://via.placeholder.com/400x400/757575";
