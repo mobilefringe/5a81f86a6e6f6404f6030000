@@ -8,7 +8,7 @@
         			<div id="promos_container">
     					<div class="promo_container">
     					    <div class="promo_content center">
-    					        <p class="promo_title" v-if="currentPromo.store">{{ currentPromo.name }}</p>
+    					        <p class="promo_title" v-if="currentPromo.store">{{ currentPromo.store.name }}</p>
     					        <p class="promo_title" v-else>{{ property.name }}</p>
     					        <h3 class="margin_60" v-if="locale=='en-ca'">{{ currentPromo.name }}</h3>
     							<h3 class="margin_60" v-else>{{ currentPromo.name_2 }}</h3>
