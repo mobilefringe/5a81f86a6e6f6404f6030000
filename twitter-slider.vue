@@ -70,8 +70,9 @@
         left: -24px;
     }
     .twitter_feed_container .prev:after {
-        content: '\f104';
-        font-family: FontAwesome;
+        /*content: '\f104';*/
+        /*font-family: FontAwesome;*/
+        content: 'Hello';
         font-size: 2.75rem;
         font-weight: normal;
         font-style: normal;
