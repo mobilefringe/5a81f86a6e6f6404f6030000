@@ -69,15 +69,15 @@
     	transform: translate(-50%, -50%);
         left: -24px;
     }
-    .twitter_feed_container .prev:after {
+    /*.twitter_feed_container .prev:after {*/
         /*content: '\f104';*/
         /*font-family: FontAwesome;*/
-        content: 'Hello';
-        font-size: 2.75rem;
-        font-weight: normal;
-        font-style: normal;
-        color: #000;    
-    }
+    /*    content: 'Hello';*/
+    /*    font-size: 2.75rem;*/
+    /*    font-weight: normal;*/
+    /*    font-style: normal;*/
+    /*    color: #000;    */
+    /*}*/
     .twitter_feed_container .prev:hover {
         cursor: pointer;
     }
