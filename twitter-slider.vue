@@ -78,9 +78,7 @@
             },
             created () {
                 this.loadData().then(response => {
-                    console.log(response)
                     var twitterFeed = response[0].data;
-                    console.log(twitterFeed)
                     var twitter_feed = twitterFeed.social.twitter;
                     this.twitterFeed = _.slice(twitter_feed, [0], [8]);
                     
