@@ -74,6 +74,8 @@
                         dots: false,
                         // fade: true,
                         // infinite: true,
+                        nextArrow: '.next',
+                        prevArrow: '.prev',
                         slidesToShow: 3,
                         // speed: 1200
                     }
