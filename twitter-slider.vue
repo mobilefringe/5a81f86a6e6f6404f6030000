@@ -20,6 +20,9 @@
 </template>
 
 <style>
+    .twitter_feed_container {
+        position: relative;
+    }
     .twitter_item blockquote {
         margin: 0 10px;
         padding-left: 0;
