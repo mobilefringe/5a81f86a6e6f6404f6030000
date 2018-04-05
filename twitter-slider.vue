@@ -57,6 +57,47 @@
     .twitter_item .twitter_content h5 {
         margin-top: 20px;
     }
+    .prev {
+        position: absolute;
+        top: 50%;
+        -moz-transform: translate(-50%, -50%);
+    	-webkit-transform: translate(-50%, -50%);
+    	-ms-transform: translate(-50%, -50%);
+    	transform: translate(-50%, -50%);
+        left: -24px;
+    }
+    .prev:after {
+        content: '\f104';
+        font-family: FontAwesome;
+        font-size: 2.75rem;
+        font-weight: normal;
+        font-style: normal;
+        color: #000;    
+    }
+    .prev:hover {
+        cursor: pointer;
+    }
+
+    .next {
+        position: absolute;
+        top: 50%;
+        -moz-transform: translate(-50%, -50%);
+    	-webkit-transform: translate(-50%, -50%);
+    	-ms-transform: translate(-50%, -50%);
+    	transform: translate(-50%, -50%);
+        right: -40px;
+    }
+    .next:after {
+        content: '\f105';
+        font-family: FontAwesome;
+        font-size: 2.75rem;
+        font-weight: normal;
+        font-style: normal;
+        color: #000;    
+    } 
+    .next:hover {
+        cursor: pointer;
+    }
 </style>
 <script>
     define(["Vue", "vuex"], function (Vue, Vuex) {
