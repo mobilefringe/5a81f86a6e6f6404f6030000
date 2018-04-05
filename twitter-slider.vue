@@ -1,7 +1,7 @@
 <template>
     <div v-if="dataLoaded" class="twitter_feed_container">
         <div class="prev"></div>
-        <slick ref="slick" :options="slickrOptions">
+        <slick ref="slick" :options="slickOptions">
 			<div class="twitter_item" v-for="(item, index) in twitterFeed">
 			    <blockquote>
 			        <p>{{ item.text }}</p>
