@@ -69,7 +69,7 @@
     	transform: translate(-50%, -50%);
         left: -24px;
     }
-    .prev.slick-arrow:after {
+    .prev.slick-arrow::after {
         content: '\f104';
         font-family: FontAwesome;
         font-size: 2.75rem;
@@ -77,7 +77,7 @@
         font-style: normal;
         color: #000;    
     }
-    .prev.slick-arrow:hover {
+    .prev.slick-arrow::hover {
         cursor: pointer;
     }
 
