@@ -2,7 +2,7 @@
     <div v-if="dataLoaded" class="twitter_feed_container">
         <div class="prev"></div>
         <slick ref="slick" :options="slickOptions">
-			<div class="twitter_item" v-for="(item, index) in twitterFeed" :class="{ 'last': index === (twitterFeed - 1) }">
+			<div class="twitter_item" v-for="(item, index) in twitterFeed" :class="{ 'first': index === 0, 'last': index === (twitterFeed - 1) }">
 			    <blockquote>
 			        <p>{{ item.text }}</p>
 			    </blockquote>
