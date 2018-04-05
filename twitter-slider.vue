@@ -3,7 +3,7 @@
         <div class="prev"></div>
         <slick ref="slick" :options="slickOptions">
 			<div class="twitter_item" v-for="(item, index) in twitterFeed" >
-			    <blockquote :class="{ first: (index === 0) , last: (index === (twitterFeed.length - 1)) }">
+			    <blockquote :class="{ first: index === 0 , last: index === (twitterFeed.length - 1) }">
 			        <p>{{ item.text }}</p>
 			    </blockquote>
 			    <div class="twitter_content">
