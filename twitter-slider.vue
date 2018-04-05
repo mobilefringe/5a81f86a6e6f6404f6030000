@@ -62,7 +62,18 @@
             template: template, // the variable template will be injected,
             data: function () {
                 return {
-                    dataLoaded: false
+                    dataLoaded: false,
+                    twitterOptions: {
+                        arrows: true,
+                        autoplay: false,
+                        // autoplaySpeed: 6000,
+                        cssEase: 'linear',
+                        dots: false,
+                        // fade: true,
+                        // infinite: true,
+                        slidesToShow: 3,
+                        // speed: 1200
+                    },
                 };
             },
             created () {
