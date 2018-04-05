@@ -63,6 +63,7 @@
             data: function () {
                 return {
                     dataLoaded: false,
+                    twitterFeed: null,
                     twitterOptions: {
                         arrows: true,
                         autoplay: false,
@@ -73,7 +74,7 @@
                         // infinite: true,
                         slidesToShow: 3,
                         // speed: 1200
-                    },
+                    }
                 };
             },
             created () {
