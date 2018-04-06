@@ -30,12 +30,12 @@
                     slickOptions: {
                         
                         useTransform: true,
-                        autoplay:true,
-                        autoplaySpeed: 4500,
-                        arrows:false,
-                        slide:'.slider-pic', 
-                        slidesToShow:1,
-                        slidesToScroll:1,
+                        // autoplay:true,
+                        // autoplaySpeed: 4500,
+                        // arrows:false,
+                        // slide:'.slider-pic', 
+                        slidesToShow: 3,
+                        slidesToScroll: 1,
                         dots:false,
                         cssEase: 'ease-out',
     //                     responsive: [
