@@ -16,9 +16,7 @@
 </template>
 
 <script>
-    define(["Vue", "vuex", "vue-meta", "vee-validate", "utility"], function(Vue, Vuex, Meta, VeeValidate, Utility) {
-        Vue.use(Meta);
-        Vue.use(VeeValidate);
+    define(["Vue", "vuex", "vue!twitter-slider"], function(Vue, Vuex, TwitterSlider) {
         return Vue.component("social-component", {
             template: template, // the variable template will be injected
             data: function() {
