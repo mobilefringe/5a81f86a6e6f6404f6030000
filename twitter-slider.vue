@@ -30,21 +30,21 @@
                     slickOptions: {
                         
                         useTransform: true,
-    autoplay:true,
-    autoplaySpeed: 4500,
-    arrows:false,
-    slide:'.slider-pic', 
-    slidesToShow:1,
-    slidesToScroll:1,
-    dots:false,
-    cssEase: 'ease-out',
-    responsive: [
-    {
-      breakpoint: 1024,
-      settings: {
-        dots: false
-      }
-    }]
+                        autoplay:true,
+                        autoplaySpeed: 4500,
+                        arrows:false,
+                        slide:'.slider-pic', 
+                        slidesToShow:1,
+                        slidesToScroll:1,
+                        dots:false,
+                        cssEase: 'ease-out',
+    //                     responsive: [
+    // {
+    //   breakpoint: 1024,
+    //   settings: {
+    //     dots: false
+    //   }
+    // }]
     
                         // arrows: true,
                         // autoplay: false,
