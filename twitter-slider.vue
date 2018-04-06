@@ -28,16 +28,34 @@
                     dataLoaded: false,
                     twitterFeed: null,
                     slickOptions: {
-                        arrows: true,
-                        autoplay: false,
-                        // autoplaySpeed: 6000,
-                        cssEase: 'linear',
-                        dots: false,
-                        // fade: true,
-                        // infinite: true,
-                        nextArrow: '.next',
-                        prevArrow: '.prev',
-                        slidesToShow: 3,
+                        
+                        useTransform: true,
+    autoplay:true,
+    autoplaySpeed: 4500,
+    arrows:false,
+    slide:'.slider-pic', 
+    slidesToShow:1,
+    slidesToScroll:1,
+    dots:false,
+    cssEase: 'ease-out',
+    responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        dots: false
+      }
+    }]
+    
+                        // arrows: true,
+                        // autoplay: false,
+                        // // autoplaySpeed: 6000,
+                        // cssEase: 'linear',
+                        // dots: false,
+                        // // fade: true,
+                        // // infinite: true,
+                        // nextArrow: '.next',
+                        // prevArrow: '.prev',
+                        // slidesToShow: 3,
                         // speed: 1200
                     }
                 };
