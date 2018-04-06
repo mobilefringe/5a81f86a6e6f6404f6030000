@@ -157,6 +157,16 @@ define([], function() {
         //     }]
         // },
         {
+            path: '/social',
+            component: view('default'),
+            redirect: '/404',
+            children: [{
+                path: '',
+                component: view('social_media'),
+                name: 'Social'
+            }]
+        },
+        {
             path: '/thank_you',
             component: view('default'),
             redirect: '/404',
