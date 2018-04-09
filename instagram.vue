@@ -4,8 +4,8 @@
             <div v-if="dataLoaded" class="insta_feed_container">
                 <div v-for="item in instaFeed" class="insta_item">
                     <div class="photo_wrap">
-                        <i v-if="item.type == 'video'" class="fa fa-play play_btn"></i> 
                         <a :href="item.link" target="_blank">
+                            <i v-if="item.type == 'video'" class="fa fa-play play_btn"></i> 
                             <img :src="item.images.thumbnail.url"/>
                         </a>
                     </div>
