@@ -1,9 +1,28 @@
 <template>
     <div v-if="dataLoaded" class="insta_feed_container">
-            
+        <div class="insta_item">
+            <div class="photo_wrap">
+                
+            </div>
+        </div>        
     </div>
 </template>
 
+<style>
+    
+</style>
+insta_item {
+    display: -moz-inline-stack;
+    display: inline-block;
+    vertical-align: top;
+    zoom: 1;
+    padding: inherit !important;
+    margin: 0 !important;
+    text-decoration: none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
 <script>
     define(["Vue", "vue!vue-slick"], function (Vue, slick) {
         return Vue.component("instagram", {
