@@ -9,7 +9,7 @@
                             <img :src="item.images.thumbnail.url"/>
                         </a>
                     </div>
-                    <div class="">
+                    <div class="info">
                         <span class="likes">
                             <i class="fa fa-heart" style="font-size: 13px;"></i>
                             {{ item.likes.count }}
