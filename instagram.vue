@@ -109,6 +109,7 @@
             data: function () {
                 return {
                     dataLoaded: false,
+                    instaUser: null,
                     instaFeed: null,
                 };
             },
@@ -116,6 +117,8 @@
                 this.loadData().then(response => {
                     var instaFeed = response[0].data;
                     var insta_feed = instaFeed.social.instagram;
+                    this.instaUser = insta_feed[0];
+                    console.log(this.instaUser)
                     this.instaFeed = _.slice(insta_feed, [0], [9]);
                     console.log(this.instaFeed)
                     
