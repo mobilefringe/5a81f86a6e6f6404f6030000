@@ -46,6 +46,20 @@
     text-shadow: 0 0 8px rgba(0,0,0,0.8);
     margin-left: -9px;
 }
+.photo_wrap a {
+    display: block;
+    text-decoration: none;
+}
+.photo_wrap img {
+    display: block;
+    padding: 0 !important;
+    margin: 0 !important;
+    max-width: 100% !important;
+    opacity: 1 !important;
+    font-size: 10px !important;
+    line-height: 0.9;
+    color: #999;
+}
 </style>
 
 <script>
