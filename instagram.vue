@@ -2,16 +2,14 @@
     <div v-if="dataLoaded" class="insta_feed_container">
         <div class="insta_item">
             <div class="photo_wrap">
-                
+                <i class="fa fa-play play_btn"></i>    
             </div>
         </div>        
     </div>
 </template>
 
 <style>
-    
-</style>
-insta_item {
+    .insta_item {
     display: -moz-inline-stack;
     display: inline-block;
     vertical-align: top;
@@ -22,7 +20,31 @@ insta_item {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+    width: 33.33%;
+}    
+.photo_wrap {
+    position: relative;
 }
+.play_btn {
+    display: block !important;
+    position: absolute;
+    z-index: 0;
+    top: 50%;
+    left: 50%;
+    margin-top: -24px;
+    margin-left: -19px;
+    padding: 0;
+    font-size: 48px;
+    color: #fff;
+    color: rgba(255,255,255,0.9);
+    font-style: normal !important;
+    font-size: 23px;
+    margin-top: -12px;
+    text-shadow: 0 0 8px rgba(0,0,0,0.8);
+    margin-left: -9px;
+}
+</style>
+
 <script>
     define(["Vue", "vue!vue-slick"], function (Vue, slick) {
         return Vue.component("instagram", {
