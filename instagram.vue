@@ -27,19 +27,22 @@
 </template>
 
 <style>
+    .insta_feed_container {
+        max-width: 500px;
+    }
     .insta_item {
-    display: -moz-inline-stack;
-    display: inline-block;
-    vertical-align: top;
-    zoom: 1;
-    padding: inherit !important;
-    margin: 0 !important;
-    text-decoration: none;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    width: 33.33%;
-}    
+        display: -moz-inline-stack;
+        display: inline-block;
+        vertical-align: top;
+        zoom: 1;
+        padding: 5px;
+        margin: 0 !important;
+        text-decoration: none;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        width: 33.33%;
+    }    
 .photo_wrap {
     position: relative;
 }
