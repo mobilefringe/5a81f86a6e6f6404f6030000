@@ -6,7 +6,7 @@
 
 <script>
     define(["Vue", "vue!vue-slick"], function (Vue, slick) {
-        return Vue.component("twitter-slider", {
+        return Vue.component("instagram", {
             template: template, // the variable template will be injected,
             data: function () {
                 return {
