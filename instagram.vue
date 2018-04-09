@@ -14,7 +14,10 @@
                             <i class="fa fa-heart" style="font-size: 13px;"></i>
                             {{ item.likes.count }}
                         </span>
-                        <span class="comments"></span>
+                        <span class="comments">
+                            <i class="fa fa-comment" style="font-size: 13px;"></i>
+                            {{ item.comments.count }}
+                        </span>
                     </div>
                 </div>        
             </div>    
