@@ -1,8 +1,8 @@
 <template>
     <div v-if="dataLoaded" class="insta_feed_container">
-        <div class="insta_item">
+        <div v-for="item in instaFeed" class="insta_item">
             <div class="photo_wrap">
-                <i class="fa fa-play play_btn"></i>    
+                <i v-if="item.type == 'video'" class="fa fa-play play_btn"></i>    
             </div>
         </div>        
     </div>
