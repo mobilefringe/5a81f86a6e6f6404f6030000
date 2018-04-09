@@ -83,6 +83,9 @@
     text-decoration: none;
     color: #666;
     text-align: center;
+        line-height: 1.1;
+    padding: 4px 0 8px 0;
+    background: #FFF;
 }
 </style>
 
