@@ -76,6 +76,14 @@
     color: #999;
     border: 6px solid white;
 }
+.info {
+    width: 100%;
+    float: left;
+    clear: both;
+    text-decoration: none;
+    color: #666;
+    text-align: center;
+}
 </style>
 
 <script>
