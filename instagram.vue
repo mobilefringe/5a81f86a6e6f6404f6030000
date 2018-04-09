@@ -59,6 +59,7 @@
     font-size: 10px !important;
     line-height: 0.9;
     color: #999;
+    border: 6px solid white;
 }
 </style>
 
