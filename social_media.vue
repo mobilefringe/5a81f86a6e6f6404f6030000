@@ -9,6 +9,8 @@
         		        <h3 class="home_page_title caps">{{$t("home_page.twitter_feed")}}</h3>
         		    </div>
         		    <twitter-slider></twitter-slider>
+        		    <div class="margin_40"></div>
+        		    <instagram></instagram>
                 </div>
             </div>
         </transition>
