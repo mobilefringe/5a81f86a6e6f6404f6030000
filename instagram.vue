@@ -17,7 +17,6 @@
             created () {
                 this.loadData().then(response => {
                     var instaFeed = response[0].data;
-                    console.log(instaFeed.instag)
                     var insta_feed = instaFeed.social.instagram;
                     this.instaFeed = _.slice(insta_feed, [0], [9]);
                     
@@ -27,7 +26,7 @@
             methods: {
                 loadData: async function() {
                     try {
-                        let results = await Promise.all([this.$store.dispatch('LOAD_PAGE_DATA', {url: "http://billingsbridge.mallmaverick.com/api/v3/billings/social.json"})]);
+                        let results = await Promise.all([this.$store.dispatch('LOAD_PAGE_DATA', {url: "http://stlaurent.mallmaverick.com/api/v3/stlaurent/social.json"})]);
                         return results;
                     } catch (e) {
                         console.log("Error loading data: " + e.message);
