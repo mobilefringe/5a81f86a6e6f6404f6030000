@@ -17,8 +17,8 @@
             created () {
                 this.loadData().then(response => {
                     var instaFeed = response[0].data;
-                    console.log(instaFeed)
-                    var insta_feed = instaFeed.social;
+                    console.log(instaFeed.instag)
+                    var insta_feed = instaFeed.social.instagram;
                     this.instaFeed = _.slice(insta_feed, [0], [9]);
                     
                     this.dataLoaded = true;
