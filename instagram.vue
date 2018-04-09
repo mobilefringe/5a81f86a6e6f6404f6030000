@@ -20,6 +20,7 @@
                     var insta_feed = instaFeed.social.instagram;
                     console.log(insta_feed)
                     this.instaFeed = _.slice(insta_feed, [0], [9]);
+                    console.log(this.instaFeed)
                     
                     this.dataLoaded = true;
                 });
