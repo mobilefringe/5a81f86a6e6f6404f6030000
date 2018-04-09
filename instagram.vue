@@ -2,6 +2,16 @@
     <div class="row">
         <div class="col-md-6">
             <div v-if="dataLoaded" class="insta_feed_container">
+                <div class="">
+                    <a href="">
+                        <div>
+                            
+                        </div>
+                        <div>
+                            
+                        </div>
+                    </a>
+                </div>
                 <div v-for="item in instaFeed" class="insta_item">
                     <div class="photo_wrap">
                         <a :href="item.link" target="_blank">
@@ -106,6 +116,7 @@
                 this.loadData().then(response => {
                     var instaFeed = response[0].data;
                     var insta_feed = instaFeed.social.instagram;
+                    console.log(insta_feed)
                     this.instaFeed = _.slice(insta_feed, [0], [9]);
                     console.log(this.instaFeed)
                     
