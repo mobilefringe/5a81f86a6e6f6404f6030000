@@ -8,7 +8,7 @@
                             <img :src="instaUser.user.profile_picture"/>
                         </div>
                         <div>
-                            <h3>@{{ instaUser.user.username }}</h3>
+                            <h3>{{ instaUser.user.username }}</h3>
                         </div>
                     </a>
                 </div>
