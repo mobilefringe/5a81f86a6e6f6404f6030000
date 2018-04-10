@@ -6,10 +6,13 @@
         		<div class="site_container">
         		    <div class="margin_60 hidden_phone"></div>
                     <div>
-        		        <h3 class="home_page_title caps">{{$t("home_page.twitter_feed")}}</h3>
+        		        <h3 class="home_page_title caps">Twitter Feed</h3>
         		    </div>
         		    <twitter-slider></twitter-slider>
-        		    <div class="margin_40"></div>
+        		    <div class="margin_60 hidden_phone"></div>
+                    <div>
+        		        <h3 class="home_page_title caps">Instagram Feed</h3>
+        		    </div>
         		    <instagram></instagram>
                 </div>
             </div>
