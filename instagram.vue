@@ -1,39 +1,34 @@
 <template>
-    <div class="row">
-        <div class="col-md-6">
-            <div v-if="dataLoaded" class="insta_feed_container">
-                <div class="insta_header" v-if="instaUser">
-                    <a href="">
-                        <div class="profile_pic">
-                            <img :src="instaUser.user.profile_picture"/>
-                        </div>
-                        <div>
-                            <h3>{{ instaUser.user.username }}</h3>
-                        </div>
-                    </a>
+    <div v-if="dataLoaded" class="insta_feed_container">
+        <div class="insta_header" v-if="instaUser">
+            <a href="">
+                <div class="profile_pic">
+                    <img :src="instaUser.user.profile_picture" alt="Instagram Profile Pic"/>
                 </div>
-                <div v-for="item in instaFeed" class="insta_item">
-                    <div class="photo_wrap">
-                        <a :href="item.link" target="_blank">
-                            <i v-if="item.type == 'video'" class="fa fa-play play_btn"></i> 
-                            <img :src="item.images.thumbnail.url"/>
-                        </a>
-                    </div>
-                    <div class="info">
-                        <span class="likes">
-                            <i class="fa fa-heart" style="font-size: 13px;"></i>
-                            {{ item.likes.count }}
-                        </span>
-                        <span class="comments">
-                            <i class="fa fa-comment" style="font-size: 13px;"></i>
-                            {{ item.comments.count }}
-                        </span>
-                    </div>
-                </div>        
-            </div>    
+                <div>
+                    <h3>{{ instaUser.user.username }}</h3>
+                </div>
+            </a>
         </div>
-    </div>
-    
+        <div v-for="item in instaFeed" class="insta_item">
+            <div class="photo_wrap">
+                <a :href="item.link" target="_blank">
+                    <i v-if="item.type == 'video'" class="fa fa-play play_btn"></i> 
+                    <img :src="item.images.thumbnail.url"/>
+                </a>
+            </div>
+            <div class="info">
+                <span class="likes">
+                    <i class="fa fa-heart" style="font-size: 13px;"></i>
+                    {{ item.likes.count }}
+                </span>
+                <span class="comments">
+                    <i class="fa fa-comment" style="font-size: 13px;"></i>
+                    {{ item.comments.count }}
+                </span>
+            </div>
+        </div>        
+    </div> 
 </template>
 
 <style>
