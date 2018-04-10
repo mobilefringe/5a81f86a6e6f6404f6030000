@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col-md-6">
             <div v-if="dataLoaded" class="insta_feed_container">
-                <div class="" v-if="instaUser">
+                <div class="insta_header" v-if="instaUser">
                     <a href="">
                         <div>
                             <h3>{{ instaUser.user.username }}</h3>
