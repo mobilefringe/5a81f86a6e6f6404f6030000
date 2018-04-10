@@ -46,6 +46,7 @@
     .profile_pic {
         max-width: 50px;
         max-height: 50px;
+        display: inline-block;
     }
     .profile_pic img{
         max-width: 100%;
