@@ -7,7 +7,7 @@
                         <div>
                             <h3>{{ instaUser.user.username }}</h3>
                         </div>
-                        <div class>
+                        <div class="profile_pic">
                             <img :src="instaUser.user.profile_picture"/>
                         </div>
                     </a>
@@ -39,6 +39,17 @@
 <style>
     .insta_feed_container {
         max-width: 500px;
+    }
+    .insta_header {
+        
+    }
+    .profile_pic {
+        max-width: 50px;
+        max-height: 50px;
+    }
+    .profile_pic img{
+        max-width: 100%;
+        border-radius: 50%;
     }
     .insta_item {
         display: -moz-inline-stack;
