@@ -1,14 +1,12 @@
 <template>
     <div v-if="dataLoaded" class="insta_feed_container">
         <div class="insta_header" v-if="instaUser">
-            <a href="">
-                <div class="profile_pic">
-                    <img :src="instaUser.user.profile_picture" alt="Instagram Profile Pic"/>
-                </div>
-                <div>
-                    <h3>{{ instaUser.user.username }}</h3>
-                </div>
-            </a>
+            <div class="profile_pic">
+                <img :src="instaUser.user.profile_picture" alt="Instagram Profile Pic"/>
+            </div>
+            <div>
+                <h3>{{ instaUser.user.username }}</h3>
+            </div>
         </div>
         <div v-for="item in instaFeed" class="insta_item">
             <div class="photo_wrap">
