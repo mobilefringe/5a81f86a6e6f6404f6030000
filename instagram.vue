@@ -4,11 +4,11 @@
             <div v-if="dataLoaded" class="insta_feed_container">
                 <div class="insta_header" v-if="instaUser">
                     <a href="">
-                        <div>
-                            <h3>{{ instaUser.user.username }}</h3>
-                        </div>
                         <div class="profile_pic">
                             <img :src="instaUser.user.profile_picture"/>
+                        </div>
+                        <div>
+                            <h3>{{ instaUser.user.username }}</h3>
                         </div>
                     </a>
                 </div>
