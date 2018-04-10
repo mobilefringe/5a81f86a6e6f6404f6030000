@@ -8,7 +8,7 @@
                             <img :src="instaUser.user.profile_picture"/>
                         </div>
                         <div>
-                            <h3>{{ instaUser.user.username }}</h3>
+                            <h3>@{{ instaUser.user.username }}</h3>
                         </div>
                     </a>
                 </div>
@@ -39,6 +39,10 @@
 <style>
     .insta_feed_container {
         max-width: 500px;
+    }
+    .insta_header {
+        padding: 10px 0;
+        text-align: center;
     }
     .insta_header div {
         display: inline-block;
