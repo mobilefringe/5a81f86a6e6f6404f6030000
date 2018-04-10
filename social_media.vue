@@ -5,15 +5,13 @@
             <div v-if="dataLoaded" v-cloak>
         		<div class="site_container">
         		    <div class="margin_60 hidden_phone"></div>
-                    <div>
-        		        <h3 class="home_page_title caps">Twitter Feed</h3>
-        		    </div>
+    		        <h3 class="home_page_title caps">Twitter Feed</h3>
         		    <twitter-slider></twitter-slider>
         		    <div class="margin_60 hidden_phone"></div>
-                    <div>
-        		        <h3 class="home_page_title caps">Instagram Feed</h3>
-        		    </div>
-        		    <instagram></instagram>
+    		        <h3 class="home_page_title caps">Instagram Feed</h3>
+    		        <div class="center-block">
+        		        <instagram></instagram>
+    		        </div>
                 </div>
             </div>
         </transition>
