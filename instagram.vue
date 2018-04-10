@@ -7,7 +7,7 @@
                         <div>
                             <h3>{{ instaUser.user.username }}</h3>
                         </div>
-                        <div class=>
+                        <div class>
                             <img :src="instaUser.user.profile_picture"/>
                         </div>
                     </a>
