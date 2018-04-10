@@ -2,13 +2,13 @@
     <div class="row">
         <div class="col-md-6">
             <div v-if="dataLoaded" class="insta_feed_container">
-                <div class="">
+                <div class="" v-if="instaUser">
                     <a href="">
                         <div>
-                            
+                            <h3>{{ instaUser.user.username }}</h3>
                         </div>
-                        <div>
-                            
+                        <div class=>
+                            <img :src="instaUser.user.profile_picture"/>
                         </div>
                     </a>
                 </div>
