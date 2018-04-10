@@ -33,6 +33,7 @@
 
 <style>
     .insta_feed_container {
+        margin: 0 auto;
         max-width: 500px;
     }
     .insta_header {
