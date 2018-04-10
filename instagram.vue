@@ -40,8 +40,8 @@
     .insta_feed_container {
         max-width: 500px;
     }
-    .insta_header {
-        
+    .insta_header div {
+        display: inline-block;
     }
     .profile_pic {
         max-width: 50px;
