@@ -136,7 +136,7 @@
             methods: {
                 loadData: async function() {
                     try {
-                        let results = await Promise.all([this.$store.dispatch('LOAD_PAGE_DATA', {url: "http://stlaurent.mallmaverick.com/api/v3/stlaurent/social.json"})]);
+                        let results = await Promise.all([this.$store.dispatch('LOAD_PAGE_DATA', {url: "https://stlaurent.mallmaverick.com/api/v4/stlaurent/social.json"})]);
                         return results;
                     } catch (e) {
                         console.log("Error loading data: " + e.message);
