@@ -97,10 +97,10 @@
                         value.description_short_2 = _.truncate(value.description_2, { 'length': 60, 'separator': ' ' });
 
                         if (_.includes(value.image_url, 'missing')) {
-                            value.image_url = "http://placehold.it/1560x800/757575";
+                            value.image_url = "https://placehold.it/1560x800/757575";
                         }
                         if (_.includes(value.event_image2_url_abs, 'missing')){
-                            value.event_image2_url_abs  = "http://placehold.it/1560x800/757575";
+                            value.event_image2_url_abs  = "https://placehold.it/1560x800/757575";
                         }
 
                         temp_event.push(value);
